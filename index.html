@@ -10,10 +10,194 @@
 			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="./assets/js/jQueryUI/jquery-ui.css" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+		/>
 	</head>
 	<body>
-		<div class="layout">
-			<div class="header"></div>
+		<div class="wrapper">
+			<div class="header">
+				<div class="header-top container">
+					<div class="header-top__container">
+						<div class="header-top__left">
+							<div class="header-top__logo">
+								<a href="">
+									<img
+										src="https://news.sun-asterisk.com/_nuxt/img/6d2d06d.jpg"
+										alt=""
+									/>
+								</a>
+							</div>
+							<div class="header-top__tag">
+								<span class="header-top__tag-item"
+									><a href="">#Learning Culture</a></span
+								>
+								<span class="header-top__tag-item"
+									><a href="">#Làm Nghề</a></span
+								>
+								<span class="header-top__tag-item"
+									><a href="">#gia đình IT</a></span
+								>
+								<span class="header-top__tag-item"
+									><a href="">#đáng tiền</a></span
+								>
+								<span class="header-top__tag-item"
+									><a href="">#Local talk</a></span
+								>
+								<span class="header-top__tag-item hot-tag"
+									><a href="">#SVN Goal 2023</a></span
+								>
+							</div>
+						</div>
+						<div class="header-top__right">
+							<div class="header-top__search">
+								<div class="header-top__search-form">
+									<input
+										type="text"
+										class="header-top__search-field"
+										placeholder="Nhập từ khoá"
+									/>
+								</div>
+								<div class="header-top__search-button">
+									<i class="fa-solid fa-magnifying-glass"></i>
+								</div>
+							</div>
+							<div class="header-top__language">
+								<div class="select-language__container">
+									<img
+										src="./assets/image/vn.svg"
+										alt=""
+										class="flag-chose"
+									/>
+									<span class="language-chose">VI</span>
+									<button class="button-dropdown">
+										<i
+											class="fa-thin fa-chevron-down header-top__icon-dropdown"
+										></i>
+									</button>
+								</div>
+								<ul class="select-language__none open-select">
+									<li
+										class="header-top__language-item language-item__selected"
+									>
+										<img
+											src="./assets/image/vn.svg"
+											alt=""
+											class="flag-image"
+										/>
+										<span class="text">VI</span>
+									</li>
+									<li class="header-top__language-item">
+										<img
+											src="./assets/image/en.svg"
+											alt=""
+											class="flag-image"
+										/>
+										<span class="text">EN</span>
+									</li>
+									<li class="header-top__language-item">
+										<img
+											src="./assets/image/jp.svg"
+											alt=""
+											class="flag-image"
+										/>
+										<span class="text">JP</span>
+									</li>
+								</ul>
+							</div>
+							<div class="header-top__unlogin">
+								<div class="header-top__login-input">
+									<a href="" class="header-top__login-button"
+										>G-SUITE LOGIN</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-main container">
+					<div class="header-main__wrapper">
+						<div class="menu-container">
+							<ul class="menu-bar">
+								<li class="menu-item">
+									<a href="" class="menu-link">Tin nóng</a>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu-link"
+										>Dự án - Sản phẩm</a
+									>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu-link">Góc nhìn</a>
+								</li>
+								<li class="menu-item has-submenu">
+									<a href="" class="menu-link"
+										>Gương mặt Sun*</a
+									>
+									<i
+										class="fa-thin fa-angle-down icon-submenu"
+									></i>
+									<div class="submenu">
+										<div class="submenu-item">
+											<span class="submenu-link"
+												>Corner of Sun*</span
+											>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item has-submenu">
+									<a href="" class="menu-link"
+										>Văn hoá Sun*</a
+									>
+									<i
+										class="fa-thin fa-angle-down icon-submenu"
+									></i>
+									<div class="submenu">
+										<div class="submenu-item">
+											<span class="submenu-link"
+												>Văn hoá học tập</span
+											>
+											<span class="submenu-link"
+												>Văn hoá - Sự kiện</span
+											>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu-link"
+										>Kinh nghiệm hay</a
+									>
+								</li>
+								<li class="menu-item has-submenu">
+									<a href="" class="menu-link"
+										>Chuyện tâm tình</a
+									>
+									<i
+										class="fa-thin fa-angle-down icon-submenu"
+									></i>
+									<div class="submenu">
+										<div class="submenu-item">
+											<span class="submenu-link"
+												>Sun* Confession</span
+											>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu-link">Multimedia</a>
+								</li>
+								<li class="menu-item">
+									<a href="" class="menu-link">Tác giả</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="header__line"></div>
+			</div>
 			<div class="mobile-header">
 				<div class="mobile-header__main-header">
 					<div class="main-header__logo">
@@ -99,9 +283,14 @@
 								<a href="" class="menu-nav__link">Góc nhìn</a>
 							</li>
 							<li class="menu-nav__category">
-								<a href="" class="menu-nav__link"
-									>Gương mặt Sun*</a
-								>
+								<div class="accordion-container">
+									<a href="" class="menu-nav__link"
+										>Gương mặt Sun*</a
+									>
+									<i
+										class="fa-solid fa-caret-right accordion-button"
+									></i>
+								</div>
 								<span class="menu-nav__category-children">
 									<a href="" class="menu-nav__link"
 										>Corner of Sun*</a
@@ -109,19 +298,26 @@
 								</span>
 							</li>
 							<li class="menu-nav__category">
-								<a href="" class="menu-nav__link"
-									>Văn hoá Sun*</a
-								>
-								<span class="menu-nav__category-children">
+								<div class="accordion-container">
 									<a href="" class="menu-nav__link"
-										>Văn hoá học tập</a
+										>Văn hoá Sun*</a
 									>
-								</span>
-								<span class="menu-nav__category-children">
-									<a href="" class="menu-nav__link"
-										>Văn hoá - Sự kiện</a
-									>
-								</span>
+									<i
+										class="fa-solid fa-caret-right accordion-button"
+									></i>
+								</div>
+								<div class="accordion-content">
+									<span class="menu-nav__category-children">
+										<a href="" class="menu-nav__link"
+											>Văn hoá học tập</a
+										>
+									</span>
+									<span class="menu-nav__category-children">
+										<a href="" class="menu-nav__link"
+											>Văn hoá - Sự kiện</a
+										>
+									</span>
+								</div>
 							</li>
 							<li class="menu-nav__category">
 								<a href="" class="menu-nav__link"
@@ -129,9 +325,14 @@
 								>
 							</li>
 							<li class="menu-nav__category">
-								<a href="" class="menu-nav__link"
-									>Chuyện tâm tình</a
-								>
+								<div class="accordion-container">
+									<a href="" class="menu-nav__link"
+										>Chuyện tâm tình</a
+									>
+									<i
+										class="fa-solid fa-caret-right accordion-button"
+									></i>
+								</div>
 								<span class="menu-nav__category-children">
 									<a href="" class="menu-nav__link"
 										>Sun* Confession</a
@@ -163,14 +364,2851 @@
 							>
 						</div>
 					</div>
-					<div class="menu-nav__background"></div>
+				</div>
+				<div class="menu-nav__background"></div>
+			</div>
+			<div class="content container">
+				<div class="home">
+					<div class="home-featured_post">
+						<div class="featured-post">
+							<div class="featured-post--main">
+								<div class="main-post">
+									<a href="" class="main-post__image">
+										<img
+											src="https://news.sun-asterisk.com/images/1280x720/dea54c2e-f746-46f0-99e4-3ac75282b14e.jpg"
+											alt=""
+											class="img__main-post"
+										/>
+									</a>
+									<div class="main-post__content">
+										<div class="main-post--title">
+											<a
+												href=""
+												class="main-post--title__link"
+												>Giải mã sức hút của các Content
+												Creator mảng công nghệ tại
+												Sun*</a
+											>
+										</div>
+										<div class="main-post--preview">
+											Content Creators hay còn gọi là nhà
+											sáng tạo nội dung, là ngành nghề nổi
+											bật trong vài năm trở lại đây. Họ
+											hoạt động trên nền tảng mạng xã hội
+											với các sản phẩm nội dung thú vị,
+											truyền cảm hứng. Sun* cũng sở hữu
+											những nhà sáng tạo nội dung hoạt
+											động trong lĩnh vực công nghệ, ngày
+											đêm cho ra đời những sản phẩm để lan
+											tỏa kiến thức IT đến cộng đồng. Hãy
+											cùng theo chân Sun* News, khám phá
+											xem họ là ai nhé!
+										</div>
+										<div class="main-post--info">
+											<span class="main-post--author">
+												<a href=""> Đăng bởi Tan. </a>
+											</span>
+											<span
+												class="main-post--line"
+											></span>
+											<span class="main-post--view">
+												169 Lượt xem
+											</span>
+											<span
+												class="main-post--line"
+											></span>
+
+											<span class="main-post--time">
+												2023-08-07
+											</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="featured-post--side">
+								<div class="side-post">
+									<div class="side-post--item">
+										<a href="" class="side-post__image">
+											<img
+												src="https://news.sun-asterisk.com/images/1280x720/34166875-18d5-4a9e-b597-9841573409fb.png"
+												alt=""
+												class="img__side-post"
+											/>
+										</a>
+										<div class="side-post__content">
+											<div class="side-post--title">
+												<a
+													href=""
+													class="side-post--title__link"
+													>HOT: Ra mắt 65 giảng viên
+													nội bộ nhà Sun*, chính thức
+													kết thúc hành trình Train Of
+													Trainer</a
+												>
+											</div>
+											<div class="side-post--info">
+												<span class="side-post--author">
+													<a href="">
+														Đăng bởi Sun* News
+													</a>
+												</span>
+												<span
+													class="side-post--line"
+												></span>
+												<span class="side-post--view">
+													327 Lượt xem
+												</span>
+												<span
+													class="side-post--line"
+												></span>
+												<span class="side-post--time">
+													2023-07-28
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="side-post--item">
+										<a href="" class="side-post__image">
+											<img
+												src="https://news.sun-asterisk.com/images/1280x720/0b83d74b-ede0-4821-a060-628dd28e7f02.jpg"
+												alt=""
+												class="img__side-post"
+											/>
+										</a>
+										<div class="side-post__content">
+											<div class="side-post--title">
+												<a
+													href=""
+													class="side-post--title__link"
+													>Công bố 19 gương mặt xuất
+													sắc nhất Sun* Quý II/2023</a
+												>
+											</div>
+											<div class="side-post--info">
+												<span class="side-post--author">
+													<a href="">
+														Đăng bởi Quỳnh Nguyễn
+													</a>
+												</span>
+												<span
+													class="side-post--line"
+												></span>
+												<span class="side-post--view">
+													631 Lượt xem
+												</span>
+												<span
+													class="side-post--line"
+												></span>
+												<span class="side-post--time">
+													2023-07-28
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="home-new_post">
+						<div class="new-post--title">
+							<span class="new-post--text">TIN MỚI NHẤT</span>
+							<div class="new-post--line"></div>
+							<span class="new-post--link"
+								><a href="">XEM TẤT CẢ</a></span
+							>
+						</div>
+						<div class="new-post--slider">
+							<div class="new-post--slider_content">
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											Cẩm nang ISO: Quản lý truy cập hệ
+											thống
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Admin
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											6 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/cad30beb-28cc-49af-b545-1168b2fb845d.jpg"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											Bật cười với màn ''review sếp'' cực
+											chất từ Sunner!
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi An & Quỳnh
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											419 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/d71a6965-0707-446d-8a26-37f114a87c65.jpg"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											TechUp - Sự kiện "hosted by Sun*"
+											dành cho cộng đồng công nghệ chính
+											thức lên sóng
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Sun* News
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											142 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/98dd2d3a-598a-403a-a04f-b4ce3ebeba5d.png"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											[Radio 28/07] Quà tặng âm nhạc: Tạm
+											biệt tháng 7, bạn đã sẵn sàng cho
+											biển xanh cát vàng?
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Sun* Radio
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											14 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/533168b1-f362-4eb1-a841-e7743ae67746.png"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											[Radio 26/05] Quà tặng âm nhạc:
+											Happy Men's Day 2023!
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Sun* Radio
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											10 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/46ef7b32-a075-403d-accb-a5419929fb0a.jpg"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											#Làm nghề: Chuyện giờ mới kể về Công
+											đoàn Sun*
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Tan.
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											284 Lượt xem
+										</span>
+									</div>
+								</div>
+								<div class="new-post--slider__item">
+									<div class="new-post--slider__wrapper">
+										<a
+											href=""
+											class="new-post--slider__image"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/440x248/76275a58-a5a7-4077-8bb9-832851754555.jpg"
+												alt=""
+												class="img_new-post--slider"
+										/></a>
+										<div class="new-post--slider__share">
+											<span>Chia sẻ</span>
+											<i
+												class="fa-solid fa-share-nodes icon-share"
+											></i>
+										</div>
+									</div>
+									<div class="new-post--slider__title">
+										<a href="" class="title-link">
+											Bật mí các "chuyến du lịch nhà người
+											ta" tại Company Trip 2023
+										</a>
+									</div>
+									<div class="new-post--slider__info">
+										<span class="new-post--slider__author">
+											Đăng bởi Thu Hằng
+										</span>
+										<div
+											class="new-post--slider__line"
+										></div>
+										<span class="new-post--slider__view">
+											198 Lượt xem
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="new-post--slider_navigation">
+								<button
+									class="new-post--slider_navigation__prev"
+								>
+									<i class="fa-solid fa-arrow-left"></i>
+								</button>
+								<button
+									class="new-post--slider_navigation__next"
+								>
+									<i class="fa-solid fa-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="home-main_post">
+						<div class="main-post--top">
+							<div class="home-for_you">
+								<div class="for-you--header">
+									<div class="for-you--header__title">
+										<div
+											class="for-you--header__title-text"
+										>
+											DÀNH CHO BẠN
+										</div>
+										<div
+											class="for-you--header__title-line"
+										></div>
+									</div>
+									<div class="for-you--header__subtitle">
+										<a
+											href=""
+											class="for-you--header__subtitle-login"
+											>Đăng nhập tài khoản G-Suite</a
+										>
+										để xem tin tức dành riêng cho member của
+										Sun*
+									</div>
+								</div>
+								<div class="for-you--post">
+									<div class="for-you--post-item">
+										<a
+											href=""
+											class="for-you--post-item__image"
+											><img
+												src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png"
+												alt=""
+												class="img__for-you"
+										/></a>
+										<div
+											class="for-you--post-item__content"
+										>
+											<div
+												class="for-you--post-item__content-category experience"
+											>
+												<a href="">KINH NGHIỆM HAY</a>
+											</div>
+											<div
+												class="for-you--post-item__content-title"
+											>
+												<a href="">
+													Chinh phục chứng chỉ CKAD
+													với loạt kinh nghiệm 'không
+													thể chi tiết hơn' từ Sunner
+													Hữu Kim (R&D)
+												</a>
+											</div>
+											<div
+												class="for-you--post-item__content-preview"
+											>
+												“Một phút nói hết” với hàng loạt
+												bí quyết chinh phục chứng chỉ
+												CKAD nổi danh cùng Sunner Hữu
+												Kim - Full Stack Software đến từ
+												R&D Unit. Chần chừ gì nữa, đọc
+												ngay thôi!
+											</div>
+											<div
+												class="for-you--post-item__content-info"
+											>
+												<span
+													><a href="">
+														Đăng bởi Kim
+													</a></span
+												>
+												<div
+													class="post-item__line"
+												></div>
+												<span>475 Lượt xem</span>
+												<div
+													class="post-item__line"
+												></div>
+												<span>2023-06-23</span>
+											</div>
+										</div>
+									</div>
+									<div class="for-you--post-item">
+										<a
+											href=""
+											class="for-you--post-item__image"
+											><img
+												src="https://news.sun-asterisk.com/images/440x248/fbfd956c-2c63-4ef8-83f5-dcb6736e5654.png"
+												alt=""
+												class="img__for-you"
+										/></a>
+										<div
+											class="for-you--post-item__content"
+										>
+											<div
+												class="for-you--post-item__content-category hotnews"
+											>
+												<a href="">TIN NÓNG</a>
+											</div>
+											<div
+												class="for-you--post-item__content-title"
+											>
+												<a href="">
+													Chính thức ra mắt đội ngũ
+													Technical Heroes - "Trạm hỗ
+													trợ công nghệ" cho các dự án
+													tại Sun* Đà Nẵng
+												</a>
+											</div>
+											<div
+												class="for-you--post-item__content-preview"
+											>
+												Vừa qua, Sun* Đà Nẵng đã chính
+												thức ra mắt đội ngũ hỗ trợ công
+												nghệ Technical Heroes để giải
+												đáp mọi vấn đề kỹ thuật cho các
+												dự án miền Trung. Với phương
+												châm trở thành trạm hỗ trợ
+												“one-stop” - không cần bắc cầu
+												qua các đầu mối phức tạp, 6
+												“siêu anh hùng” từ đội ngũ
+												Technical Heroes sẽ trở thành
+												điểm đến đáng tin cậy cho tất cả
+												Sunners Đà Nẵng.
+											</div>
+											<div
+												class="for-you--post-item__content-info"
+											>
+												<span
+													><a href="">
+														Đăng bởi Sun* News
+													</a></span
+												>
+												<div
+													class="post-item__line"
+												></div>
+												<span> 451 Lượt xem </span>
+												<div
+													class="post-item__line"
+												></div>
+												<span>2023-06-23</span>
+											</div>
+										</div>
+									</div>
+									<div class="for-you--post-item">
+										<a
+											href=""
+											class="for-you--post-item__image"
+											><img
+												src="https://news.sun-asterisk.com/images/440x248/11e65e9a-115a-4892-920d-75b9ac1fd97d.png"
+												alt=""
+												class="img__for-you"
+										/></a>
+										<div
+											class="for-you--post-item__content"
+										>
+											<div
+												class="for-you--post-item__content-category sunner"
+											>
+												<a href="">GƯƠNG MẶT SUN*</a>
+											</div>
+											<div
+												class="for-you--post-item__content-title"
+											>
+												<a href="">
+													Thành Toại: Khi thầy giáo
+													dạy Hóa trở thành lập trình
+													viên iOS
+												</a>
+											</div>
+											<div
+												class="for-you--post-item__content-preview"
+											>
+												Năm 2021, có một thầy giáo dạy
+												Hóa mang tên Thành Toại đã bước
+												ra khỏi vùng an toàn của bản
+												thân, quyết tâm chinh phục ước
+												mơ làm lập trình viên của mình.
+												Những năm tháng thử thách ấy đã
+												tôi luyện Toại trở thành một iOS
+												Developer cứng cáp, bền bỉ, xông
+												pha và có những đóng góp hiệu
+												quả tại CEV14, chi nhánh Sun* Hồ
+												Chí Minh.
+											</div>
+											<div
+												class="for-you--post-item__content-info"
+											>
+												<span
+													><a href="">
+														Đăng bởi Thu Hằng
+													</a></span
+												>
+												<div
+													class="post-item__line"
+												></div>
+												<span> 390 Lượt xem </span>
+												<div
+													class="post-item__line"
+												></div>
+												<span>2023-06-22</span>
+											</div>
+										</div>
+									</div>
+									<div class="for-you--post-item">
+										<a
+											href=""
+											class="for-you--post-item__image"
+											><img
+												src="https://news.sun-asterisk.com/images/440x248/f309e172-58a5-41a8-a812-d1b3b60015e9.png"
+												alt=""
+												class="img__for-you"
+										/></a>
+										<div
+											class="for-you--post-item__content"
+										>
+											<div
+												class="for-you--post-item__content-category project-product"
+											>
+												<a href="">DỰ ÁN - SẢN PHẨM</a>
+											</div>
+											<div
+												class="for-you--post-item__content-title"
+											>
+												<a href="">
+													#Sun* Goal 2023: Thành công
+													từ dự án MVP - Bước tiến mới
+													trên hành trình khẳng định
+													chất Digital Creative Studio
+													nhà Sun*
+												</a>
+											</div>
+											<div
+												class="for-you--post-item__content-preview"
+											>
+												Hoạt động triển khai đội hình
+												tiên phong tinh nhuệ thực hiện
+												dự án MVP (Minimum Viable
+												Product) thuộc mục tiêu số 3 của
+												Sun* trong năm 2023 - “Tăng hiệu
+												quả sử dụng chi phí khách hàng”.
+												Sau một thời gian nghiên cứu và
+												đi vào thực nghiệm, Sun* đã gặt
+												hái được trái ngọt xứng đáng khi
+												đã có được các dự án MVP đầu
+												tiên thuộc CEV06, CEV13 và
+												CEV14, đính kèm những kết quả
+												bên lề đáng mừng.
+											</div>
+											<div
+												class="for-you--post-item__content-info"
+											>
+												<span
+													><a href="">
+														Đăng bởi Sun* News
+													</a></span
+												>
+												<div
+													class="post-item__line"
+												></div>
+												<span>888 Lượt xem</span>
+												<div
+													class="post-item__line"
+												></div>
+												<span> 2023-05-19 </span>
+											</div>
+										</div>
+									</div>
+									<div class="for-you--post-item">
+										<a
+											href=""
+											class="for-you--post-item__image"
+											><img
+												src="https://news.sun-asterisk.com/images/440x248/2db465b9-62c4-42f6-bc25-dff58167bfed.jpg"
+												alt=""
+												class="img__for-you"
+										/></a>
+										<div
+											class="for-you--post-item__content"
+										>
+											<div
+												class="for-you--post-item__content-category corner-of-sun"
+											>
+												<a href="">CORNER OF SUN*</a>
+											</div>
+											<div
+												class="for-you--post-item__content-title"
+											>
+												<a href="">
+													Ngọc Duyên: Mọi thứ đẹp đẽ
+													trong đời đều bắt nguồn từ
+													những điều bình thường nhất
+												</a>
+											</div>
+											<div
+												class="for-you--post-item__content-preview"
+											>
+												Trong một thế giới mà đa số mọi
+												người đều muốn trở nên đặc biệt,
+												thì đâu đó vẫn có những con
+												người bền bỉ với những điều giản
+												đơn. Mục tiêu của họ không phải
+												là trở thành người thành công
+												nhất, giỏi nhất, tuyệt vời nhất,
+												mục tiêu của họ là làm tốt nhất
+												từ những việc bình thường nhất.
+											</div>
+											<div
+												class="for-you--post-item__content-info"
+											>
+												<span
+													><a href="">
+														Đăng bởi Tan.
+													</a></span
+												>
+												<div
+													class="post-item__line"
+												></div>
+												<span> 486 Lượt xem </span>
+												<div
+													class="post-item__line"
+												></div>
+												<span> 2023-05-15 </span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="home-media">
+								<div class="media-title">
+									<a href="" class="media-title--link"
+										>THƯ VIỆN MEDIA</a
+									>
+								</div>
+								<div class="media-panel">
+									<div class="media-panel--header">
+										<div
+											class="media-panel--header__wrapper"
+										>
+											<div
+												class="media-panel--header__navbar"
+											>
+												<div
+													class="navbar-item navbar-item__selected"
+												>
+													ALL MEDIA
+												</div>
+												<div class="navbar-item">
+													VIDEO
+												</div>
+												<div class="navbar-item">
+													PHOTOS
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="media-panel--content">
+										<div
+											class="media-panel--content__item default"
+										>
+											<div class="media-panel--post">
+												<div
+													class="media-panel--post__container"
+												>
+													<div
+														class="media-panel--post__main"
+													>
+														<div
+															class="media-panel--post__wrapper"
+														>
+															<a
+																href=""
+																class="media-panel--post__image"
+															>
+																<img
+																	src="https://news.sun-asterisk.com/images/440x248/15e74e74-41bd-471d-8827-ad70a8b68857.png"
+																	alt=""
+																	class="img__media-panel"
+																/>
+															</a>
+														</div>
+														<div
+															class="media-panel--post__title"
+														>
+															<a
+																href=""
+																class="media-panel--post__link"
+															>
+																Sun* Men's Day
+																2023: Vui thôi
+																chưa đủ, phải
+																gọi là "đã"!
+															</a>
+														</div>
+														<div
+															class="media-panel--post__info"
+														>
+															<span
+																><a href="">
+																	Đăng bởi
+																	Ling + Hằng
+																</a></span
+															>
+															<span
+																class="media-panel--post__line"
+															></span>
+															<span>
+																1097 Lượt xem
+															</span>
+														</div>
+													</div>
+													<div
+														class="media-panel--post__list"
+													>
+														<div
+															class="media-panel--post__item post-item__selected"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/15e74e74-41bd-471d-8827-ad70a8b68857.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title post-item--title__selected"
+															>
+																Sun* Men's Day
+																2023: Vui thôi
+																chưa đủ, phải
+																gọi là "đã"!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/d9544278-e3a2-4bf9-b9a1-ae7c98e91c5d.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 28/04]
+																Quà tặng âm
+																nhạc: Tạm biệt
+																tháng Tư đầy
+																nắng và gió
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/ecf66d49-198e-40bb-a006-a3b359a1856b.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 03/03]
+																Happy Sun* Day
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/346b9674-fcaf-4473-ac7f-47860a3db874.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Cùng nhìn ngắm
+																những khoảnh
+																khắc Giáng sinh
+																rộn ràng của
+																người Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/cd1e6050-67e6-4c01-a3b5-9bc080414bf8.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																6000 viên pin -
+																một kỷ lục mới
+																tiếp tục được
+																xác lập tại Ngày
+																hội "Đổi pin
+																rinh quà"
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/fbbcff7e-6fc5-4a72-98ae-81ec30a315d2.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Sun* Radio đặc
+																biệt: Lời cảm ơn
+																những hành động
+																tốt đẹp nhỏ bé
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/4db94e6a-478a-4e61-be3d-1a7c27e2dd9b.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Cùng những “KOL
+																đặc biệt” lan
+																tỏa cẩm nang
+																hành động
+																Sun*ness tới
+																toàn dân!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/3b9b570b-5044-4e95-aa92-25fe52ae25d2.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Những "người lái
+																đò" thầm lặng
+																tại Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/d8715a29-8256-4afc-8a6a-da725f4ea655.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Sunner trải
+																nghiệm 1 tuần
+																trở thành "nghệ
+																nhân" đồ da
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/db5f5509-6ff6-4a7e-9569-b6576eb92a81.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																"Rụng tim" trước
+																những khoảnh
+																khắc đáng yêu
+																ngày 20/10 tại
+																Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/6cf58e48-ffa3-4c37-a09b-280efb53827d.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Toàn cảnh giải
+																cầu lông Sun*
+																Badminton Autumn
+																2022
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/2521f270-920e-4384-98b6-4a59f2829644.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Ấn tượng Trung
+																thu 3 miền của
+																người Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/14cb4540-1748-42f6-a11e-364fc0e5cd4d.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 26/08]
+																Quà tặng âm
+																nhạc: Gửi tới
+																chàng trai có nụ
+																cười tỏa nắng...
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/6ee05aaf-08da-46a4-b821-8bddf68f049c.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 29/07]
+																Quà tặng âm
+																nhạc: Tớ chỉ
+																biết đến mỗi cậu
+																thôi đấy!!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/e2bba25b-7c3f-4ac5-9459-8e0c2c0fd6d6.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 24/06]
+																Quà tặng âm
+																nhạc: Thanh xuân
+																của chúng ta
+																là...
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													class="media-panel--post__loadmore"
+												>
+													<a href="">Xem tiếp</a>
+												</div>
+											</div>
+										</div>
+										<div class="media-panel--content__item">
+											<div class="media-panel--post">
+												<div
+													class="media-panel--post__container"
+												>
+													<div
+														class="media-panel--post__main"
+													>
+														<div
+															class="media-panel--post__wrapper"
+														>
+															<a
+																href=""
+																class="media-panel--post__image"
+															>
+																<img
+																	src="https://news.sun-asterisk.com/images/440x248/d9544278-e3a2-4bf9-b9a1-ae7c98e91c5d.png"
+																	alt=""
+																	class="img__media-panel"
+																/>
+															</a>
+														</div>
+														<div
+															class="media-panel--post__title"
+														>
+															<a
+																href=""
+																class="media-panel--post__link"
+															>
+																[Radio 28/04]
+																Quà tặng âm
+																nhạc: Tạm biệt
+																tháng Tư đầy
+																nắng và gió
+															</a>
+														</div>
+														<div
+															class="media-panel--post__info"
+														>
+															<span
+																><a href="">
+																	Đăng bởi
+																	Sun* Radio
+																</a></span
+															>
+															<span
+																class="media-panel--post__line"
+															></span>
+															<span>
+																177 Lượt xem
+															</span>
+														</div>
+													</div>
+													<div
+														class="media-panel--post__list"
+													>
+														<div
+															class="media-panel--post__item post-item__selected"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/d9544278-e3a2-4bf9-b9a1-ae7c98e91c5d.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title post-item--title__selected"
+															>
+																[Radio 28/04]
+																Quà tặng âm
+																nhạc: Tạm biệt
+																tháng Tư đầy
+																nắng và gió
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/ecf66d49-198e-40bb-a006-a3b359a1856b.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 03/03]
+																Happy Sun* Day
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/fbbcff7e-6fc5-4a72-98ae-81ec30a315d2.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Sun* Radio đặc
+																biệt: Lời cảm ơn
+																những hành động
+																tốt đẹp nhỏ bé
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/14cb4540-1748-42f6-a11e-364fc0e5cd4d.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 26/08]
+																Quà tặng âm
+																nhạc: Gửi tới
+																chàng trai có nụ
+																cười tỏa nắng...
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/6ee05aaf-08da-46a4-b821-8bddf68f049c.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 29/07]
+																Quà tặng âm
+																nhạc: Tớ chỉ
+																biết đến mỗi cậu
+																thôi đấy!!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/e2bba25b-7c3f-4ac5-9459-8e0c2c0fd6d6.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																[Radio 24/06]
+																Quà tặng âm
+																nhạc: Thanh xuân
+																của chúng ta
+																là...
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													class="media-panel--post__loadmore"
+												>
+													<a href="">Xem tiếp</a>
+												</div>
+											</div>
+										</div>
+										<div class="media-panel--content__item">
+											<div class="media-panel--post">
+												<div
+													class="media-panel--post__container"
+												>
+													<div
+														class="media-panel--post__main"
+													>
+														<div
+															class="media-panel--post__wrapper"
+														>
+															<a
+																href=""
+																class="media-panel--post__image"
+															>
+																<img
+																	src="https://news.sun-asterisk.com/images/440x248/15e74e74-41bd-471d-8827-ad70a8b68857.png"
+																	alt=""
+																	class="img__media-panel"
+																/>
+															</a>
+														</div>
+														<div
+															class="media-panel--post__title"
+														>
+															<a
+																href=""
+																class="media-panel--post__link"
+															>
+																Sun* Men's Day
+																2023: Vui thôi
+																chưa đủ, phải
+																gọi là "đã"!
+															</a>
+														</div>
+														<div
+															class="media-panel--post__info"
+														>
+															<span
+																><a href="">
+																	Đăng bởi
+																	Ling + Hằng
+																</a></span
+															>
+															<span
+																class="media-panel--post__line"
+															></span>
+															<span>
+																1097 Lượt xem
+															</span>
+														</div>
+													</div>
+													<div
+														class="media-panel--post__list"
+													>
+														<div
+															class="media-panel--post__item post-item__selected"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/15e74e74-41bd-471d-8827-ad70a8b68857.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title post-item--title__selected"
+															>
+																Sun* Men's Day
+																2023: Vui thôi
+																chưa đủ, phải
+																gọi là "đã"!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/346b9674-fcaf-4473-ac7f-47860a3db874.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Cùng nhìn ngắm
+																những khoảnh
+																khắc Giáng sinh
+																rộn ràng của
+																người Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/cd1e6050-67e6-4c01-a3b5-9bc080414bf8.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																6000 viên pin -
+																một kỷ lục mới
+																tiếp tục được
+																xác lập tại Ngày
+																hội "Đổi pin
+																rinh quà"
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/4db94e6a-478a-4e61-be3d-1a7c27e2dd9b.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Cùng những “KOL
+																đặc biệt” lan
+																tỏa cẩm nang
+																hành động
+																Sun*ness tới
+																toàn dân!
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/3b9b570b-5044-4e95-aa92-25fe52ae25d2.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Những "người lái
+																đò" thầm lặng
+																tại Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/d8715a29-8256-4afc-8a6a-da725f4ea655.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Sunner trải
+																nghiệm 1 tuần
+																trở thành "nghệ
+																nhân" đồ da
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/db5f5509-6ff6-4a7e-9569-b6576eb92a81.jpg);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																"Rụng tim" trước
+																những khoảnh
+																khắc đáng yêu
+																ngày 20/10 tại
+																Sun*
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/6cf58e48-ffa3-4c37-a09b-280efb53827d.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Toàn cảnh giải
+																cầu lông Sun*
+																Badminton Autumn
+																2022
+															</div>
+														</div>
+														<div
+															class="media-panel--post__item"
+														>
+															<div
+																class="media-panel--item__wrapper"
+															>
+																<div
+																	class="media-panel--item__image"
+																	style="
+																		background-image: url(https://news.sun-asterisk.com/images/440x248/2521f270-920e-4384-98b6-4a59f2829644.png);
+																	"
+																></div>
+															</div>
+															<div
+																class="media-panel--item__title"
+															>
+																Ấn tượng Trung
+																thu 3 miền của
+																người Sun*
+															</div>
+														</div>
+													</div>
+												</div>
+												<div
+													class="media-panel--post__loadmore"
+												>
+													<a href="">Xem tiếp</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="main-post--bottom">
+							<div class="home-hot_post">
+								<div class="hot-post--title">ĐANG HOT</div>
+								<div class="hot-post--list">
+									<div class="hot-post--item">
+										<div class="hot-post--item__position">
+											1
+										</div>
+										<div class="hot-post--item__post">
+											<div class="hot-post--item__title">
+												<a href="">
+													Chính thức ra mắt đội ngũ
+													Technical Heroes - "Trạm hỗ
+													trợ công nghệ" cho các dự án
+													tại Sun* Đà Nẵng
+												</a>
+											</div>
+											<div class="hot-post--item__view">
+												452 Lượt xem
+											</div>
+										</div>
+									</div>
+									<div class="hot-post--item">
+										<div class="hot-post--item__position">
+											2
+										</div>
+										<div class="hot-post--item__post">
+											<div class="hot-post--item__title">
+												<a href="">
+													Chinh phục chứng chỉ CKAD
+													với loạt kinh nghiệm 'không
+													thể chi tiết hơn' từ Sunner
+													Hữu Kim (R&D)
+												</a>
+											</div>
+											<div class="hot-post--item__view">
+												477 Lượt xem
+											</div>
+										</div>
+									</div>
+									<div class="hot-post--item">
+										<div class="hot-post--item__position">
+											3
+										</div>
+										<div class="hot-post--item__post">
+											<div class="hot-post--item__title">
+												<a href="">
+													Thành Toại: Khi thầy giáo
+													dạy Hóa trở thành lập trình
+													viên iOS
+												</a>
+											</div>
+											<div class="hot-post--item__view">
+												394 Lượt xem
+											</div>
+										</div>
+									</div>
+									<div class="hot-post--item">
+										<div
+											class="hot-post--item__position hot-post--item__positiongray"
+										>
+											4
+										</div>
+										<div class="hot-post--item__post">
+											<div class="hot-post--item__title">
+												<a href="">
+													#Đáng tiền: ''Cắt giảm thời
+													gian làm việc nhà'' bằng
+													những món đồ công nghệ do
+													người Sun* gợi ý!
+												</a>
+											</div>
+											<div class="hot-post--item__view">
+												340 Lượt xem
+											</div>
+										</div>
+									</div>
+									<div class="hot-post--item">
+										<div
+											class="hot-post--item__position hot-post--item__positiongray"
+										>
+											5
+										</div>
+										<div class="hot-post--item__post">
+											<div class="hot-post--item__title">
+												<a href="">
+													Bạn sợ giao tiếp Tiếng Anh?
+													Để Sunner chỉ cho!
+												</a>
+											</div>
+											<div class="hot-post--item__view">
+												357 Lượt xem
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="home-introduction">
+								<div class="introduction-title">ABOUT US</div>
+								<div class="introduction-slider">
+									<div class="introduction-slider--wrapper">
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/f99661ac-95be-45ef-bbc4-ab3d09592473.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/c980d703-e65b-4e1f-965f-423b271a80a9.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/6531c765-647d-4c38-b27d-c79a98a728cb.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/603c1103-eee0-4117-9d57-7ec2b7755b77.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/1d694798-0341-486f-abaf-eb47573fa3e3.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/10d4931d-b3c9-4ac8-a097-9d832581db7e.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/6558ee57-9159-4c96-9976-21349b4ec5f4.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+										<div
+											class="introduction-item__container"
+										>
+											<img
+												src="https://news.sun-asterisk.com/images/full/be6ea82b-816e-4efd-be1d-5ec0cdf4ba3e.png"
+												alt=""
+												class="introduction-item--img"
+											/>
+										</div>
+									</div>
+									<div
+										class="introduction-slider--pagination"
+									></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="home-category">
+						<div class="category-wrapper container">
+							<div class="category-list">
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">TIN NÓNG</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/fbfd956c-2c63-4ef8-83f5-dcb6736e5654.png"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Chính thức ra mắt đội ngũ
+												Technical Heroes - "Trạm hỗ trợ
+												công nghệ" cho các dự án tại
+												Sun* Đà Nẵng
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Sự thật phía sau việc ngành công
+												nghệ thông tin trên thế giới
+												đang chao đảo
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Tổng hợp từ A đến Z những cột
+												mốc lịch sử trong hành trình 10
+												năm của Sun*
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">DỰ ÁN - SẢN PHẨM</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/03ccd6f8-c386-41fa-8a8d-4191fb6208b2.jpg"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Thành quả thực chiến ấn tượng
+												trong thử nghiệm dịch vụ Atlas
+												Performance Testing
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Wakutan_Dự án đầu tiên áp dụng
+												công nghệ Nuxt 3 mới nhất
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												#Sun* Goal 2023: Thành công từ
+												dự án MVP - Bước tiến mới trên
+												hành trình khẳng định chất
+												Digital Creative Studio nhà Sun*
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">GÓC NHÌN</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/868a5149-12ff-46ac-9657-6e56f9b9fd0b.jpg"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Vinh Nhổn: Flex hay "ẩn ức" của
+												người Việt
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Lương về, có nên nộp hết tiền
+												cho vợ?
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Mâu thuẫn với đồng nghiệp và
+												chìa khóa giải quyết từ Sunner
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">GƯƠNG MẶT SUN*</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/e33346ef-68e3-487d-a498-1e58a6e132aa.jpg"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Xuân Nam và hành trình "chuyển
+												mình" trở thành lập trình viên
+												đa ngôn ngữ
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												#Làm nghề: Gặp gỡ những ''chiến
+												binh thầm lặng'' tại Ban Xúc
+												tiến phát triển dự án của Sun*
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Ngọc Duyên: Mọi thứ đẹp đẽ trong
+												đời đều bắt nguồn từ những điều
+												bình thường nhất
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">VĂN HOÁ HỌC TẬP</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/94ed0377-edc2-4afe-9e8b-06a2c97569ba.jpg"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Hơn 60 ngày đêm của chiến dịch
+												''đào tạo tập trung" cho đội ngũ
+												PSM, BrSE, Comtor tại Sun*
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Toàn Sun* sôi động với nhiều
+												chương trình học tập cực kỳ hấp
+												dẫn
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Đột nhập Effective Coaching
+												Skills - khóa học cực kỳ thú vị
+												của đội ngũ lãnh đạo nhà Sun*
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">VĂN HOÁ - SỰ KIỆN</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/456c662d-d637-4271-91ea-0432ef9d8d80.png"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Toàn cảnh giải thể thao “hot”
+												nhất mùa hè này tại Sun* - Sun*
+												Games 2023
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Bật mí các "chuyến du lịch nhà
+												người ta" tại Company Trip 2023
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Khuấy đảo mùa hè với giải thể
+												thao Sun* Games 2023
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">KINH NGHIỆM HAY</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/20b51db2-74ba-406f-9c2c-ed3194eec6a1.png"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												#Làm nghề: Khi người làm QA lên
+												tiếng!
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Mách Sunners những địa điểm du
+												lịch đội nhóm “ngon-bổ-rẻ” nhất
+												mùa hè năm nay
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Chinh phục chứng chỉ CKAD với
+												loạt kinh nghiệm 'không thể chi
+												tiết hơn' từ Sunner Hữu Kim
+												(R&D)
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">CHUYỆN TÂM TÌNH</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/d98ace41-2bf4-4ed2-9c7b-93161ca0ae56.png"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												Muôn màu muôn vẻ nam nhân Sun*
+												trong mắt các chị em
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Độc thân tuổi 30: "Chẳng phải
+												mặt trời cũng độc thân nhưng nó
+												vẫn tự toả sáng đó sao!"
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												Cuộc đời này có được mấy lần 10
+												năm?
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="category-post">
+									<div class="category-post--title">
+										<a href="">MULTIMEDIA</a>
+									</div>
+									<div class="category-post--main">
+										<div class="category-post--main__image">
+											<a
+												href=""
+												class="category-post--image__container"
+												><img
+													src="https://news.sun-asterisk.com/images/440x248/224df243-26cf-4368-8c94-78b8bc8a0cf8.png"
+													alt=""
+													class="img__category-post"
+											/></a>
+										</div>
+										<div class="category-post--main__title">
+											<a href="">
+												[Radio 30/12] Quà tặng âm nhạc:
+												Những dòng tâm sự của người Sun*
+												trong ngày làm việc cuối cùng
+												của năm 2022
+											</a>
+										</div>
+									</div>
+									<div class="category-post--list">
+										<div class="category-post--item">
+											<a href="">
+												Sun* Radio đặc biệt: Lời cảm ơn
+												những hành động tốt đẹp nhỏ bé
+											</a>
+										</div>
+										<div class="category-post--item">
+											<a href="">
+												[Radio 28/10] Quà tặng âm nhạc:
+												Em như ngọn hải đăng dẫn lối
+												cuộc đời anh!
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="recruitment">
+								<div class="recruitment-title">
+									<div class="recruitment-title--text">
+										HOT JOB
+									</div>
+									<div class="recruitment-title--line"></div>
+								</div>
+								<div class="recruitment-slider">
+									<div class="recruitment-slider--content">
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span>
+														PHP Engineer (Campaign
+														Sign-on Bonus: Về chung
+														nhà, nhận quà công nghệ)
+													</span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/c5002db9-decf-451e-a40d-5567d5233c22.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$600-1800 (Gross)
+														</span>
+														<span class="position">
+															Junior/Middle/Senior
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>Hà Nội</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span
+																>Trên 1 năm kinh
+																nghiệm</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span> Ruby Engineer </span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/a9cb5c78-e04f-4f66-9cf5-fc295ad8b914.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$600-1800 (Gross)
+														</span>
+														<span class="position">
+															Junior/Middle/Senior
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>Hà Nội</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span
+																>Trên 1 năm kinh
+																nghiệm</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span> QA/Tester </span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/fa5bac3d-b8b5-41a7-966e-d541b6c69952.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$500-1200 (Gross)
+														</span>
+														<span class="position">
+															Junior/Middle/Senior
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>Hà Nội</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span
+																>Trên 2 năm kinh
+																nghiệm</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span>
+														System Engineer
+													</span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/dde3ae00-c6f5-4fd5-be3c-d45536ea28f1.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$600-1800 (Gross)
+														</span>
+														<span class="position">
+															Junior/Middle/Senior
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>
+																Hà Nội, Đà Nẵng
+															</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span
+																>Trên 1 năm kinh
+																nghiệm</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span>
+														Front-end Engineer
+													</span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/c5002db9-decf-451e-a40d-5567d5233c22.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$600-1800 Gross
+														</span>
+														<span class="position">
+															ReactJS/VueJS
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>Hà Nội</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span>
+																Có trên 01 năm
+																kinh nghiệm thực
+																tiễn ở vị trí
+																tương đương
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div
+											class="recruitment-slider--container"
+										>
+											<div
+												class="recruitment-slider--item"
+											>
+												<div
+													class="recruitment-slider--item__top-header"
+												>
+													<span> BrSE </span>
+												</div>
+												<div
+													class="recruitment-slider--item__main-header"
+												>
+													<div
+														class="recruitment-slider--item__image"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/440x248/fc6f320c-0c73-4cd9-93fd-6b9186bf8720.jpg"
+															alt=""
+															class="img__recruitment"
+														/>
+													</div>
+													<div
+														class="recruitment-slider--item__detail"
+													>
+														<span class="salary">
+															$1000-2500 Gross
+														</span>
+														<span class="position">
+															Junior/Middle/Senior
+														</span>
+													</div>
+												</div>
+												<div
+													class="recruitment-slider--item__info"
+												>
+													<div
+														class="recruitment-slider--item__wrapper"
+													>
+														<div
+															class="recruitment-slider--item__address"
+														>
+															<i
+																class="fa-solid fa-location-dot recruitment-icon"
+															></i>
+															<span>
+																Hà Nội, Đà Nẵng
+															</span>
+														</div>
+														<div
+															class="recruitment-slider--item__experience"
+														>
+															<i
+																class="fa-solid fa-briefcase recruitment-icon"
+															></i>
+															<span
+																>Trên 1 năm kinh
+																nghiệm</span
+															>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="recruitment-slider--navigation">
+										<button
+											class="recruitment-slider--button__prev"
+										>
+											<i
+												class="fa-solid fa-arrow-left"
+											></i>
+										</button>
+										<button
+											class="recruitment-slider--button__next"
+										>
+											<i
+												class="fa-solid fa-arrow-right"
+											></i>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="author">
+								<div class="author-title">
+									<div class="author-title--text">
+										TÁC GIẢ
+									</div>
+									<div class="author-title--line"></div>
+									<div class="author-title--link">
+										<a href="">XEM TẤT CẢ</a>
+									</div>
+								</div>
+								<div class="author-slider">
+									<div class="author-slider--content">
+										<div class="author-slider--container">
+											<div class="author-slider--item">
+												<a
+													href=""
+													class="author-slider--link"
+												>
+													<div
+														class="author-slider--avatar"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/full/d325f7ca-98b8-4d7e-b279-6e14faf0f532.jpg"
+															alt=""
+															class="img__author"
+														/>
+													</div>
+													<div
+														class="author-slider--name"
+													>
+														Chạn Vương 9x
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="author-slider--container">
+											<div class="author-slider--item">
+												<a
+													href=""
+													class="author-slider--link"
+												>
+													<div
+														class="author-slider--avatar"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/full/f1532f07-1fdd-4540-950b-8a1f1c3ec168.jpg"
+															alt=""
+															class="img__author"
+														/>
+													</div>
+													<div
+														class="author-slider--name"
+													>
+														Ve.
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="author-slider--container">
+											<div class="author-slider--item">
+												<a
+													href=""
+													class="author-slider--link"
+												>
+													<div
+														class="author-slider--avatar"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/full/c3939f8f-9333-4b5b-8177-b3b3655f02ba.jpeg"
+															alt=""
+															class="img__author"
+														/>
+													</div>
+													<div
+														class="author-slider--name"
+													>
+														Wataridori
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="author-slider--container">
+											<div class="author-slider--item">
+												<a
+													href=""
+													class="author-slider--link"
+												>
+													<div
+														class="author-slider--avatar"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/full/4280454c-51cc-4c81-8f92-d9345704ca0e.png"
+															alt=""
+															class="img__author"
+														/>
+													</div>
+													<div
+														class="author-slider--name"
+													>
+														Q
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="author-slider--container">
+											<div class="author-slider--item">
+												<a
+													href=""
+													class="author-slider--link"
+												>
+													<div
+														class="author-slider--avatar"
+													>
+														<img
+															src="https://news.sun-asterisk.com/images/full/7634daf1-0b3a-411c-abdf-30a985b94c65.jpg"
+															alt=""
+															class="img__author"
+														/>
+													</div>
+													<div
+														class="author-slider--name"
+													>
+														Nga Ba Phải
+													</div>
+												</a>
+											</div>
+										</div>
+									</div>
+									<div class="author-slider--navigation">
+										<button
+											class="author-slider--button__prev"
+										>
+											<i
+												class="fa-solid fa-arrow-left"
+											></i>
+										</button>
+										<button
+											class="author-slider--button__next"
+										>
+											<i
+												class="fa-solid fa-arrow-right"
+											></i>
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-			<div class="content"></div>
-			<div class="footer"></div>
+			<div class="footer">
+				<div class="footer-container container">
+					<div class="main-footer">
+						<div class="main-footer--container">
+							<div class="main-footer--title">LIÊN HỆ</div>
+							<div class="main-footer--content">
+								<p>Sun* Inc.</p>
+								<p>Tòa soạn nội bộ Sun* Inc.</p>
+								<p>
+									Địa chỉ: Tầng 13, Tòa nhà Keangnam Land Mark
+									72, Đường Phạm Hùng, Quận Nam Từ Liêm, TP.
+									Hà Nội.
+								</p>
+							</div>
+						</div>
+						<div class="main-footer--container">
+							<div class="main-footer--title">
+								CHỊU TRÁCH NHIỆM NỘI DUNG
+							</div>
+							<div class="main-footer--content">
+								<p>
+									Biên tập và chỉnh sửa bởi Ban Truyền thông
+									nội bộ.
+								</p>
+								<p>Đường dây nóng: 024.38.378.453 (nhánh 6)</p>
+							</div>
+						</div>
+						<div class="main-footer--container">
+							<div class="main-footer--title">GÓP Ý</div>
+							<div class="main-footer--content">
+								<p>
+									Sun* hoan nghênh độc giả gửi góp ý cho chúng
+									tôi.
+								</p>
+								<div class="main-footer--form">
+									<span>Gửi phản hồi</span>
+									<i
+										class="fa-solid fa-paper-plane icon-send"
+									></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="banner-footer">
+						<div class="banner-footer--logo">
+							<a href="" class="footer-logo"
+								><img
+									src="https://news.sun-asterisk.com/_nuxt/img/d80ebd6.png"
+									alt=""
+							/></a>
+						</div>
+						<div class="banner-footer--social">
+							<div class="footer-social--container">
+								<a href="" class="link-social"
+									><i
+										class="fa-sharp fa-solid fa-earth-asia"
+									></i
+								></a>
+							</div>
+							<div class="footer-social--container">
+								<a href="" class="link-social"
+									><i class="fa-brands fa-youtube"></i
+								></a>
+							</div>
+							<div class="footer-social--container">
+								<a href="" class="link-social"
+									><i class="fa-brands fa-facebook"></i
+								></a>
+							</div>
+						</div>
+					</div>
+					<div class="bottom-footer">
+						Sun* News, trang tin nội bộ của Sun* Inc. © Toàn bộ bản
+						quyền thuộc Sun* Inc.
+					</div>
+				</div>
+			</div>
 			<div class="contact"></div>
 		</div>
 		<script src="./assets/js/jquery-3.7.0.min.js"></script>
+		<script src="./assets/js/jQueryUI/jquery-ui.min.js"></script>
 		<script src="./assets/js/main.js"></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
 	</body>
 </html>
