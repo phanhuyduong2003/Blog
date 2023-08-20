@@ -716,18 +716,12 @@
                                         padding: 0;
                                         margin-top: 15px;
                                     }
-                                    .main-post--author {
-                                    }
                                     .main-post--line {
                                         width: 1px;
                                         height: 10px;
                                         display: inline-block;
                                         margin: 0 10px;
                                         background-color: #6d758c;
-                                    }
-                                    .main-post--view {
-                                    }
-                                    .main-post--time {
                                     }
                                 }
                             }
@@ -1290,6 +1284,7 @@
                                                         border-radius: 50%;
                                                         border: 3px solid #9595954d;
                                                         border-top-color: gray;
+                                                        animation: spin 1.5s ease-in-out infinite;
                                                         -webkit-animation: spin 1.5s ease-in-out infinite;
                                                         -moz-animation: spin 1.5s ease-in-out infinite;
                                                         @keyframes spin {

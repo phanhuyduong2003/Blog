@@ -1490,6 +1490,7 @@ a {
   border-radius: 50%;
   border: 3px solid rgba(149, 149, 149, 0.3019607843);
   border-top-color: gray;
+  animation: spin 1.5s ease-in-out infinite;
   -webkit-animation: spin 1.5s ease-in-out infinite;
   -moz-animation: spin 1.5s ease-in-out infinite;
 }
