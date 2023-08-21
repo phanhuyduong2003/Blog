@@ -14,17 +14,13 @@
                 height: 64px;
                 transition: height 0.3s ease-out;
                 @include mq_min_1280 {
-                    padding-left: 17px;
-                    padding-right: 25px;
+                    padding: 0 25px 0 17px;
                 }
                 .header-top__container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
+                    @include flex(space-between, center);
                     transition: all 0.3s ease;
                     .header-top__left {
-                        display: flex;
-                        align-items: center;
+                        @include flex(unset, center);
                         .header-top__logo {
                             max-width: 145px;
                             margin-right: 30px;
@@ -40,8 +36,7 @@
                             .header-top__tag-item {
                                 display: inline-block;
                                 border-radius: 3px;
-                                margin-right: 10px;
-                                margin-bottom: 1px;
+                                margin: 0 10px 1px 0;
                                 background-color: #f7f9f9;
                                 a {
                                     padding: 5px 10px;
@@ -65,8 +60,7 @@
                     }
                     .header-top__right {
                         min-width: 420px;
-                        display: flex;
-                        align-items: center;
+                        @include flex(space-between, center);
                         .header-top__search {
                             min-width: 250px;
                             margin-right: 15px;
@@ -86,9 +80,6 @@
                                     transition: all 0.4s ease;
                                     color: #84909f;
                                     background-color: #fff;
-                                    font-family: 'Open Sans', sans-serif;
-                                    font-size: 14px;
-                                    line-height: 40px;
                                     &:hover {
                                         border: 1px solid #c0c4cc;
                                         border-radius: 4px;
@@ -115,9 +106,7 @@
                             cursor: pointer;
                             .select-language__container {
                                 width: 90px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
+                                @include flex(center, center);
                                 user-select: none;
                                 img {
                                     margin-right: 8px;
@@ -143,13 +132,13 @@
                                 transition: opacity 0.3s ease;
                             }
                             .select-language__list-language {
-                                height: auto;
-                                opacity: 1;
-                                padding: 3px 0;
                                 position: absolute;
                                 z-index: 1;
                                 top: 20px;
                                 right: 0;
+                                height: auto;
+                                opacity: 1;
+                                padding: 3px 0;
                                 margin-top: 12px;
                                 border: 1px solid #ebeef5;
                                 border-radius: 4px;
@@ -169,8 +158,7 @@
                                 }
                                 .header-top__language-item {
                                     height: 33px;
-                                    display: flex;
-                                    align-items: center;
+                                    @include flex(unset, center);
                                     padding-left: 26px;
                                     color: #606266;
                                     &:hover {
@@ -180,7 +168,6 @@
                                     img {
                                         margin: 0 -20px;
                                         padding: 0 20px;
-                                        margin-right: 8px;
                                     }
                                     .text {
                                         padding: 0 20px;
@@ -215,29 +202,23 @@
                 transition: height 0.3s ease-out;
             }
             .header-main {
-                padding-left: 17px;
-                padding-right: 25px;
+                padding: 0 25px 0 17px;
                 .header-main__wrapper {
                     width: 100%;
                     height: 58px;
-                    display: flex;
-                    align-items: center;
+                    @include flex(unset, center);
                     .menu-container {
                         width: 100%;
                         .menu-bar {
-                            display: flex;
-                            justify-content: space-evenly;
-                            align-items: center;
+                            @include flex(space-evenly, center);
                             background-color: #fff;
                         }
                         .menu-item {
-                            display: flex;
-                            align-items: center;
+                            @include flex(unset, center);
                             position: relative;
                             .menu-link {
                                 height: 56px;
-                                display: flex;
-                                align-items: center;
+                                @include flex(unset, center);
                                 padding-right: 20px;
                                 font-size: 14px;
                                 color: #24253d;
@@ -269,8 +250,7 @@
                                         padding: 5px 0;
                                         font-size: 14px;
                                         .submenu-link {
-                                            display: flex;
-                                            align-items: center;
+                                            @include flex(unset, center);
                                             height: 36px;
                                             padding: 0 10px;
                                         }
@@ -309,9 +289,7 @@
         }
         .mobile-header__main-header {
             height: 76px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            @include flex(space-between, center);
             .main-header__logo {
                 padding-left: 20px;
                 max-width: 140px;
@@ -325,8 +303,7 @@
                 }
             }
             .main-header__menu {
-                display: flex;
-                align-items: center;
+                @include flex(unset, center);
                 .menu__select-language {
                     position: relative;
                     padding-right: 5px;
@@ -334,8 +311,7 @@
                     .select-language__container {
                         height: 35px;
                         position: relative;
-                        display: flex;
-                        align-items: center;
+                        @include flex(unset, center);
                         padding-right: 15px;
                         cursor: pointer;
                         user-select: none;
@@ -425,8 +401,7 @@
             background-color: #fff;
             transition: all 0.5s ease;
             @include mq_min_768 {
-                display: flex;
-                justify-content: flex-end;
+                @include flex(flex-end, unset);
                 background-color: initial;
             }
             .menu-nav__container {
@@ -441,11 +416,8 @@
                     background-color: #fff;
                 }
                 .menu-nav__header {
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    padding-left: 20px;
-                    padding-bottom: 10px;
+                    @include flex(space-between, center);
+                    padding: 0 0 10px 20px;
                     .menu-nav__unlogin {
                         padding: 8px 10px;
                         border-radius: 3px;
@@ -468,8 +440,7 @@
                 .menu-nav__search {
                     margin-top: 20px;
                     padding: 0 20px;
-                    display: flex;
-                    justify-content: center;
+                    @include flex(center, unset);
                     .search-form {
                         flex-grow: 2;
                         .input-container {
@@ -511,9 +482,7 @@
                         border-left: none;
                         border-top-right-radius: 4px;
                         border-bottom-right-radius: 4px;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        @include flex(center, center);
                         box-sizing: border-box;
                         cursor: pointer;
                         color: #959bac;
@@ -540,9 +509,7 @@
                             color: #24253d;
                         }
                         .accordion-container {
-                            display: flex;
-                            justify-content: space-between;
-                            align-items: center;
+                            @include flex(space-between, center);
                             border: 0;
                             border-bottom: 1px solid #ececec;
                             margin: 0;
@@ -649,7 +616,7 @@
                 .featured-post {
                     @include mq_min_1280 {
                         padding-top: 20px;
-                        display: flex;
+                        @include flex(unset, unset);
                         column-gap: 20px;
                     }
                     &--main {
@@ -706,8 +673,7 @@
                                     }
                                 }
                                 .main-post--info {
-                                    display: flex;
-                                    align-items: center;
+                                    @include flex(unset, center);
                                     padding: 15px 20px;
                                     font-size: 12px;
                                     line-height: 1.5;
@@ -715,6 +681,16 @@
                                     @include mq_min_1280 {
                                         padding: 0;
                                         margin-top: 15px;
+                                    }
+                                    .main-post--author {
+                                        a {
+                                            max-width: 120px;
+                                            @include truncate_text(1);
+                                        }
+                                    }
+                                    .main-post--view {
+                                        max-width: 80px;
+                                        @include truncate_text(1);
                                     }
                                     .main-post--line {
                                         width: 1px;
@@ -763,11 +739,20 @@
                                         }
                                         .side-post--info {
                                             padding-bottom: 15px;
-                                            display: flex;
-                                            align-items: center;
+                                            @include flex(unset, center);
                                             line-height: 1.5;
                                             font-size: 12px;
                                             color: #6d758c;
+                                            .side-post--author {
+                                                a {
+                                                    max-width: 150px;
+                                                    @include truncate_text(1);
+                                                }
+                                            }
+                                            .side-post--view {
+                                                max-width: 80px;
+                                                @include truncate_text(1);
+                                            }
                                             .side-post--line {
                                                 width: 1px;
                                                 height: 10px;
@@ -792,8 +777,7 @@
                     margin-top: 60px;
                 }
                 .new-post--title {
-                    display: flex;
-                    align-items: center;
+                    @include flex(unset, center);
                     &::before {
                         content: '';
                         width: 5px;
@@ -825,73 +809,76 @@
                     margin-top: 25px;
                     position: relative;
                     &_content {
-                        .slick-list {
-                            .slick-track {
-                                .slick-slide {
-                                    margin-left: 10px;
-                                    margin-right: 10px;
-                                }
-                            }
-                        }
-                        .new-post--slider__item {
-                            .new-post--slider__wrapper {
-                                position: relative;
-                                box-shadow: 0 6px 23px 0 rgba(60, 60, 60, 0.2);
-                                border-radius: 2.25px;
-                                overflow: hidden;
-                                margin-bottom: 10.5px;
-                                .new-post--slider__image {
-                                    width: 100%;
-                                    transition: all 0.4s ease;
-                                    &:hover {
-                                        transform: scale(1.05);
-                                    }
-                                    .img_new-post--slider {
+                        .newpost-slider--container {
+                            .new-post--slider__item {
+                                margin: 0 10px;
+                                .new-post--slider__wrapper {
+                                    position: relative;
+                                    box-shadow: 0 6px 23px 0 rgba(60, 60, 60, 0.2);
+                                    border-radius: 2.25px;
+                                    overflow: hidden;
+                                    margin-bottom: 10.5px;
+                                    .new-post--slider__image {
+                                        display: block;
                                         width: 100%;
-                                        height: auto;
-                                        aspect-ratio: 16/9;
-                                        object-fit: cover;
+                                        transition: all 0.4s ease;
+                                        &:hover {
+                                            transform: scale(1.05);
+                                        }
+                                        .img_new-post--slider {
+                                            width: 100%;
+                                            height: auto;
+                                            aspect-ratio: 16/9;
+                                            object-fit: cover;
+                                        }
                                     }
-                                }
-                                .new-post--slider__share {
-                                    position: absolute;
-                                    top: 0;
-                                    right: 0;
-                                    padding: 7px 6px;
-                                    color: #fff;
-                                    border: 1px solid #84909f;
-                                    border-radius: 1px;
-                                    font-size: 12px;
-                                    font-family: 'Open Sans', sans-serif;
-                                    background-color: rgba(36, 37, 61, 0.53);
-                                    cursor: pointer;
-                                    .icon-share {
+                                    .new-post--slider__share {
+                                        position: absolute;
+                                        top: 0;
+                                        right: 0;
+                                        padding: 7px 6px;
                                         color: #fff;
+                                        border: 1px solid #84909f;
+                                        border-radius: 1px;
+                                        font-size: 12px;
+                                        font-family: 'Open Sans', sans-serif;
+                                        background-color: rgba(36, 37, 61, 0.53);
+                                        cursor: pointer;
+                                        .icon-share {
+                                            color: #fff;
+                                        }
                                     }
                                 }
-                            }
-                            .new-post--slider__title {
-                                .title-link {
-                                    min-height: 51px;
-                                    max-height: 51px;
-                                    font-size: 17px;
-                                    font-weight: 700;
-                                    line-height: 1.5;
-                                    @include truncate_text(2);
+                                .new-post--slider__title {
+                                    .title-link {
+                                        min-height: 51px;
+                                        max-height: 51px;
+                                        font-size: 17px;
+                                        font-weight: 700;
+                                        line-height: 1.5;
+                                        @include truncate_text(2);
+                                    }
                                 }
-                            }
-                            .new-post--slider__info {
-                                display: flex;
-                                align-items: center;
-                                padding-bottom: 15px;
-                                font-size: 12px;
-                                line-height: 1.5;
-                                color: #6d758c;
-                                .new-post--slider__line {
-                                    width: 1px;
-                                    height: 12px;
-                                    margin: 0 10px;
-                                    background-color: #cacdd5;
+                                .new-post--slider__info {
+                                    @include flex(unset, center);
+                                    padding-bottom: 15px;
+                                    font-size: 12px;
+                                    line-height: 1.5;
+                                    color: #6d758c;
+                                    .new-post--slider__author {
+                                        max-width: 120px;
+                                        @include truncate_text(1);
+                                    }
+                                    .new-post--slider__view {
+                                        max-width: 80px;
+                                        @include truncate_text(1);
+                                    }
+                                    .new-post--slider__line {
+                                        width: 1px;
+                                        height: 12px;
+                                        margin: 0 10px;
+                                        background-color: #cacdd5;
+                                    }
                                 }
                             }
                         }
@@ -936,7 +923,7 @@
             .home-main_post {
                 margin-bottom: 40px;
                 @include mq_min_1280 {
-                    display: flex;
+                    @include flex(unset, unset);
                 }
                 .main-post--top {
                     @include mq_min_1280 {
@@ -947,8 +934,7 @@
                         margin-bottom: 40px;
                         .for-you--header {
                             &__title {
-                                display: flex;
-                                align-items: center;
+                                @include flex(unset, center);
                                 &::before {
                                     content: '';
                                     display: block;
@@ -985,7 +971,7 @@
                                 border-radius: 4px;
                                 box-shadow: 0 2px 15px 0 rgba(32, 33, 47, 0.14);
                                 @include mq_min_768 {
-                                    display: flex;
+                                    @include flex(unset, center);
                                 }
                                 &__image {
                                     width: 100%;
@@ -998,9 +984,9 @@
                                     @include mq_min_992 {
                                         height: 168.75px;
                                     }
-                                    @include mq_min_1280 {
-                                        height: 160.3125px;
-                                    }
+                                    // @include mq_min_1280 {
+                                    //     height: 160.3125px;
+                                    // }
                                     &:hover {
                                         .img__for-you {
                                             transform: scale(1.05);
@@ -1113,14 +1099,23 @@
                                         }
                                     }
                                     &-info {
-                                        display: flex;
-                                        align-items: center;
+                                        @include flex(unset, center);
                                         border-top: 1px solid #e4e4e4;
                                         padding: 9px 0;
                                         line-height: 20px;
                                         color: #6d758c;
                                         @include mq_min_768 {
                                             border-top: 0;
+                                        }
+                                        .foryou-item--author {
+                                            a {
+                                                max-width: 120px;
+                                                @include truncate_text(1);
+                                            }
+                                        }
+                                        .foryou-item--view {
+                                            max-width: 80px;
+                                            @include truncate_text(1);
                                         }
                                         span {
                                             font-size: 12px;
@@ -1178,8 +1173,7 @@
                                         background-color: #c4a878;
                                     }
                                     .media-panel--header__navbar {
-                                        display: flex;
-                                        justify-content: center;
+                                        @include flex(center, unset);
                                         margin-bottom: -1px;
                                         @include mq_min_768 {
                                             justify-content: flex-end;
@@ -1312,6 +1306,16 @@
                                                 }
                                                 .media-panel--post__info {
                                                     display: flex;
+                                                    .media-panel--author {
+                                                        a {
+                                                            max-width: 120px;
+                                                            @include truncate_text(1);
+                                                        }
+                                                    }
+                                                    .media-panel--view {
+                                                        max-width: 90px;
+                                                        @include truncate_text(1);
+                                                    }
                                                     span {
                                                         font-size: 12px;
                                                         color: #fff;
@@ -1415,9 +1419,7 @@
                                     width: 37px;
                                     height: 37px;
                                     aspect-ratio: 1;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
+                                    @include flex(center, center);
                                     margin-right: 17px;
                                     background-image: url('https://news.sun-asterisk.com/_nuxt/img/25404de.png');
                                     background-repeat: no-repeat;
@@ -1432,9 +1434,7 @@
                                     width: 37px;
                                     height: 37px;
                                     aspect-ratio: 1;
-                                    display: flex;
-                                    justify-content: center;
-                                    align-items: center;
+                                    @include flex(center, center);
                                     margin-right: 17px;
                                     background-image: url('https://news.sun-asterisk.com/_nuxt/img/407738d.png');
                                     background-repeat: no-repeat;
@@ -1447,14 +1447,18 @@
                                 }
                                 &__post {
                                     .hot-post--item__title {
+                                        // max-height: 850px;
                                         a {
                                             margin-bottom: 15px;
                                             line-height: 1.3;
                                             font-size: 14px;
                                             font-weight: 700;
+                                            @include truncate_text(3);
                                         }
                                     }
                                     .hot-post--item__view {
+                                        max-width: 100px;
+                                        @include truncate_text(1);
                                         font-size: 12px;
                                         color: #6d758c;
                                     }
@@ -1562,8 +1566,7 @@
                     }
                     .category-list {
                         @include mq_min_992 {
-                            display: flex;
-                            justify-content: flex-start;
+                            @include flex(flex-start, unset);
                             flex-wrap: wrap;
                             margin: 0 -12.5px;
                         }
@@ -1585,17 +1588,12 @@
                                 margin: 0 12.5px 50px;
                             }
                             @include mq_min_1280 {
-                                width: calc(100% / 2 - 50px);
-                                margin: 0 67.5px 50px;
-                            }
-                            @include mq_min_1400 {
                                 width: calc(100% / 3 - 25px);
                                 margin: 0 12.5px 50px;
                             }
                             &--title {
                                 a {
-                                    display: flex;
-                                    align-items: center;
+                                    @include flex(unset, center);
                                     margin-bottom: 17px;
                                     font-size: 17px;
                                     font-weight: 700;
@@ -1695,8 +1693,7 @@
                     }
                     .recruitment {
                         &-title {
-                            display: flex;
-                            align-items: center;
+                            @include flex(unset, center);
                             margin-bottom: 25px;
                             &--text {
                                 &::before {
@@ -1721,8 +1718,7 @@
                             position: relative;
                             &--content {
                                 .recruitment-slider--container {
-                                    display: flex;
-                                    justify-content: center;
+                                    @include flex(center, unset);
                                     .recruitment-slider--item {
                                         width: 85% !important;
                                         max-width: 260px !important;
@@ -1755,9 +1751,7 @@
                                             .recruitment-slider--item__image {
                                                 width: 57px;
                                                 height: 57px;
-                                                display: flex;
-                                                justify-content: center;
-                                                align-items: center;
+                                                @include flex(center, center);
                                                 margin-right: 10px;
                                                 position: relative;
                                                 bottom: -10px;
@@ -1792,8 +1786,7 @@
                                                 .recruitment-slider--item__address,
                                                 .recruitment-slider--item__experience {
                                                     width: 100%;
-                                                    display: flex;
-                                                    align-items: center;
+                                                    @include flex(unset, center);
                                                     margin-bottom: 10px;
                                                     font-size: 14px;
                                                     color: #6d758c;
@@ -1853,8 +1846,7 @@
                         margin-top: 24px;
                         margin-bottom: 20px;
                         &-title {
-                            display: flex;
-                            align-items: center;
+                            @include flex(unset, center);
                             margin-bottom: 25px;
                             &--text {
                                 display: flex;
@@ -1892,8 +1884,7 @@
                             position: relative;
                             &--content {
                                 .author-slider--container {
-                                    display: flex;
-                                    justify-content: center;
+                                    @include flex(center, unset);
                                     .author-slider--item {
                                         max-width: 255px;
                                         @include mq_min_768 {
@@ -2002,8 +1993,7 @@
                         font-size: 14px;
                         color: #84909f;
                         .main-footer--form {
-                            display: flex;
-                            justify-content: center;
+                            @include flex(center, unset);
                             margin-top: 10px;
                             border-radius: 3px;
                             font-size: 16px;
@@ -2023,9 +2013,7 @@
             }
             .banner-footer {
                 height: 85px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex(center, center);
                 margin: 15px auto 30px;
                 padding: 0 60px;
                 background-image: url('https://news.sun-asterisk.com/_nuxt/img/bb8beb4.jpeg');
@@ -2052,9 +2040,9 @@
                         line-height: 40px;
                         border-radius: 100%;
                         background-color: rgba(36, 37, 61, 0.4);
-                        .link-social {
-                            color: #fff;
-                        }
+                    }
+                    .link-social {
+                        color: #fff;
                     }
                 }
             }

@@ -1,4 +1,5 @@
 var RUN = {
+    //Thay đổi ngôn ngữ trên điện thoại
     handleSelectLanguageMobile: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -15,6 +16,8 @@ var RUN = {
             event.stopPropagation();
         });
     },
+
+    //Thay đổi ngôn ngữ
     handleSelectLanguage: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -30,6 +33,8 @@ var RUN = {
             $('.language-item__selected').removeClass('language-item__selected');
         });
     },
+
+    //Đóng mở sidebar
     handleSideBarMobile: () => {
         $('.menu__sidebar-button').on('click', function () {
             $('.mobile-header__menu-nav').addClass('menu-nav__active');
@@ -43,17 +48,24 @@ var RUN = {
             $('body').css('overflowX', 'hidden');
         });
     },
+
+    //Đóng mở submenu
     handleOpenSubmenu: () => {
         $('.menu-nav__category').accordion({
+            header: '.accordion-container',
             icons: false,
             collapsible: true,
-            active: false,
+            active: true,
             heightStyle: 'content',
         });
         $('.menu-nav__category').on('click', function () {
-            $(this).find('.accordion-container .accordion-button').toggleClass('fa-caret-right fa-caret-down');
+            $('.accordion-button').not($(this).find('.accordion-button')).removeClass('fa-caret-down');
+            $('.menu-nav__category').not(this).accordion('option', 'active', false);
+            $(this).find('.accordion-button').toggleClass('fa-caret-down');
         });
     },
+
+    //Ẩn menu khi cuộn
     handleMenuOnScroll: () => {
         var prevScrollpos = 0;
         window.onscroll = function () {
@@ -66,11 +78,13 @@ var RUN = {
             prevScrollpos = currentScrollPos;
         };
     },
+
+    //Cài đặt slide cho bài viết mới
     handleSlideNewPost: () => {
         $('.new-post--slider_content').slick({
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
             speed: 800,
@@ -81,7 +95,7 @@ var RUN = {
                     breakpoint: 1280,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToScroll: 1,
                     },
                 },
                 {
@@ -94,6 +108,8 @@ var RUN = {
             ],
         });
     },
+
+    //Cài đặt slide cho ảnh giới thiệu
     handleSlideIntroduction: () => {
         $('.introduction-slider--wrapper').slick({
             infinite: true,
@@ -107,12 +123,14 @@ var RUN = {
             arrows: false,
         });
     },
+
+    //Cài đặt slide cho tuyển dụng
     handleSlideRecruitment: () => {
         $('.recruitment-slider--content').slick({
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 4,
-            // autoplay: true,
+            slidesToScroll: 2,
+            autoplay: true,
             autoplaySpeed: 3000,
             speed: 1000,
             prevArrow: $('.recruitment-slider--button__prev'),
@@ -142,11 +160,13 @@ var RUN = {
             ],
         });
     },
+
+    //Cài đặt slide cho tác giả
     handleSlideAuthor: () => {
         $('.author-slider--content').slick({
             infinite: true,
             slidesToShow: 4,
-            slidesToScroll: 4,
+            slidesToScroll: 1,
             prevArrow: $('.author-slider--button__prev'),
             nextArrow: $('.author-slider--button__next'),
             responsive: [
@@ -154,14 +174,14 @@ var RUN = {
                     breakpoint: 1280,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 3,
+                        slidesToScroll: 1,
                     },
                 },
                 {
                     breakpoint: 992,
                     settings: {
                         slidesToShow: 2,
-                        slidesToScroll: 2,
+                        slidesToScroll: 1,
                     },
                 },
                 {
@@ -174,6 +194,8 @@ var RUN = {
             ],
         });
     },
+
+    //Xử lý lựa chọn xem ảnh/video
     handleMediaPanel: () => {
         let all_media = [
             {
@@ -374,17 +396,23 @@ var RUN = {
                 type: 2,
             },
         ];
+
+        //Lấy ra thể loại mặc định
         const handleGetTypeDefault = () => {
             let type_default = $('.media-panel--content__item');
 
             $(type_default[0]).removeClass('default');
             $(type_default[0]).addClass('default');
         };
+
+        //Lấy ra danh sách thể loại
         const handleGetListType = () => {
             type_navbar.map((item) => {
                 $('.media-panel--header__navbar').append(`<div class="navbar-item" data-type=${item.type}>${item.name}</div>`);
             });
         };
+
+        //Xử lý chuyển động chờ ảnh/video từ dữ liệu
         const handleOverLoading = () => {
             $('.media-panel--post__image').addClass('loading-iframe');
             $('.media-panel--post__iframe').addClass('loading-iframe');
@@ -393,25 +421,33 @@ var RUN = {
                 $('.media-panel--post__iframe').removeClass('loading-iframe');
             }, 2000);
         };
+
+        //Lấy bài viết mặc định
         const handleGetPostDefault = () => {
             let lastPostID = all_media[0].id;
             const postDefault = () => {
                 let handleListPost = all_media.filter((item) => item.id === Number(lastPostID));
                 $('.media-panel--post__main').append(
-                    `<div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleListPost[0].detail.view} </span> </div>`,
+                    `<div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleListPost[0].detail.view} </span> </div>`,
                 );
                 handleOverLoading();
             };
             postDefault();
         };
+
+        //Lấy thể loại được chọn mặc định
         const handleGetNavbarDefault = () => {
             let navbarItem = $('.navbar-item');
             $(navbarItem[0]).addClass('navbar-item__selected');
         };
+
+        //Lấy bài viết được chọn mặc định
         const handleGetPostSelected = () => {
             let postItem = $('.media-panel--post__item');
             $(postItem[0]).addClass('post-item__selected');
         };
+
+        //Xử lý chọn bài viết trong danh sách bài viết
         const handleClickPost = () => {
             let id_navbar = type_navbar[0].type;
             let handleTypePost = all_media.filter((item) => (Number(id_navbar) === 99 ? item : item.type === Number(id_navbar)));
@@ -428,11 +464,11 @@ var RUN = {
                     if (handleListPost[0].detail.video_main !== '') {
                         $('.media-panel--post__main').replaceWith(
                             `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__iframe loading-iframe">
-<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleListPost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleListPost[0].detail.view} </span> </div></div>`,
+<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleListPost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleListPost[0].detail.view} </span> </div></div>`,
                         );
                     } else {
                         $('.media-panel--post__main').replaceWith(
-                            `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleListPost[0].detail.view} </span> </div></div>`,
+                            `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleListPost[0].detail.view} </span> </div></div>`,
                         );
                     }
                     $('.post-item__selected').removeClass('post-item__selected');
@@ -443,6 +479,8 @@ var RUN = {
                 });
             });
         };
+
+        //Xử lý chọn thể loại
         const handleClickNavbar = () => {
             $('.navbar-item').on('click', function () {
                 $('.media-panel--post__main').replaceWith(`<div class="media-panel--post__main"></div>`);
@@ -457,11 +495,11 @@ var RUN = {
                 if (handleTypePost[0].detail.video_main !== '') {
                     $('.media-panel--post__main').replaceWith(
                         `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__iframe loading-iframe">
-<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleTypePost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleTypePost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleTypePost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleTypePost[0].detail.view} </span> </div></div>`,
+<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleTypePost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleTypePost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleTypePost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleTypePost[0].detail.view} </span> </div></div>`,
                     );
                 } else {
                     $('.media-panel--post__main').replaceWith(
-                        `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleTypePost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleTypePost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleTypePost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleTypePost[0].detail.view} </span> </div></div>`,
+                        `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleTypePost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleTypePost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleTypePost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleTypePost[0].detail.view} </span> </div></div>`,
                     );
                 }
                 handleOverLoading();
@@ -475,6 +513,8 @@ var RUN = {
                 $(this).addClass('navbar-item__selected');
             });
         };
+
+        //Xử lý khi chọn bài viết
         const handleClickItem = () => {
             $('.media-panel--post__item').on('click', function () {
                 let id_post = $(this).attr('data-post');
@@ -482,11 +522,11 @@ var RUN = {
                 if (handleListPost[0].detail.video_main !== '') {
                     $('.media-panel--post__main').replaceWith(
                         `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__iframe loading-iframe">
-<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleListPost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleListPost[0].detail.view} </span> </div></div>`,
+<div style="padding: 56.25% 0 0 0; position: relative"><iframe src="${handleListPost[0].detail.video_main}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleListPost[0].detail.view} </span> </div></div>`,
                     );
                 } else {
                     $('.media-panel--post__main').replaceWith(
-                        `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span ><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span> ${handleListPost[0].detail.view} </span> </div></div>`,
+                        `<div class="media-panel--post__main"><div class="media-panel--post__wrapper "><a href="" class="media-panel--post__image loading-iframe"><img src="${handleListPost[0].detail.image_main}" alt="" class="img__media-panel" /> </a> </div> <div class="media-panel--post__title" > <a href="" class="media-panel--post__link" > ${handleListPost[0].title} </a> </div> <div class="media-panel--post__info" > <span class="media-panel--author"><a href="">${handleListPost[0].detail.author} </a></span > <span class="media-panel--post__line" ></span> <span class="media-panel--view"> ${handleListPost[0].detail.view} </span> </div></div>`,
                     );
                 }
                 $('.post-item__selected').removeClass('post-item__selected');
@@ -496,9 +536,6 @@ var RUN = {
                 event.stopPropagation();
             });
         };
-        // navbarSelected();
-        // postDefault();
-        // handleOverLoading();
         handleGetTypeDefault();
         handleGetListType();
         handleGetPostDefault();
