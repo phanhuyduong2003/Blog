@@ -87,7 +87,7 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-            speed: 800,
+            // speed: 800,
             prevArrow: $('.new-post--slider_navigation__prev'),
             nextArrow: $('.new-post--slider_navigation__next'),
             responsive: [
@@ -117,7 +117,7 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-            speed: 1000,
+            // speed: 1000,
             dots: true,
             appendDots: $('.introduction-slider--pagination'),
             arrows: false,
@@ -132,7 +132,7 @@ var RUN = {
             slidesToScroll: 2,
             autoplay: true,
             autoplaySpeed: 3000,
-            speed: 1000,
+            // speed: 1000,
             prevArrow: $('.recruitment-slider--button__prev'),
             nextArrow: $('.recruitment-slider--button__next'),
             responsive: [
