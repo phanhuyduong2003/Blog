@@ -195,6 +195,26 @@ var RUN = {
         });
     },
 
+    //Cài đặt slide cho bài viết liên quan
+    handleSlidePostRelated: () => {
+        $('.post-slider--content').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            prevArrow: $('.post-slider--prev'),
+            nextArrow: $('.post-slider--next'),
+            responsive: [
+                {
+                    breakpoint: 1280,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                    },
+                },
+            ],
+        });
+    },
+
     //Xử lý lựa chọn xem ảnh/video
     handleMediaPanel: () => {
         let all_media = [
@@ -457,7 +477,6 @@ var RUN = {
                 );
                 handleGetPostSelected();
                 $('.media-panel--post__item').on('click', function () {
-                    console.log($(this));
                     let id_post = $(this).attr('data-post');
 
                     let handleListPost = all_media.filter((item) => item.id === Number(id_post));
@@ -555,6 +574,7 @@ var RUN = {
         RUN.handleSlideIntroduction();
         RUN.handleSlideRecruitment();
         RUN.handleSlideAuthor();
+        RUN.handleSlidePostRelated();
         RUN.handleMediaPanel();
     },
 };
@@ -563,4 +583,3 @@ $(document).ready(() => {
         RUN.init();
     }, 100);
 });
-$(document).ready(function () {});

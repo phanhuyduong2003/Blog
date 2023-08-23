@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MoncowUX Blog</title>
+        <link rel="shortcut icon" href="https://moncow.com/wp-content/uploads/2022/11/cropped-logo-mc2-32x32.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./assets/icon/css/all.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/js/jQueryUI/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="./assets/styles/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="header-top container">
+                    <div class="header-top__container">
+                        <div class="header-top__left">
+                            <div class="header-top__logo">
+                                <a href="#" class="header-top--image">
+                                    <img src="./assets/image/logo1.png" alt="" class="img-header" />
+                                </a>
+                            </div>
+                            <div class="header-top__tag">
+                                <span class="header-top__tag-item"><a href="#">#Learning Culture</a></span>
+                                <span class="header-top__tag-item"><a href="#">#Làm Nghề</a></span>
+                                <span class="header-top__tag-item"><a href="#">#gia đình IT</a></span>
+                                <span class="header-top__tag-item"><a href="#">#đáng tiền</a></span>
+                                <span class="header-top__tag-item"><a href="#">#Local talk</a></span>
+                                <span class="header-top__tag-item hot-tag"><a href="#">#SVN Goal 2023</a></span>
+                            </div>
+                        </div>
+                        <div class="header-top__right">
+                            <div class="header-top__search">
+                                <div class="header-top__search-form">
+                                    <input type="text" class="header-top__search-field" placeholder="Nhập từ khoá" />
+                                </div>
+                                <div class="header-top__search-button">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </div>
+                            </div>
+                            <div class="header-top__language">
+                                <div class="select-language__container">
+                                    <img src="./assets/image/vn.svg" alt="" class="flag-chose" />
+                                    <span class="language-chose">VI</span>
+                                    <button class="button-dropdown">
+                                        <i class="fa-thin fa-chevron-down header-top__icon-dropdown"></i>
+                                    </button>
+                                </div>
+                                <ul class="select-language__none open-select">
+                                    <li class="header-top__language-item language-item__selected">
+                                        <img src="./assets/image/vn.svg" alt="" class="flag-image" />
+                                        <span class="text">VI</span>
+                                    </li>
+                                    <li class="header-top__language-item">
+                                        <img src="./assets/image/en.svg" alt="" class="flag-image" />
+                                        <span class="text">EN</span>
+                                    </li>
+                                    <li class="header-top__language-item">
+                                        <img src="./assets/image/jp.svg" alt="" class="flag-image" />
+                                        <span class="text">JP</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-top__unlogin">
+                                <div class="header-top__login-input">
+                                    <a href="#" class="header-top__login-button">G-SUITE LOGIN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-main container">
+                    <div class="header-main__wrapper">
+                        <div class="menu-container">
+                            <ul class="menu-bar">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Tin nóng</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Dự án - Sản phẩm</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Góc nhìn</a>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Gương mặt Sun*</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Corner of Sun*</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Văn hoá Sun*</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Văn hoá học tập</span>
+                                            <span class="submenu-link">Văn hoá - Sự kiện</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Kinh nghiệm hay</a>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Chuyện tâm tình</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Sun* Confession</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Multimedia</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Tác giả</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__line"></div>
+            </div>
+            <div class="mobile-header">
+                <div class="mobile-header__main-header">
+                    <div class="main-header__logo">
+                        <a href="#" class="logo-home">
+                            <img src="./assets/image/logo1.png" alt="" class="logo" />
+                        </a>
+                    </div>
+                    <div class="main-header__menu">
+                        <div class="menu__select-language">
+                            <div class="select-language__container">
+                                <span class="language">VI</span>
+                                <span class="fa-thin fa-chevron-down icon-dropdown"></span>
+                            </div>
+                            <div class="select-dropdown__none open-dropdown">
+                                <div class="list-language">
+                                    <ul class="list-language__dropdown">
+                                        <li class="list-language__dropdown-item selected">
+                                            <span>VI</span>
+                                        </li>
+                                        <li class="list-language__dropdown-item">
+                                            <span>EN</span>
+                                        </li>
+                                        <li class="list-language__dropdown-item">
+                                            <span>JP</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__sidebar-button">
+                            <span class="fa-solid fa-bars"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-header__menu-nav">
+                    <div class="menu-nav__container">
+                        <div class="menu-nav__header">
+                            <div class="menu-nav__unlogin">
+                                <a href="#" class="menu-nav__login-button">G-SUITE LOGIN</a>
+                            </div>
+                            <div class="menu-nav__close-button">
+                                <i class="fa-solid fa-xmark icon-close"></i>
+                            </div>
+                        </div>
+                        <div class="menu-nav__search">
+                            <div class="search-form">
+                                <div class="input-container">
+                                    <input type="text" class="search-field" placeholder="Nhập từ khoá" />
+                                </div>
+                            </div>
+                            <div class="search-button">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                        <ul class="menu-nav__link-list">
+                            <li class="menu-nav__category">
+                                <a href="#" class="menu-nav__link">Tin nóng</a>
+                            </li>
+                            <li class="menu-nav__category">
+                                <a href="#" class="menu-nav__link">Dự án - Sản phẩm</a>
+                            </li>
+                            <li class="menu-nav__category">
+                                <a href="#" class="menu-nav__link">Góc nhìn</a>
+                            </li>
+                            <li class="menu-nav__category">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Gương mặt Sun*</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <span class="menu-nav__category-children">
+                                    <a href="#" class="menu-nav__link">Corner of Sun*</a>
+                                </span>
+                            </li>
+                            <li class="menu-nav__category">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Văn hoá Sun*</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <span class="menu-nav__category-children">
+                                        <a href="#" class="menu-nav__link">Văn hoá học tập</a>
+                                    </span>
+                                    <span class="menu-nav__category-children">
+                                        <a href="#" class="menu-nav__link">Văn hoá - Sự kiện</a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="menu-nav__category">
+                                <a href="#" class="menu-nav__link">Kinh nghiệm hay</a>
+                            </li>
+                            <li class="menu-nav__category">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Chuyện tâm tình</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <span class="menu-nav__category-children"> <a href="#" class="menu-nav__link">Sun* Confession</a></span>
+                            </li>
+                            <li class="menu-nav__category">
+                                <a href="#" class="menu-nav__link">Multimedia</a>
+                            </li>
+                        </ul>
+                        <div class="menu-nav__tag-list">
+                            <span class="menu-nav__tag-item"><a href="#">#Learning Culture</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#Làm Nghề</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#gia đình IT</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#đáng tiền</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#Local talk</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#SVN Goal 2023</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-nav__background"></div>
+            </div>
+            <div class="content container">
+                <div class="post-detail--wrapper">
+                    <div class="post-detail">
+                        <div class="post-detail--content">
+                            <div class="post-content--header">
+                                <div class="post-category story"><a href="#">CHUYỆN TÂM TÌNH</a></div>
+                                <h1 class="post-title">Bật cười với màn ''review sếp'' cực chất từ Sunner!</h1>
+                                <div class="post-info">
+                                    <span href="#" class="post-author"><a href="" class="name-author">Đăng bởi An & Quỳnh</a></span>
+                                    <span class="post-line"></span>
+                                    <span class="share-button">
+                                        <i class="fa-brands fa-facebook"></i>
+                                        <span class="count-share">Share 0</span>
+                                    </span>
+                                    <span class="post-line"></span>
+                                    <span class="post-view"><span class="count-view">555 views</span></span>
+                                    <span class="post-line"></span>
+                                    <span class="post-time">2023-08-09</span>
+                                </div>
+                                <div class="post-description">Khi được hỏi "Bạn chấm mấy điểm cho sếp mình?", Sun* News đã khai quật được vô vàn câu trả lời hóm hỉnh và ''chất như nước cất'' từ anh chị em khắp ba miền đấy!</div>
+                                <div class="post-suggestion">
+                                    <div class="post-suggestion--item">
+                                        <div class="post-suggestion--image"><img class="img--post-suggestion" src="https://moncow.com/wp-content/uploads/2022/11/cropped-logo-mc2-32x32.png" /></div>
+                                        <a href="#" class="post-suggestion--title"> Stress "tuổi gì" mà đòi gặp những Sunner này! </a>
+                                    </div>
+                                    <div class="post-suggestion--item">
+                                        <div class="post-suggestion--image"><img class="img--post-suggestion" src="https://moncow.com/wp-content/uploads/2022/11/cropped-logo-mc2-32x32.png" /></div>
+                                        <a href="#" class="post-suggestion--title"> Muôn màu muôn vẻ nam nhân Sun* trong mắt các chị em </a>
+                                    </div>
+                                    <div class="post-suggestion--item">
+                                        <div class="post-suggestion--image"><img class="img--post-suggestion" src="https://moncow.com/wp-content/uploads/2022/11/cropped-logo-mc2-32x32.png" /></div>
+                                        <a href="#" class="post-suggestion--title"> Nghe người Sun* kể: Những mong ước trong năm mới 2023 </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content--body">
+                                <div class="post-content--wrapper">
+                                    <div class="post-content--detail">
+                                        <div class="post-content--item">
+                                            <div class="post-item--title">Huyền Chi (L&D): Chị ấy có năng lực giải toán bằng cả một bài thơ!</div>
+                                            <div class="post-item--image"><img src="https://news.sun-asterisk.com/images/750/b2fbf4be-a794-4a63-ab1e-bce6cd6f0c05.jpg" alt="" class="img-post" /></div>
+                                            <div class="post-item--describe">
+                                                <p><strong>Đặc điểm nhận dạng: </strong>Nhà giáo nhân dân, học sinh Chuyên toán đạt giải quốc gia văn, người giải toán bằng một bài thơ!</p>
+                                            </div>
+                                            <div class="post-item--detail">
+                                                <p>
+                                                    <i>
+                                                        Chị gái nhà tớ có khả năng 'smart learning' đỉnh cao, làm điều gì cũng phải đi đến tận cùng bản chất! Tại Sun* mọi người hay gọi chị ấy là nhà giáo nhân dân bởi các chương trình training học tập nổi danh khắp 3 miền. Team tớ còn bất ngờ khi
+                                                        biết rằng chị ấy là học sinh chuyên toán nhưng lại đạt giải quốc gia môn văn, một người có khả năng "giải toán bằng thơ", vừa logic, có tư duy phản biện nhưng cực khéo léo và tâm lý!
+                                                    </i>
+                                                </p>
+                                                <p>
+                                                    <i
+                                                        >Chị ấy có khả năng liên hệ, vận dụng các kiến thức thông tin từ nhiều mảng khác nhau, từ đó đưa ra lý giải, đưa ra quan điểm một cách rất thuyết phục. Nếu có 1 điều phải "chấn chỉnh”, mong chị nhà hãy duy trì chiếc bàn làm việc gọn gàng hơn
+                                                        nhé! (Bật mí là bộ đồ dùng giải khát của chị Hạnh rất đồ sộ bao gồm 1 bộ ấm uống trà, nến uống trà, 2 cốc uống nước, thìa, đũa… nên chiếc bàn bé nhỏ cũng nhiều phải chịu đựng sự lộn xộn kha khá hehe).</i
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="post-content--item">
+                                            <div class="post-item--title">Việt Anh & Tiến Quân (CEV03): Tóc sếp hơi dài, gu thời trang hơi lạ</div>
+                                            <div class="post-item--image"><img src="https://news.sun-asterisk.com/images/750/4154779d-2d53-4c86-b09a-2c9340e46f45.jpg" alt="" class="img-post" /></div>
+                                            <div class="post-item--describe">
+                                                <p><strong>Đặc điểm nhận dạng: </strong>Tóc sếp hơi dài và gu thời trang hơi lạ. Mặt sếp cũng phổ thông nữa, nhìn đâu cũng thấy sếp được.</p>
+                                            </div>
+                                            <div class="post-item--detail">
+                                                <p>
+                                                    <i>
+                                                        Sếp là người giỏi chơi thể thao và giỏi nhậu. Anh em đi nhậu với sếp là tới bến. Sếp cũng nói chuyện hay nữa. Người đi ngủ sớm nhất trong các buổi picnic của CEV03 là sếp. Chúng mình mong muốn sếp có thể ngủ muộn hơn và chơi với anh em tới bến
+                                                        hơn! Thêm một lời nhắn nữa là: <strong>“Sếpppppp... Tăng lương cho bọn em đi.”</strong>
+                                                    </i>
+                                                </p>
+                                                <p>
+                                                    <i></i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="post-content--item">
+                                            <div class="post-item--title">Dương Nhài (CEV05): Chúng mình thậm chí còn soi gương qua đầu của anh nhưng anh vẫn cười hiền mà không giận!</div>
+                                            <div class="post-item--image"><img src="https://news.sun-asterisk.com/images/750/ce030789-2831-426f-8b79-00626bd83fe0.jpg" alt="" class="img-post" /></div>
+                                            <div class="post-item--describe">
+                                                <p><strong>Đặc điểm nhận dạng: </strong>Đầu soi gương</p>
+                                            </div>
+                                            <div class="post-item--detail">
+                                                <p>
+                                                    <i>
+                                                        Anh là người hiểu biết vấn đề rất sâu, rất kiên nhẫn giải thích cho mọi người. Anh cũng là người tế nhị, hiền lành. Thỉnh thoảng member hay hỏi anh dùng dầu gội đầu của hãng nào, rồi 1 năm hỏng mấy cái lược, da đầu bóng khỏe như vậy có dùng
+                                                        dưỡng ẩm không, thậm chí có bạn còn soi gương qua đầu của anh nhưng anh vẫn cười hiền mà không giận.
+                                                    </i>
+                                                </p>
+                                                <p>
+                                                    <i>Có lẽ chúng mình sẽ không mai mối cho sếp thêm ai nữa vì sếp toàn im lặng và đỏ mặt thôi!</i>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="post-content--item">
+                                            <div class="post-item--title">Trâm Anh (CEV10): Để quả tóc như 'úp bát ô tô' chắc chắn là sếp em!</div>
+                                            <div class="post-item--image"><img src="https://news.sun-asterisk.com/images/750/7e655958-6833-4173-a259-8b1fb1641949.jpg" alt="" class="img-post" /></div>
+                                            <div class="post-item--describe">
+                                                <p><strong>Đặc điểm nhận dạng: </strong>Ở độ tuổi 2 nách 2 đứa con mà để quả tóc như 'úp bát ô tô lên đầu' và đi đu ‘’Ai đồ’’ chắc chắn là sếp nhà em.</p>
+                                            </div>
+                                            <div class="post-item--detail">
+                                                <p>
+                                                    <i>
+                                                        Sếp em rất giỏi chơi game, mỗi khi chơi game trong event, teambuilding,... thì team nào có sếp chắc chắn là team đứng nhất (nhưng nhất từ dưới lên ạ). Sếp em bình thường hơi… trẩu nhưng mỗi lần bắn tiếng Nhật nói chuyện với khách hàng là uy tín
+                                                        cực kỳ luôn.
+                                                    </i>
+                                                </p>
+                                                <p>
+                                                    <i
+                                                        >Em thấy phong cách làm việc thoải mái thân thiện với nhân viên như hiện tại là quá ok rồi sếp ạ. Em chỉ có góp ý là sếp nên thay đổi ngoại hình về đúng lứa tuổi của mình, chứ cố trẻ hóa như hiện tại thì công cuộc kiếm người yêu 2k của anh cũng
+                                                        không khá thêm được mà lại còn bị đàn em trong công ty 'trê' suốt thôi.</i
+                                                    >
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-content--end"><strong>Quả là thú vị với những màn "review" sếp của anh chị em Sunners! Còn bạn thì sao, sếp trong mắt bạn hiện lên như thế nào? Chia sẻ cùng Sun* News ngay tại khung bình luận bên dưới nhé!</strong></div>
+                                    <div class="post-content--author"><i class="fa-regular fa-pen-line"></i><a href="#" class="name-author">An & Quỳnh</a></div>
+                                </div>
+                                <div class="post-content--hotpost">
+                                    <div class="hot-post--title">ĐANG HOT</div>
+                                    <div class="hot-post--list">
+                                        <div class="hot-post--item">
+                                            <div class="hot-post--item__position">1</div>
+                                            <div class="hot-post--item__post">
+                                                <div class="hot-post--item__title">
+                                                    <a href="#"> Chính thức ra mắt đội ngũ Technical Heroes - "Trạm hỗ trợ công nghệ" cho các dự án tại Sun* Đà Nẵng </a>
+                                                </div>
+                                                <div class="hot-post--item__view">452 Lượt xem</div>
+                                            </div>
+                                        </div>
+                                        <div class="hot-post--item">
+                                            <div class="hot-post--item__position">2</div>
+                                            <div class="hot-post--item__post">
+                                                <div class="hot-post--item__title">
+                                                    <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                                </div>
+                                                <div class="hot-post--item__view">477 Lượt xem</div>
+                                            </div>
+                                        </div>
+                                        <div class="hot-post--item">
+                                            <div class="hot-post--item__position">3</div>
+                                            <div class="hot-post--item__post">
+                                                <div class="hot-post--item__title">
+                                                    <a href="#"> Thành Toại: Khi thầy giáo dạy Hóa trở thành lập trình viên iOS </a>
+                                                </div>
+                                                <div class="hot-post--item__view">394 Lượt xem</div>
+                                            </div>
+                                        </div>
+                                        <div class="hot-post--item">
+                                            <div class="hot-post--item__position hot-post--item__positiongray">4</div>
+                                            <div class="hot-post--item__post">
+                                                <div class="hot-post--item__title">
+                                                    <a href="#"> #Đáng tiền: ''Cắt giảm thời gian làm việc nhà'' bằng những món đồ công nghệ do người Sun* gợi ý! </a>
+                                                </div>
+                                                <div class="hot-post--item__view">340 Lượt xem</div>
+                                            </div>
+                                        </div>
+                                        <div class="hot-post--item">
+                                            <div class="hot-post--item__position hot-post--item__positiongray">5</div>
+                                            <div class="hot-post--item__post">
+                                                <div class="hot-post--item__title">
+                                                    <a href="#"> Bạn sợ giao tiếp Tiếng Anh? Để Sunner chỉ cho! </a>
+                                                </div>
+                                                <div class="hot-post--item__view">357 Lượt xem</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-content--tag">
+                                <div class="post-tag--item"><a href="#"> #Góc nhìn </a></div>
+                                <div class="post-tag--item"><a href="#"> #review sếp </a></div>
+                            </div>
+                            <div class="post-content--comment">
+                                <div class="post-comment--form">
+                                    <div class="post-comment--wrapper">
+                                        <div class="post-comment--image"><img src="./assets/image/user-image.png" alt="" class="img-user" /></div>
+                                        <div class="post-comment--field">
+                                            <div class="comment-anonymous">
+                                                <input type="checkbox" name="" id="" />
+                                                <span>Bình luận ẩn danh</span>
+                                            </div>
+                                            <div class="post-comment--input"><textarea name="" id="" placeholder="Viết bình luận"></textarea></div>
+                                        </div>
+                                    </div>
+                                    <div class="post-comment--submit"><button type="submit" class="comment-submit--button">Đăng</button></div>
+                                </div>
+                                <div class="post-comment--list">
+                                    <div class="post-comment--item">
+                                        <div class="post-comment--wrapper">
+                                            <div class="comment-avt"><img src="https://lh3.googleusercontent.com/a/AGNmyxY5yzLMXrRnd76dYxjQHwEyba8BRdTQo0la6sv8=s96-c" alt="" class="img-avt" /></div>
+                                            <div class="comment-wrapper">
+                                                <div class="comment-main">
+                                                    <div class="comment-name">Pham Phu Cuoi</div>
+                                                    <div class="comment-content">ủa ủa, tui tưởng CEV 14 thu thập thông tin của nhiều người, hoá ra chỉ hỏi mỗi tui thôi hả?</div>
+                                                </div>
+                                                <div class="comment-info">
+                                                    <span class="reply-button">Trả lời</span>
+                                                    <span class="comment-time">Aug 9th, 4:37 PM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-comment--item comment-reply">
+                                        <div class="post-comment--wrapper">
+                                            <div class="comment-avt"><img src="https://lh3.googleusercontent.com/a/AAcHTtecGZDKRmoCffha8Uj-zGZvWX2qL8Iv2BkybhciOyYL9Q=s96-c" alt="" class="img-avt" /></div>
+                                            <div class="comment-wrapper">
+                                                <div class="comment-main">
+                                                    <div class="comment-name">Duong Thi Thuy An</div>
+                                                    <div class="comment-content">Đúng rùi anh ạ, mỗi bên một ít mười phân lại vẹn mười hehe ^^</div>
+                                                </div>
+                                                <div class="comment-info">
+                                                    <span class="reply-button">Trả lời</span>
+                                                    <span class="comment-time">Aug 9th, 4:47 PM</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-detail--related">
+                            <div class="post-related--wrapper">
+                                <div class="post-related--header">
+                                    <div class="post-related--title">cùng chuyên mục</div>
+                                    <div class="post-related--line"></div>
+                                    <a href="#" class="post-related--link">Xem tất cả</a>
+                                </div>
+                                <div class="post-related--content">
+                                    <a href="#" class="post-related--item">
+                                        <div class="post-related--image"><img src="https://news.sun-asterisk.com/images/440x248/0f903e84-85bf-478a-83a0-51abb999a9c1.png" alt="" class="img-post--related" /></div>
+                                        <p>Stress "tuổi gì" mà đòi gặp những Sunner này!</p>
+                                    </a>
+                                    <a href="#" class="post-related--item">
+                                        <div class="post-related--image"><img src="https://news.sun-asterisk.com/images/440x248/d98ace41-2bf4-4ed2-9c7b-93161ca0ae56.png" alt="" class="img-post--related" /></div>
+                                        <p>Muôn màu muôn vẻ nam nhân Sun* trong mắt các chị em</p>
+                                    </a>
+                                    <a href="#" class="post-related--item">
+                                        <div class="post-related--image"><img src="https://news.sun-asterisk.com/images/440x248/ae855ffb-3fce-4e4b-886c-ba023d92b19e.png" alt="" class="img-post--related" /></div>
+                                        <p>Nghe người Sun* kể: Những mong ước trong năm mới 2023</p>
+                                    </a>
+                                </div>
+                                <div class="post-related--slider">
+                                    <div class="post-slider--content">
+                                        <div class="post-slider--container">
+                                            <div class="post-slider--item">
+                                                <div class="post-slider--image">
+                                                    <a href="#" class="post-slider--link"> <img src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg" alt="" class="img-post--slider" /></a>
+                                                    <div class="post-slider--share">
+                                                        <span>Chia sẻ</span>
+                                                        <i class="fa-solid fa-share-nodes icon-share"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="post-slider--title">
+                                                    <a href="#" class="post-title--link"> Cẩm nang ISO: Quản lý truy cập hệ thống </a>
+                                                </div>
+                                                <div class="post-slider--info">
+                                                    <span class="post-slider--author"> Đăng bởi Admin </span>
+                                                    <div class="post-slider--line"></div>
+                                                    <span class="post-slider--view"> 6 Lượt xem </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-slider--container">
+                                            <div class="post-slider--item">
+                                                <div class="post-slider--image">
+                                                    <a href="#" class="post-slider--link"> <img src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg" alt="" class="img-post--slider" /></a>
+                                                    <div class="post-slider--share">
+                                                        <span>Chia sẻ</span>
+                                                        <i class="fa-solid fa-share-nodes icon-share"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="post-slider--title">
+                                                    <a href="#" class="post-title--link"> Cẩm nang ISO: Quản lý truy cập hệ thống </a>
+                                                </div>
+                                                <div class="post-slider--info">
+                                                    <span class="post-slider--author"> Đăng bởi Admin </span>
+                                                    <div class="post-slider--line"></div>
+                                                    <span class="post-slider--view"> 6 Lượt xem </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-slider--container">
+                                            <div class="post-slider--item">
+                                                <div class="post-slider--image">
+                                                    <a href="#" class="post-slider--link"> <img src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg" alt="" class="img-post--slider" /></a>
+                                                    <div class="post-slider--share">
+                                                        <span>Chia sẻ</span>
+                                                        <i class="fa-solid fa-share-nodes icon-share"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="post-slider--title">
+                                                    <a href="#" class="post-title--link"> Cẩm nang ISO: Quản lý truy cập hệ thống </a>
+                                                </div>
+                                                <div class="post-slider--info">
+                                                    <span class="post-slider--author"> Đăng bởi Admin </span>
+                                                    <div class="post-slider--line"></div>
+                                                    <span class="post-slider--view"> 6 Lượt xem </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-slider--container">
+                                            <div class="post-slider--item">
+                                                <div class="post-slider--image">
+                                                    <a href="#" class="post-slider--link"> <img src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg" alt="" class="img-post--slider" /></a>
+                                                    <div class="post-slider--share">
+                                                        <span>Chia sẻ</span>
+                                                        <i class="fa-solid fa-share-nodes icon-share"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="post-slider--title">
+                                                    <a href="#" class="post-title--link"> Cẩm nang ISO: Quản lý truy cập hệ thống </a>
+                                                </div>
+                                                <div class="post-slider--info">
+                                                    <span class="post-slider--author"> Đăng bởi Admin </span>
+                                                    <div class="post-slider--line"></div>
+                                                    <span class="post-slider--view"> 6 Lượt xem </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="post-slider--container">
+                                            <div class="post-slider--item">
+                                                <div class="post-slider--image">
+                                                    <a href="#" class="post-slider--link"> <img src="https://news.sun-asterisk.com/images/440x248/cf1c9f25-c653-43a6-b18d-ddb5b06bc980.jpg" alt="" class="img-post--slider" /></a>
+                                                    <div class="post-slider--share">
+                                                        <span>Chia sẻ</span>
+                                                        <i class="fa-solid fa-share-nodes icon-share"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="post-slider--title">
+                                                    <a href="#" class="post-title--link"> Cẩm nang ISO: Quản lý truy cập hệ thống </a>
+                                                </div>
+                                                <div class="post-slider--info">
+                                                    <span class="post-slider--author"> Đăng bởi Admin </span>
+                                                    <div class="post-slider--line"></div>
+                                                    <span class="post-slider--view"> 6 Lượt xem </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-slider--navigation">
+                                        <button class="post-slider--prev">
+                                            <i class="fa-solid fa-arrow-left"></i>
+                                        </button>
+                                        <button class="post-slider--next">
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery-3.7.0.min.js"></script>
+        <script src="./assets/js/jQueryUI/jquery-ui.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    </body>
+</html>
