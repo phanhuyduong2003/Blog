@@ -170,6 +170,8 @@
                                         color: #516589;
                                     }
                                     img {
+                                        width: auto;
+                                        height: auto;
                                         margin: 0 -20px;
                                         padding: 0 20px;
                                     }
@@ -1962,177 +1964,196 @@
             }
             .post-detail {
                 &--content {
-                    .post-content--header {
-                        padding: 20px 0 10px;
-                        .post-category {
-                            a {
-                                text-transform: uppercase;
-                                letter-spacing: 2px;
-                                font-size: 12px;
-                                line-height: 17px;
-                            }
+                    .post-content--main {
+                        @include mq_min_768 {
+                            display: flex;
                         }
-                        .post-title {
-                            margin-bottom: 10px;
-                            @include set_font(26px, 700, 1.4);
-                            color: #000;
+                        .post-wrapper {
                             @include mq_min_768 {
-                                font-size: 30px;
-                                line-height: 1.5;
+                                width: 75%;
+                                margin: 0 30px;
                             }
-                        }
-                        .post-info {
-                            width: 100%;
-                            padding: 10px 0;
-                            margin: 10px 0;
-                            font-size: 14px;
-                            line-height: 15px;
-                            @include mq_min_768 {
-                                @include flex(unset, center);
-                                // flex-wrap: wrap;
-                                text-align: unset;
-                            }
-                            text-align: center;
-                            .post-author {
-                                @include flex(center, unset);
-                                margin-bottom: 5px;
-                                .name-author {
-                                    max-width: 200px;
-                                    margin-right: 5px;
-                                    line-height: 20px;
-                                    @include truncate_text(1);
+                            .post-content--header {
+                                padding: 20px 0 10px;
+                                .post-category {
+                                    a {
+                                        text-transform: uppercase;
+                                        letter-spacing: 2px;
+                                        font-size: 12px;
+                                        line-height: 17px;
+                                    }
                                 }
-                            }
-                            .share-button {
-                                position: relative;
-                                margin: 0 5px;
-                                padding: 0 5px;
-                                border-radius: 2px;
-                                background-color: #1877f2;
-                                color: #fff;
-                                cursor: pointer;
-                                @include mq_min_768 {
-                                    padding: 5px;
+                                .post-title {
+                                    margin-bottom: 10px;
+                                    @include set_font(26px, 700, 1.4);
+                                    color: #000;
+                                    @include mq_min_768 {
+                                        font-size: 30px;
+                                        line-height: 1.5;
+                                    }
                                 }
-                                .count-share {
-                                    padding-left: 5px;
-                                    font-weight: 700;
-                                }
-                            }
-                            .post-view {
-                                @include flex(center, unset);
-                                margin: 0 5px;
-                                line-height: 20px;
-                                .count-view {
-                                    max-width: 120px;
-                                    @include truncate_text(1);
-                                }
-                            }
-                            .post-time {
-                                margin-left: 5px;
-                            }
-                            .post-line {
-                                @include mq_min_768 {
-                                    width: 1px;
-                                    height: 16px;
-                                    background-color: #000;
-                                }
-                            }
-                        }
-                        .post-description {
-                            margin-bottom: 15px;
-                            @include set_font(16px, 700, 28px);
-                            @include mq_min_768 {
-                                font-size: 18px;
-                            }
-                        }
-                        .post-suggestion {
-                            padding-bottom: 15px;
-                            border-bottom: 1px solid #e4e4e4;
-                            &--item {
-                                @include flex(unset, center);
-                                margin-bottom: 10px;
-                                .post-suggestion--image {
-                                    width: 20px;
-                                    height: 20px;
-                                    margin-right: 5px;
-                                }
-                                .post-suggestion--title {
+                                .post-info {
+                                    width: 100%;
+                                    padding: 10px 0;
+                                    margin: 10px 0;
                                     font-size: 14px;
-                                    line-height: 1.5;
-                                    color: #6d758c;
-                                }
-                            }
-                        }
-                    }
-                    .post-content--body {
-                        padding-top: 10px;
-                        .post-content--wrapper {
-                            .post-content--detail {
-                                .post-content--item {
-                                    .post-item--title {
-                                        margin-bottom: 15px;
-                                        @include set_font(20px, 700, 1.4);
+                                    line-height: 15px;
+                                    @include mq_min_768 {
+                                        @include flex(unset, center);
+                                        // flex-wrap: wrap;
+                                        text-align: unset;
                                     }
-                                    .post-item--image {
-                                        padding-bottom: 10px;
-                                    }
-                                    .post-item--describe {
-                                        border: 1px solid #d2d2d2;
-                                        padding: 0 5px;
-                                        line-height: 2.5;
-                                        p {
-                                            margin-bottom: 10px;
-                                            @include set_font(16px, unset, 1.7);
-                                            strong {
-                                                font-weight: 600;
-                                            }
+                                    text-align: center;
+                                    .post-author {
+                                        @include flex(center, unset);
+                                        margin-bottom: 5px;
+                                        .name-author {
+                                            max-width: 200px;
+                                            margin-right: 5px;
+                                            line-height: 20px;
+                                            @include truncate_text(1);
                                         }
                                     }
-                                    .post-item--detail {
+                                    .share-button {
                                         position: relative;
-                                        padding: 70px 0 20px;
-                                        margin: 30px auto;
-                                        font-style: italic;
-                                        &::before {
-                                            content: '“';
-                                            position: absolute;
-                                            padding-top: 15px;
-                                            width: 50px;
-                                            height: 50px;
-                                            top: 10px;
-                                            left: 50%;
-                                            // transform: translate(-50%);
-                                            border-radius: 50%;
-                                            @include set_font(80px, unset, 50px);
-                                            // font-family: 'Catamaran', sans-serif;
-                                            // text-align: center;
-                                            color: #fff;
+                                        margin: 0 5px;
+                                        padding: 0 5px;
+                                        border-radius: 2px;
+                                        background-color: #1877f2;
+                                        color: #fff;
+                                        cursor: pointer;
+                                        @include mq_min_768 {
+                                            padding: 5px;
+                                        }
+                                        .count-share {
+                                            padding-left: 5px;
+                                            font-weight: 700;
+                                        }
+                                    }
+                                    .post-view {
+                                        @include flex(center, unset);
+                                        margin: 0 5px;
+                                        line-height: 20px;
+                                        .count-view {
+                                            max-width: 120px;
+                                            @include truncate_text(1);
+                                        }
+                                    }
+                                    .post-time {
+                                        margin-left: 5px;
+                                    }
+                                    .post-line {
+                                        @include mq_min_768 {
+                                            width: 1px;
+                                            height: 16px;
                                             background-color: #000;
                                         }
-                                        p {
-                                            margin-bottom: 10px;
-                                            @include set_font(16px, unset, 1.7);
-                                            text-align: justify;
-                                            strong {
-                                                font-weight: 600;
-                                            }
+                                    }
+                                }
+                                .post-description {
+                                    margin-bottom: 15px;
+                                    @include set_font(16px, 700, 28px);
+                                    @include mq_min_768 {
+                                        font-size: 18px;
+                                    }
+                                }
+                                .post-suggestion {
+                                    padding-bottom: 15px;
+                                    border-bottom: 1px solid #e4e4e4;
+                                    &--item {
+                                        @include flex(unset, center);
+                                        margin-bottom: 10px;
+                                        .post-suggestion--image {
+                                            width: 20px;
+                                            height: 20px;
+                                            margin-right: 5px;
+                                        }
+                                        .post-suggestion--title {
+                                            font-size: 14px;
+                                            line-height: 1.5;
+                                            color: #6d758c;
                                         }
                                     }
                                 }
                             }
-                            .post-content--end {
-                                strong {
-                                    font-weight: 600;
+                            .post-content--body {
+                                padding-top: 10px;
+                                .post-content--wrapper {
+                                    .post-content--detail {
+                                        .post-content--item {
+                                            .post-item--title {
+                                                margin-bottom: 15px;
+                                                @include set_font(20px, 700, 1.4);
+                                            }
+                                            .post-item--image {
+                                                padding-bottom: 10px;
+                                            }
+                                            .post-item--describe {
+                                                border: 1px solid #d2d2d2;
+                                                padding: 0 5px;
+                                                line-height: 2.5;
+                                                p {
+                                                    margin-bottom: 10px;
+                                                    @include set_font(16px, unset, 1.7);
+                                                    strong {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+                                            }
+                                            .post-item--detail {
+                                                max-width: 600px;
+                                                position: relative;
+                                                padding: 70px 0 20px;
+                                                margin: 30px auto;
+                                                font-style: italic;
+                                                &::before {
+                                                    content: '“';
+                                                    position: absolute;
+                                                    padding-top: 15px;
+                                                    width: 50px;
+                                                    height: 50px;
+                                                    top: 10px;
+                                                    left: 50%;
+                                                    // transform: translate(-50%);
+                                                    border-radius: 50%;
+                                                    @include set_font(80px, unset, 50px);
+                                                    // font-family: 'Catamaran', sans-serif;
+                                                    // text-align: center;
+                                                    color: #fff;
+                                                    background-color: #000;
+                                                }
+                                                p {
+                                                    margin-bottom: 10px;
+                                                    @include set_font(16px, unset, 1.7);
+                                                    text-align: justify;
+                                                    strong {
+                                                        font-weight: 600;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .post-content--end {
+                                        strong {
+                                            @include set_font(16px, 700, 1.7);
+                                        }
+                                    }
+                                    .post-content--author {
+                                        margin: 35px 0;
+                                        text-align: right;
+                                        font-weight: 700;
+                                    }
                                 }
-                            }
-                            .post-content--author {
-                                margin: 35px 0;
-                                text-align: right;
-                                font-weight: 700;
                             }
                         }
                         .post-content--hotpost {
+                            @include mq_min_768 {
+                                width: 25%;
+                                height: 100%;
+                                position: sticky;
+                                top: 170px;
+                                right: 0;
+                            }
                             .hot-post--title {
                                 font-size: 17px;
                                 font-weight: 700;
@@ -2212,8 +2233,9 @@
                     }
                     .post-content--comment {
                         margin-top: 50px;
+                        margin-bottom: 80px;
                         .post-comment--form {
-                            .post-comment--wrapper {
+                            .post-comment--action {
                                 display: flex;
                                 .post-comment--image {
                                     width: 55px;
@@ -2226,17 +2248,21 @@
                                         padding: 20px 0 0;
                                         textarea {
                                             width: 100%;
-                                            min-height: 50px;
+                                            min-height: 100px;
                                             resize: none;
                                             outline: none;
                                             border: none;
                                             border-bottom: 1px solid #e4e4e4;
-                                            overflow: hidden;
+                                            // overflow: hidden;
                                             font-size: 16px;
                                             line-height: 1.45;
+                                            font-family: 'Open Sans', sans-serif;
                                             &::placeholder {
                                                 font-family: 'Open Sans', sans-serif;
                                                 font-size: 14px;
+                                            }
+                                            &::-webkit-scrollbar {
+                                                width: 5px;
                                             }
                                         }
                                     }
@@ -2276,9 +2302,11 @@
                                         }
                                     }
                                     .comment-wrapper {
-                                        width: 80%;
+                                        width: calc(100% - 40px);
                                         margin-top: 10px;
-
+                                        @include mq_min_768 {
+                                            width: calc(100% - 55px);
+                                        }
                                         .comment-main {
                                             position: relative;
                                             padding: 25px;
@@ -2316,16 +2344,41 @@
                                     }
                                 }
                             }
-                            .comment-reply {
-                                margin-left: 60px;
-                            }
                         }
                     }
                 }
                 &--related {
-                    padding: 20px;
+                    width: 100vw;
+                    margin-left: -20px;
                     background-color: #f7f9f9;
+                    @include mq_min_768 {
+                        margin-left: calc((100vw - 650px) / -2 - 25px);
+                    }
+                    @include mq_min_992 {
+                        margin-left: calc((100vw - 870px) / -2 - 25px);
+                    }
+                    @include mq_min_1280 {
+                        margin-left: calc((100vw - 1170px) / -2 - 25px);
+                    }
+                    @include mq_min_1400 {
+                        margin-left: calc((100vw - 1280px) / -2 - 25px);
+                    }
                     .post-related--wrapper {
+                        padding: 20px;
+                        @include mq_min_768 {
+                            width: 650px;
+                            margin: 0 auto;
+                            padding: 25px;
+                        }
+                        @include mq_min_992 {
+                            width: 870px;
+                        }
+                        @include mq_min_1280 {
+                            width: 1170px;
+                        }
+                        @include mq_min_1400 {
+                            width: 1280px;
+                        }
                         .post-related--header {
                             display: flex;
                             align-items: center;
@@ -2358,22 +2411,44 @@
                             }
                         }
                         .post-related--content {
+                            @include mq_min_992 {
+                                display: none;
+                            }
                             .post-related--item {
                                 display: flex;
                                 padding-bottom: 10px;
                                 margin-bottom: 10px;
                                 border-bottom: 1px dotted black;
-                                &:hover {
-                                    text-decoration: underline;
-                                }
+                                cursor: pointer;
                                 .post-related--image {
+                                    width: 40%;
                                     .img-post--related {
                                         aspect-ratio: 16/9;
                                     }
                                 }
-                                p {
+                                .post-related--detail {
+                                    width: 60%;
                                     padding-left: 20px;
-                                    @include set_font(14px, 700, 1.4);
+                                    .post-related--item-title {
+                                        @include set_font(14px, 700, 1.4);
+                                        margin-bottom: 10px;
+                                        &:hover {
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                    .post-related--item-info {
+                                        display: flex;
+                                        @include set_font(12px, unset, 15px);
+                                        color: #6d758c;
+                                        .post-related--author {
+                                            max-width: 200px;
+                                            margin-right: 10px;
+                                            @include truncate_text(1);
+                                            &:hover {
+                                                color: #2573ce;
+                                            }
+                                        }
+                                    }
                                 }
                             }
                         }
