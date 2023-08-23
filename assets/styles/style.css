@@ -446,6 +446,7 @@ img {
     align-items: center;
     height: 36px;
     padding: 0 10px;
+    color: #2573ce;
   }
   .wrapper .header .header-main .header-main__wrapper .menu-container .has-submenu {
     min-width: 150px;
