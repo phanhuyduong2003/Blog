@@ -2160,7 +2160,7 @@ img {
   width: 100%;
   aspect-ratio: 1;
   border: 1px solid #fff;
-  border-radius: 50%;
+  border-radius: 5px;
   object-fit: cover;
 }
 .wrapper .content .home .home-category .category-wrapper .recruitment-slider--content .recruitment-slider--container .recruitment-slider--item__main-header .recruitment-slider--item__detail {
@@ -2179,6 +2179,11 @@ img {
   font-weight: 700;
 }
 .wrapper .content .home .home-category .category-wrapper .recruitment-slider--content .recruitment-slider--container .recruitment-slider--item__main-header .recruitment-slider--item__detail .position {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 12px;
   line-height: 1.4;
   color: #84909f;
@@ -2489,7 +2494,6 @@ img {
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--header .post-description {
   margin-bottom: 15px;
-  text-align: justify;
   font-size: 16px;
   font-weight: 700;
   line-height: 28px;
@@ -2524,9 +2528,6 @@ img {
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body {
   padding-top: 10px;
-}
-.wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body .post-content--wrapper .post-content--detail {
-  text-align: justify;
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body .post-content--wrapper .post-content--detail .post-content--item .post-item--title {
   margin-bottom: 15px;
@@ -2578,7 +2579,6 @@ img {
   font-size: 16px;
   font-weight: unset;
   line-height: 1.7;
-  text-align: justify;
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body .post-content--wrapper .post-content--detail .post-content--item .post-item--detail p strong {
   font-weight: 600;
@@ -3083,6 +3083,7 @@ img {
   padding-bottom: 20px;
   margin-bottom: 20px;
   border-bottom: 2px solid #2573ce;
+  word-break: keep-all;
 }
 @media screen and (min-width: 992px) {
   .wrapper .footer .footer-container .main-footer--container {

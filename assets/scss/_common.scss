@@ -1757,7 +1757,7 @@
                                                     width: 100%;
                                                     aspect-ratio: 1;
                                                     border: 1px solid #fff;
-                                                    border-radius: 50%;
+                                                    border-radius: 5px;
                                                     object-fit: cover;
                                                 }
                                             }
@@ -1772,6 +1772,7 @@
                                                     font-weight: 700;
                                                 }
                                                 .position {
+                                                    @include truncate_text(1);
                                                     font-size: 12px;
                                                     line-height: 1.4;
                                                     color: #84909f;
@@ -2060,7 +2061,6 @@
                                 }
                                 .post-description {
                                     margin-bottom: 15px;
-                                    text-align: justify;
                                     @include set_font(16px, 700, 28px);
                                     @include mq_min_768 {
                                         font-size: 18px;
@@ -2092,7 +2092,6 @@
                                 padding-top: 10px;
                                 .post-content--wrapper {
                                     .post-content--detail {
-                                        text-align: justify;
                                         .post-content--item {
                                             .post-item--title {
                                                 margin-bottom: 15px;
@@ -2138,7 +2137,6 @@
                                                 p {
                                                     margin-bottom: 10px;
                                                     @include set_font(16px, unset, 1.7);
-                                                    text-align: justify;
                                                     strong {
                                                         font-weight: 600;
                                                     }
@@ -2605,6 +2603,7 @@
                     padding-bottom: 20px;
                     margin-bottom: 20px;
                     border-bottom: 2px solid #2573ce;
+                    word-break: keep-all;
                     .main-footer--title {
                         margin-bottom: 20px;
                         font-size: 14px;
