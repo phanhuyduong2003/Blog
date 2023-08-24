@@ -99,6 +99,7 @@
                                 position: absolute;
                                 top: 10px;
                                 right: 10px;
+                                cursor: pointer;
                                 color: #959bac;
                             }
                         }
@@ -259,7 +260,9 @@
                                             @include flex(unset, center);
                                             height: 36px;
                                             padding: 0 10px;
-                                            color: #2573ce;
+                                            &:hover {
+                                                color: #2573ce;
+                                            }
                                         }
                                     }
                                 }
@@ -795,9 +798,8 @@
                         background-color: #2573ce;
                     }
                     .new-post--text {
-                        font-size: 20px;
-                        font-weight: 700;
-                        line-height: 27px;
+                        text-transform: uppercase;
+                        @include set_font(20px, 700, 27px);
                         color: #24253d;
                     }
                     .new-post--line {
@@ -953,9 +955,8 @@
                                     margin-right: 8px;
                                 }
                                 &-text {
-                                    font-size: 20px;
-                                    font-weight: 700;
-                                    line-height: 27px;
+                                    text-transform: uppercase;
+                                    @include set_font(20px, 700, 27px);
                                 }
                                 &-line {
                                     height: 1px;
@@ -1189,12 +1190,10 @@
                                                 padding-right: 0;
                                             }
                                             &:hover {
-                                                color: #fff;
-                                                opacity: 0.8;
+                                                color: #2573ce;
                                             }
                                             &__selected {
-                                                color: #fff;
-                                                opacity: 0.8;
+                                                color: #2573ce;
                                             }
                                         }
                                     }
@@ -1592,6 +1591,7 @@
                                 a {
                                     @include flex(unset, center);
                                     margin-bottom: 17px;
+                                    text-transform: uppercase;
                                     font-size: 17px;
                                     font-weight: 700;
                                     &::before {
@@ -1669,7 +1669,7 @@
                                         color: #6d758c;
                                         @include truncate_text(2);
                                         &:hover {
-                                            color: #383838;
+                                            color: #2573ce;
                                         }
                                         @include mq_min_768 {
                                             min-height: 19.6px;
@@ -1700,7 +1700,8 @@
                                     margin-right: 8px;
                                     background-color: #2573ce;
                                 }
-                                display: flex;
+                                @include flex(unset, center);
+                                text-transform: uppercase;
                                 font-size: 17px;
                                 font-weight: 700;
                             }
@@ -1734,7 +1735,7 @@
                                             font-size: 14px;
                                             font-weight: 700;
                                             line-height: 1.4;
-                                            background-color: #cc0202;
+                                            background-color: #2573ce;
                                             color: #fff;
                                             span {
                                                 @include truncate_text(2);
@@ -1744,7 +1745,7 @@
                                             height: 65px;
                                             display: flex;
                                             padding: 5px 15px 7px;
-                                            background-color: #fff0ee;
+                                            background-color: #b7d7f7;
                                             .recruitment-slider--item__image {
                                                 width: 57px;
                                                 height: 57px;
@@ -1755,15 +1756,18 @@
                                                 .img__recruitment {
                                                     width: 100%;
                                                     aspect-ratio: 1;
+                                                    border: 1px solid #fff;
+                                                    border-radius: 50%;
                                                     object-fit: cover;
                                                 }
                                             }
                                             .recruitment-slider--item__detail {
+                                                width: calc((100% - 57px));
                                                 display: flex;
                                                 flex-direction: column;
                                                 .salary {
-                                                    margin-top: 10px;
-                                                    margin-bottom: 5px;
+                                                    margin: 10px 0 5px 0;
+                                                    @include truncate_text(1);
                                                     font-size: 18px;
                                                     font-weight: 700;
                                                 }
@@ -1846,9 +1850,6 @@
                             @include flex(unset, center);
                             margin-bottom: 25px;
                             &--text {
-                                display: flex;
-                                font-size: 17px;
-                                font-weight: 700;
                                 &::before {
                                     content: '';
                                     width: 4px;
@@ -1856,6 +1857,10 @@
                                     margin-right: 8px;
                                     background-color: #2573ce;
                                 }
+                                @include flex(unset, center);
+                                text-transform: uppercase;
+                                font-size: 17px;
+                                font-weight: 700;
                             }
                             &--line {
                                 height: 1px;
@@ -1966,11 +1971,11 @@
             .post-detail {
                 &--content {
                     .post-content--main {
-                        @include mq_min_768 {
+                        @include mq_min_1280 {
                             display: flex;
                         }
                         .post-wrapper {
-                            @include mq_min_768 {
+                            @include mq_min_1280 {
                                 width: 75%;
                                 margin: 0 30px;
                             }
@@ -2001,16 +2006,18 @@
                                     line-height: 15px;
                                     @include mq_min_768 {
                                         @include flex(unset, center);
-                                        // flex-wrap: wrap;
                                         text-align: unset;
                                     }
                                     text-align: center;
                                     .post-author {
-                                        @include flex(center, unset);
+                                        @include flex(center, center);
                                         margin-bottom: 5px;
+                                        @include mq_min_768 {
+                                            margin-bottom: 0;
+                                            padding-right: 5px;
+                                        }
                                         .name-author {
                                             max-width: 200px;
-                                            margin-right: 5px;
                                             line-height: 20px;
                                             @include truncate_text(1);
                                         }
@@ -2033,7 +2040,7 @@
                                     }
                                     .post-view {
                                         @include flex(center, unset);
-                                        margin: 0 5px;
+                                        padding: 0 5px;
                                         line-height: 20px;
                                         .count-view {
                                             max-width: 120px;
@@ -2041,7 +2048,7 @@
                                         }
                                     }
                                     .post-time {
-                                        margin-left: 5px;
+                                        padding-left: 5px;
                                     }
                                     .post-line {
                                         @include mq_min_768 {
@@ -2053,6 +2060,7 @@
                                 }
                                 .post-description {
                                     margin-bottom: 15px;
+                                    text-align: justify;
                                     @include set_font(16px, 700, 28px);
                                     @include mq_min_768 {
                                         font-size: 18px;
@@ -2073,6 +2081,9 @@
                                             font-size: 14px;
                                             line-height: 1.5;
                                             color: #6d758c;
+                                            &:hover {
+                                                color: #2573ce;
+                                            }
                                         }
                                     }
                                 }
@@ -2081,6 +2092,7 @@
                                 padding-top: 10px;
                                 .post-content--wrapper {
                                     .post-content--detail {
+                                        text-align: justify;
                                         .post-content--item {
                                             .post-item--title {
                                                 margin-bottom: 15px;
@@ -2148,7 +2160,7 @@
                             }
                         }
                         .post-content--hotpost {
-                            @include mq_min_768 {
+                            @include mq_min_1280 {
                                 width: 25%;
                                 height: 100%;
                                 position: sticky;
@@ -2247,9 +2259,9 @@
                                     margin: 0 0 25px 25px;
                                     .post-comment--input {
                                         padding: 20px 0 0;
-                                        textarea {
+                                        .input-field {
                                             width: 100%;
-                                            min-height: 100px;
+                                            max-height: 100px;
                                             resize: none;
                                             outline: none;
                                             border: none;
@@ -2390,7 +2402,7 @@
                                 width: 5px;
                                 height: 18px;
                                 margin-right: 8px;
-                                background-color: #f20;
+                                background-color: #2573ce;
                             }
                             .post-related--title {
                                 text-transform: uppercase;
@@ -2405,7 +2417,7 @@
                             .post-related--link {
                                 text-transform: uppercase;
                                 @include set_font(11px, 400, 15px);
-                                color: #f20;
+                                color: #2573ce;
                                 &:hover {
                                     text-decoration: underline;
                                 }
@@ -2638,7 +2650,7 @@
                     margin: 25px auto 30px;
                 }
                 &::before {
-                    content: 'MAKE MONCOWUX GREAT AGAIN';
+                    content: '';
                     position: absolute;
                     top: 40%;
                     left: 50%;
@@ -2646,6 +2658,9 @@
                     color: #fff;
                     font-size: 20px;
                     font-weight: 400;
+                    @include mq_min_992 {
+                        content: 'MAKE MONCOWUX BETTER';
+                    }
                 }
                 &--logo {
                     display: none;
@@ -2653,6 +2668,7 @@
                         display: block;
                     }
                     .footer-logo {
+                        @include flex(unset, center);
                         width: 50%;
                         img {
                             width: 100%;

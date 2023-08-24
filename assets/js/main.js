@@ -130,7 +130,7 @@ var RUN = {
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 2,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 3000,
             // speed: 1000,
             prevArrow: $('.recruitment-slider--button__prev'),
@@ -563,6 +563,13 @@ var RUN = {
         handleClickPost();
         handleClickNavbar();
     },
+    handleInputComment: () => {
+        $('.input-field').on('input', function () {
+            this.style.height = 'auto';
+
+            this.style.height = this.scrollHeight + 'px';
+        });
+    },
 
     init: () => {
         RUN.handleSelectLanguageMobile();
@@ -576,6 +583,7 @@ var RUN = {
         RUN.handleSlideAuthor();
         RUN.handleSlidePostRelated();
         RUN.handleMediaPanel();
+        RUN.handleInputComment();
     },
 };
 $(document).ready(() => {
