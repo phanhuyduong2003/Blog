@@ -2528,6 +2528,7 @@ img {
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body {
   padding-top: 10px;
+  line-height: 1.6;
 }
 .wrapper .content .post-detail--wrapper .post-detail--content .post-content--main .post-wrapper .post-content--body .post-content--wrapper .post-content--detail .post-content--item .post-item--title {
   margin-bottom: 15px;
