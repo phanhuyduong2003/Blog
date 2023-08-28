@@ -566,8 +566,27 @@ var RUN = {
     handleInputComment: () => {
         $('.input-field').on('input', function () {
             this.style.height = 'auto';
-
             this.style.height = this.scrollHeight + 'px';
+        });
+    },
+    handleClickPagination: () => {
+        $('.category-navigation--page').on('click', function () {
+            $('.category-navigation--active').removeClass('category-navigation--active');
+            $(this).toggleClass('category-navigation--active');
+        });
+    },
+    handleModal: () => {
+        $('.main-footer--modal').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+        });
+        $('.main-footer--form').on('click', function (event) {
+            event.preventDefault();
+            $('.main-footer--modal').iziModal('open');
+            // console.log(111);
+        });
+        $('.modal-close').on('click', function () {
+            $('.main-footer--modal').iziModal('close');
         });
     },
 
@@ -584,6 +603,8 @@ var RUN = {
         RUN.handleSlidePostRelated();
         RUN.handleMediaPanel();
         RUN.handleInputComment();
+        RUN.handleClickPagination();
+        RUN.handleModal();
     },
 };
 $(document).ready(() => {
