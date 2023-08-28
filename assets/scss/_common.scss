@@ -2940,8 +2940,7 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            // margin: 8px;
-                            margin-right: 5px;
+                            margin-right: 8px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 14px;
@@ -2953,8 +2952,6 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            // margin: 8px;
-                            margin-left: 5px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 14px;
@@ -2966,7 +2963,7 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            margin-right: 5px;
+                            margin-right: 8px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 18px;
@@ -2977,11 +2974,8 @@
                             }
                         }
                         .category-navigation--dots {
-                            // width: 26px;
-                            // height: 26px;
                             margin-right: 5px;
-                            padding: 15px;
-                            // margin: 8px;
+                            padding: 5px;
                             font-size: 14px;
                         }
                         .category-navigation--active {
@@ -3288,8 +3282,7 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            // margin: 8px;
-                            margin-right: 5px;
+                            margin-right: 8px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 14px;
@@ -3301,8 +3294,6 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            // margin: 8px;
-                            margin-left: 5px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 14px;
@@ -3314,7 +3305,7 @@
                             height: 26px;
                             @include flex(center, center);
                             padding: 15px;
-                            margin-right: 5px;
+                            margin-right: 8px;
                             border: 1px solid #2573ce;
                             border-radius: 50%;
                             font-size: 18px;

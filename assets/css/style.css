@@ -3511,7 +3511,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-right: 5px;
+  margin-right: 8px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 14px;
@@ -3525,7 +3525,6 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-left: 5px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 14px;
@@ -3539,7 +3538,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-right: 5px;
+  margin-right: 8px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 18px;
@@ -3551,7 +3550,7 @@ img {
 }
 .wrapper .content .category .category-main .category-main--listpost .category-main--navigation .category-navigation--dots {
   margin-right: 5px;
-  padding: 15px;
+  padding: 5px;
   font-size: 14px;
 }
 .wrapper .content .category .category-main .category-main--listpost .category-main--navigation .category-navigation--active {
@@ -3912,7 +3911,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-right: 5px;
+  margin-right: 8px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 14px;
@@ -3926,7 +3925,6 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-left: 5px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 14px;
@@ -3940,7 +3938,7 @@ img {
   justify-content: center;
   align-items: center;
   padding: 15px;
-  margin-right: 5px;
+  margin-right: 8px;
   border: 1px solid #2573ce;
   border-radius: 50%;
   font-size: 18px;
