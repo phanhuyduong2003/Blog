@@ -579,11 +579,11 @@ var RUN = {
         $('.main-footer--modal').iziModal({
             closeButton: true,
             bodyOverflow: true,
+            focusInput: false,
         });
         $('.main-footer--form').on('click', function (event) {
             event.preventDefault();
             $('.main-footer--modal').iziModal('open');
-            // console.log(111);
         });
         $('.modal-close').on('click', function () {
             $('.main-footer--modal').iziModal('close');

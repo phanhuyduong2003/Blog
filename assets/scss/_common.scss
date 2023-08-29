@@ -1422,6 +1422,8 @@
                                     aspect-ratio: 1;
                                     @include flex(center, center);
                                     margin-right: 17px;
+                                    border: 1px solid #f93b5a;
+                                    border-radius: 50%;
                                     background-repeat: no-repeat;
                                     background-position: 50%;
 
@@ -1445,6 +1447,90 @@
                                         @include truncate_text(1);
                                         font-size: 12px;
                                         color: #6d758c;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .home-birthday {
+                        margin-top: 30px;
+                        // .birthday-list {
+                        //     @include flex(center, initial);
+                        //     .birthday-item {
+                        //         width: 100%;
+                        //         height: 75px;
+                        //         position: relative;
+                        //         background-image: url(../image/image_background-birthday.jpg);
+                        //         background-position: center;
+                        //         background-size: cover;
+                        //         @include mq_min_576 {
+                        //             width: 70%;
+                        //         }
+                        //         .birthday-image {
+                        //             width: 40px;
+                        //             height: 40px;
+                        //             position: absolute;
+                        //             top: -10px;
+                        //             left: 70%;
+                        //             transform: rotate(20deg);
+                        //         }
+                        //         .birthday-info {
+                        //             width: 100%;
+                        //             height: 100%;
+                        //             @include flex(space-between, center);
+                        //             padding: 15px;
+                        //             .birthday-name {
+                        //                 font-size: 25px;
+                        //             }
+                        //             .birthday-day {
+                        //                 // text-align: right;
+                        //             }
+                        //         }
+                        //     }
+                        // }
+                        .birthday-header {
+                            margin-bottom: 20px;
+                            @include set_font(20px, 600, initial);
+                            color: #f47f29;
+                        }
+                        .birthday-list {
+                            // padding: 20px;
+                            .birthday-item {
+                                position: relative;
+                                @include flex(initial, center);
+                                margin-bottom: 15px;
+                                padding: 12px;
+                                // border: 1px solid #2573ce;
+                                border-radius: 4px;
+                                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
+                                transition: all 0.4s ease;
+                                background-image: url('../image/image_background-birthday.jpg');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                background-position: center;
+                                // cursor: pointer;
+                                &::after {
+                                    position: absolute;
+                                    right: 0;
+                                    content: '';
+                                    width: 50px;
+                                    height: 50px;
+                                    background-size: 50px;
+                                    background-image: url('../image/image_ballons.png');
+                                }
+                                .birthday-item--image {
+                                    width: 40px;
+                                    height: 40px;
+                                    margin-right: 20px;
+                                    border: 1px solid #2573ce;
+                                    border-radius: 50%;
+                                }
+                                .birthday-item--info {
+                                    .birthday-item--name {
+                                        max-width: 180px;
+                                        @include set_font(14px, 600, initial);
+                                        @include truncate_text(1);
+                                        margin-bottom: 10px;
                                     }
                                 }
                             }
@@ -2188,9 +2274,10 @@
                                         aspect-ratio: 1;
                                         @include flex(center, center);
                                         margin-right: 17px;
+                                        border: 1px solid #f93b5a;
+                                        border-radius: 50%;
                                         background-repeat: no-repeat;
                                         background-position: 50%;
-
                                         background-size: contain;
                                         font-size: 14px;
                                         font-weight: 700;
@@ -3027,9 +3114,10 @@
                                     aspect-ratio: 1;
                                     @include flex(center, center);
                                     margin-right: 17px;
+                                    border: 1px solid #f93b5a;
+                                    border-radius: 50%;
                                     background-repeat: no-repeat;
                                     background-position: 50%;
-
                                     background-size: contain;
                                     font-size: 14px;
                                     font-weight: 700;
@@ -3371,9 +3459,10 @@
                                     aspect-ratio: 1;
                                     @include flex(center, center);
                                     margin-right: 17px;
+                                    border: 1px solid #f93b5a;
+                                    border-radius: 50%;
                                     background-repeat: no-repeat;
                                     background-position: 50%;
-
                                     background-size: contain;
                                     font-size: 14px;
                                     font-weight: 700;
@@ -3604,6 +3693,29 @@
                         cursor: pointer;
                     }
                 }
+            }
+        }
+    }
+}
+.not-found--container {
+    height: 100vh;
+    @include flex(center, center);
+    flex-direction: column;
+    // background-image: url('../image/image_background.jpg');
+    .not-found--header {
+        width: 400px;
+    }
+    .not-found--body {
+        white-space: break-spaces;
+        text-align: center;
+        span {
+            display: block;
+            // margin-bottom: 20px;
+            a {
+                padding: 10px;
+                border-radius: 4px;
+                background-color: red;
+                color: #fff;
             }
         }
     }
