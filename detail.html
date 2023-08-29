@@ -34,14 +34,14 @@
                             </div>
                         </div>
                         <div class="header-top__right">
-                            <div class="header-top__search">
+                            <form class="header-top__search">
                                 <div class="header-top__search-form">
                                     <input type="text" class="header-top__search-field" placeholder="Nhập từ khoá" />
                                 </div>
-                                <div class="header-top__search-button">
+                                <button class="header-top__search-button">
                                     <i class="fa-solid fa-magnifying-glass"></i>
-                                </div>
-                            </div>
+                                </button>
+                            </form>
                             <div class="header-top__language">
                                 <div class="select-language__container">
                                     <img src="./assets/image/icon/icon_vn.svg" alt="" class="flag-chose" />
@@ -173,16 +173,17 @@
                                 <i class="fa-solid fa-xmark icon-close"></i>
                             </div>
                         </div>
-                        <div class="menu-nav__search">
+
+                        <form class="menu-nav__search">
                             <div class="search-form">
                                 <div class="input-container">
                                     <input type="text" class="search-field" placeholder="Nhập từ khoá" />
                                 </div>
                             </div>
-                            <div class="search-button">
+                            <button class="search-button">
                                 <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                        </div>
+                            </button>
+                        </form>
                         <ul class="menu-nav__link-list">
                             <li class="menu-nav__category">
                                 <a href="#" class="menu-nav__link">Tin nóng</a>
@@ -245,9 +246,9 @@
             <div class="content container">
                 <div class="post-detail--wrapper">
                     <div class="post-detail">
-                        <div class="post-detail--content">
-                            <div class="post-content--main">
-                                <div class="post-wrapper">
+                        <div class="post-detail--main">
+                            <div class="post-content">
+                                <div class="post-content--main">
                                     <div class="post-content--header">
                                         <div class="post-category story"><a href="#">CHUYỆN TÂM TÌNH</a></div>
                                         <h1 class="post-title">Bật cười với màn ''review sếp'' cực chất từ Sunner!</h1>
@@ -366,35 +367,96 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="post-content--hotpost">
-                                    <div class="hot-post--title">ĐANG HOT</div>
-                                    <div class="hot-post--list">
-                                        <div class="hot-post--item">
-                                            <div class="hot-post--item__position"></div>
-                                            <div class="hot-post--item__post">
-                                                <div class="hot-post--item__title">
-                                                    <a href="#"> Chính thức ra mắt đội ngũ Technical Heroes - "Trạm hỗ trợ công nghệ" cho các dự án tại Sun* Đà Nẵng </a>
+                                <div class="post-content--side">
+                                    <div class="post-content--hotpost">
+                                        <div class="hot-post--title">ĐANG HOT</div>
+                                        <div class="hot-post--list">
+                                            <div class="hot-post--item">
+                                                <div class="hot-post--item__position"></div>
+                                                <div class="hot-post--item__post">
+                                                    <div class="hot-post--item__title">
+                                                        <a href="#"> Chính thức ra mắt đội ngũ Technical Heroes - "Trạm hỗ trợ công nghệ" cho các dự án tại Sun* Đà Nẵng </a>
+                                                    </div>
+                                                    <div class="hot-post--item__view">452 Lượt xem</div>
                                                 </div>
-                                                <div class="hot-post--item__view">452 Lượt xem</div>
+                                            </div>
+                                            <div class="hot-post--item">
+                                                <div class="hot-post--item__position"></div>
+                                                <div class="hot-post--item__post">
+                                                    <div class="hot-post--item__title">
+                                                        <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                                    </div>
+                                                    <div class="hot-post--item__view">477 Lượt xem</div>
+                                                </div>
+                                            </div>
+                                            <div class="hot-post--item">
+                                                <div class="hot-post--item__position"></div>
+                                                <div class="hot-post--item__post">
+                                                    <div class="hot-post--item__title">
+                                                        <a href="#"> Thành Toại: Khi thầy giáo dạy Hóa trở thành lập trình viên iOS </a>
+                                                    </div>
+                                                    <div class="hot-post--item__view">394 Lượt xem</div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="hot-post--item">
-                                            <div class="hot-post--item__position"></div>
-                                            <div class="hot-post--item__post">
-                                                <div class="hot-post--item__title">
-                                                    <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                    </div>
+                                    <div class="post-content--birthday">
+                                        <div class="birthday-header">HAPPY BIRTHDAY MONCOWER</div>
+                                        <div class="birthday-list">
+                                            <div class="birthday-item">
+                                                <div class="birthday-item--image"><img class="img-birthday" src="./assets/image/icon/icon_user.png" alt="Michael Johnson" /></div>
+                                                <div class="birthday-item--info">
+                                                    <h2 class="birthday-item--name">John Doe</h2>
+                                                    <p class="birthday-item--date">Ngày 5</p>
                                                 </div>
-                                                <div class="hot-post--item__view">477 Lượt xem</div>
                                             </div>
+                                            <div class="birthday-item">
+                                                <div class="birthday-item--image"><img class="img-birthday" src="./assets/image/icon/icon_user.png" alt="Michael Johnson" /></div>
+                                                <div class="birthday-item--info">
+                                                    <h2 class="birthday-item--name">Jane Smith</h2>
+                                                    <p class="birthday-item--date">Ngày 15</p>
+                                                </div>
+                                            </div>
+                                            <div class="birthday-item">
+                                                <div class="birthday-item--image"><img class="img-birthday" src="./assets/image/icon/icon_user.png" alt="Michael Johnson" /></div>
+                                                <div class="birthday-item--info">
+                                                    <h2 class="birthday-item--name">Michael Johnson</h2>
+                                                    <p class="birthday-item--date">Ngày 20</p>
+                                                </div>
+                                            </div>
+                                            <!-- Thêm các mục sinh nhật khác ở đây -->
                                         </div>
-                                        <div class="hot-post--item">
-                                            <div class="hot-post--item__position"></div>
-                                            <div class="hot-post--item__post">
-                                                <div class="hot-post--item__title">
-                                                    <a href="#"> Thành Toại: Khi thầy giáo dạy Hóa trở thành lập trình viên iOS </a>
+                                    </div>
+                                    <div class="post-content--introduction">
+                                        <div class="introduction-title">ABOUT US</div>
+                                        <div class="introduction-slider">
+                                            <div class="introduction-slider--wrapper">
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/f99661ac-95be-45ef-bbc4-ab3d09592473.png" alt="" class="introduction-item--img" />
                                                 </div>
-                                                <div class="hot-post--item__view">394 Lượt xem</div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/c980d703-e65b-4e1f-965f-423b271a80a9.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/6531c765-647d-4c38-b27d-c79a98a728cb.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/603c1103-eee0-4117-9d57-7ec2b7755b77.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/1d694798-0341-486f-abaf-eb47573fa3e3.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/10d4931d-b3c9-4ac8-a097-9d832581db7e.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/6558ee57-9159-4c96-9976-21349b4ec5f4.png" alt="" class="introduction-item--img" />
+                                                </div>
+                                                <div class="introduction-item__container">
+                                                    <img src="https://news.sun-asterisk.com/images/full/be6ea82b-816e-4efd-be1d-5ec0cdf4ba3e.png" alt="" class="introduction-item--img" />
+                                                </div>
                                             </div>
+                                            <div class="introduction-slider--pagination"></div>
                                         </div>
                                     </div>
                                 </div>
