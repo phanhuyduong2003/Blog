@@ -4013,6 +4013,17 @@ img {
 .wrapper .content .search .search-main .search-main--bar .search-main--button span {
   margin-left: 5px;
 }
+.wrapper .content .search .search-main .search-main--count {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: initial;
+  color: #2573ce;
+}
+.wrapper .content .search .search-main .search-main--count span {
+  font-weight: 700;
+}
 .wrapper .content .search .search-main .search-main--listpost .search-main--content .search-main--item {
   margin-bottom: 15px;
   border-radius: 4px;
