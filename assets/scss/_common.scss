@@ -648,11 +648,8 @@
                                 width: 100%;
                                 height: 56.25vw;
                                 @include mq_min_1280 {
-                                    height: 100%;
-                                    &:hover {
-                                        transform: scale(1.05);
-                                        transition: all 0.5 ease;
-                                    }
+                                    height: 400px;
+                                    overflow: hidden;
                                 }
                                 transition: all 0.5s ease;
                                 .img__main-post {
@@ -661,6 +658,11 @@
                                     aspect-ratio: 16/9;
                                     object-fit: cover;
                                     border-radius: 3px;
+                                    transition: all 0.5s ease;
+                                    &:hover {
+                                        transform: scale(1.05);
+                                        transition: all 0.5s ease;
+                                    }
                                 }
                             }
                             &__content {
@@ -733,17 +735,17 @@
                                     overflow: hidden;
                                     .side-post__image {
                                         width: 100%;
-                                        height: 100%;
-                                        min-height: 182.5px;
-                                        transition: all 0.5s ease;
-                                        &:hover {
-                                            transform: scale(1.05);
-                                        }
+                                        height: 210px;
+                                        overflow: hidden;
                                         .img__side-post {
                                             width: 100%;
                                             height: 100%;
                                             aspect-ratio: 16/9;
                                             object-fit: cover;
+                                            transition: all 0.5s ease;
+                                            &:hover {
+                                                transform: scale(1.05);
+                                            }
                                         }
                                     }
                                     .side-post__content {
@@ -1485,7 +1487,7 @@
                                 background-repeat: no-repeat;
                                 background-size: cover;
                                 background-position: center;
-                                &::after {
+                                &::before {
                                     position: absolute;
                                     right: 0;
                                     content: '';
@@ -1507,6 +1509,49 @@
                                         @include set_font(14px, 600, initial);
                                         @include truncate_text(1);
                                         margin-bottom: 10px;
+                                    }
+                                }
+                                &:hover {
+                                    @keyframes firework {
+                                        0% {
+                                            transform: translate(-50%, 60vh);
+                                            width: 0.5vmin;
+                                            opacity: 1;
+                                        }
+                                        50% {
+                                            width: 0.5vmin;
+                                            opacity: 1;
+                                        }
+                                        100% {
+                                            width: 45vmin;
+                                            opacity: 0;
+                                        }
+                                    }
+                                    .firework,
+                                    .firework::before,
+                                    .firework::after {
+                                        --top: 60vh;
+                                        content: '';
+                                        position: absolute;
+                                        z-index: 10;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 0.5vmin;
+                                        aspect-ratio: 1;
+                                        background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
+                                        background-size: 0.5vmin 0.5vmin;
+                                        background-repeat: no-repeat;
+                                        animation: firework 2s infinite;
+                                    }
+                                    .firework::before {
+                                        transform: translate(-50%, -50%) rotate(25deg) !important;
+                                    }
+                                    .firework::after {
+                                        transform: translate(-50%, -50%) rotate(-37deg) !important;
                                     }
                                 }
                             }
@@ -1660,23 +1705,26 @@
                                     width: 100%;
                                     margin-bottom: 15px;
                                     overflow: hidden;
-                                    &:hover {
-                                        .category-post--image__container {
-                                            transform: scale(1.05);
-                                        }
-                                    }
                                     .category-post--image__container {
                                         width: 100%;
+                                        height: 200px;
                                         display: block;
                                         background-repeat: no-repeat;
                                         background-position: 50%;
                                         background-size: cover;
                                         transition: all 0.4s ease;
+                                        overflow: hidden;
                                         .img__category-post {
                                             width: 100%;
                                             height: 100%;
                                             aspect-ratio: 55/31;
                                             object-fit: cover;
+                                            transition: all 0.5s ease;
+                                            @include mq_min_1280 {
+                                                &:hover {
+                                                    transform: scale(1.05);
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -2214,9 +2262,9 @@
                             @include mq_min_1280 {
                                 width: 25%;
                                 height: 100%;
-                                position: sticky;
-                                top: 150px;
-                                right: 0;
+                                // position: sticky;
+                                // top: 150px;
+                                // right: 0;
                             }
                             .post-content--hotpost {
                                 .hot-post--title {
@@ -2324,6 +2372,49 @@
                                                 @include set_font(14px, 600, initial);
                                                 @include truncate_text(1);
                                                 margin-bottom: 10px;
+                                            }
+                                        }
+                                        &:hover {
+                                            @keyframes firework {
+                                                0% {
+                                                    transform: translate(-50%, 60vh);
+                                                    width: 0.5vmin;
+                                                    opacity: 1;
+                                                }
+                                                50% {
+                                                    width: 0.5vmin;
+                                                    opacity: 1;
+                                                }
+                                                100% {
+                                                    width: 45vmin;
+                                                    opacity: 0;
+                                                }
+                                            }
+                                            .firework,
+                                            .firework::before,
+                                            .firework::after {
+                                                --top: 60vh;
+                                                content: '';
+                                                position: absolute;
+                                                z-index: 10;
+                                                top: 50%;
+                                                left: 50%;
+                                                transform: translate(-50%, -50%);
+                                                width: 0.5vmin;
+                                                aspect-ratio: 1;
+                                                background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
+                                                    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%,
+                                                    radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%,
+                                                    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
+                                                background-size: 0.5vmin 0.5vmin;
+                                                background-repeat: no-repeat;
+                                                animation: firework 2s infinite;
+                                            }
+                                            .firework::before {
+                                                transform: translate(-50%, -50%) rotate(25deg) !important;
+                                            }
+                                            .firework::after {
+                                                transform: translate(-50%, -50%) rotate(-37deg) !important;
                                             }
                                         }
                                     }
@@ -2764,13 +2855,6 @@
             .category-hot--news {
                 display: block;
                 width: 100%;
-                // margin-left: -20px;
-                // @include mq_min_768 {
-                //     margin-left: calc((100vw - 650px) / -2 - 25px);
-                // }
-                // @include mq_min_992 {
-                //     margin-left: calc((100vw - 870px) / -2 - 25px);
-                // }
                 @include mq_min_1280 {
                     width: 100%;
                     margin: 0 auto;
@@ -2800,7 +2884,6 @@
                 }
                 .hot-news--content {
                     @include mq_min_1280 {
-                        // padding-top: 20px;
                         @include flex(unset, unset);
                         column-gap: 20px;
                     }
@@ -2812,13 +2895,10 @@
                         .main-post {
                             &__image {
                                 width: 100%;
-                                // height: 56.25vw;
+                                height: 56.25vw;
                                 @include mq_min_1280 {
-                                    height: 100%;
-                                    &:hover {
-                                        transform: scale(1.05);
-                                        transition: all 0.5s ease;
-                                    }
+                                    height: 400px;
+                                    overflow: hidden;
                                 }
                                 transition: all 0.5s ease;
                                 .img__main-post {
@@ -2827,6 +2907,11 @@
                                     aspect-ratio: 16/9;
                                     object-fit: cover;
                                     border-radius: 3px;
+                                    transition: all 0.5s ease;
+                                    &:hover {
+                                        transform: scale(1.05);
+                                        transition: all 0.5s ease;
+                                    }
                                 }
                             }
                             &__content {
@@ -2898,17 +2983,17 @@
                                     overflow: hidden;
                                     .side-post__image {
                                         width: 100%;
-                                        height: 100%;
-                                        min-height: 182.5px;
-                                        transition: all 0.5s ease;
-                                        &:hover {
-                                            transform: scale(1.05);
-                                        }
+                                        height: 210px;
+                                        overflow: hidden;
                                         .img__side-post {
                                             width: 100%;
                                             height: 100%;
                                             aspect-ratio: 16/9;
                                             object-fit: cover;
+                                            transition: all 0.5s ease;
+                                            &:hover {
+                                                transform: scale(1.05);
+                                            }
                                         }
                                     }
                                     .side-post__content {
@@ -3282,6 +3367,49 @@
                                         @include set_font(14px, 600, initial);
                                         @include truncate_text(1);
                                         margin-bottom: 10px;
+                                    }
+                                }
+                                &:hover {
+                                    @keyframes firework {
+                                        0% {
+                                            transform: translate(-50%, 60vh);
+                                            width: 0.5vmin;
+                                            opacity: 1;
+                                        }
+                                        50% {
+                                            width: 0.5vmin;
+                                            opacity: 1;
+                                        }
+                                        100% {
+                                            width: 45vmin;
+                                            opacity: 0;
+                                        }
+                                    }
+                                    .firework,
+                                    .firework::before,
+                                    .firework::after {
+                                        --top: 60vh;
+                                        content: '';
+                                        position: absolute;
+                                        z-index: 10;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        width: 0.5vmin;
+                                        aspect-ratio: 1;
+                                        background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%,
+                                            radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
+                                        background-size: 0.5vmin 0.5vmin;
+                                        background-repeat: no-repeat;
+                                        animation: firework 2s infinite;
+                                    }
+                                    .firework::before {
+                                        transform: translate(-50%, -50%) rotate(25deg) !important;
+                                    }
+                                    .firework::after {
+                                        transform: translate(-50%, -50%) rotate(-37deg) !important;
                                     }
                                 }
                             }
@@ -3926,7 +4054,6 @@
     height: 100vh;
     @include flex(center, center);
     flex-direction: column;
-    // background-image: url('../image/image_background.jpg');
     .not-found--header {
         width: 400px;
     }
@@ -3935,7 +4062,6 @@
         text-align: center;
         span {
             display: block;
-            // margin-bottom: 20px;
             a {
                 padding: 10px;
                 border-radius: 4px;

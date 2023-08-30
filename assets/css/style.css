@@ -859,11 +859,8 @@ img {
 }
 @media screen and (min-width: 1280px) {
   .wrapper .content .home .home-featured_post .featured-post--main .main-post__image {
-    height: 100%;
-  }
-  .wrapper .content .home .home-featured_post .featured-post--main .main-post__image:hover {
-    transform: scale(1.05);
-    transition: all 0.5 ease;
+    height: 400px;
+    overflow: hidden;
   }
 }
 .wrapper .content .home .home-featured_post .featured-post--main .main-post__image .img__main-post {
@@ -872,6 +869,11 @@ img {
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.wrapper .content .home .home-featured_post .featured-post--main .main-post__image .img__main-post:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 .wrapper .content .home .home-featured_post .featured-post--main .main-post__content .main-post--title {
   padding: 10px 20px 5px;
@@ -968,18 +970,18 @@ img {
   }
   .wrapper .content .home .home-featured_post .featured-post--side .side-post--item .side-post__image {
     width: 100%;
-    height: 100%;
-    min-height: 182.5px;
-    transition: all 0.5s ease;
-  }
-  .wrapper .content .home .home-featured_post .featured-post--side .side-post--item .side-post__image:hover {
-    transform: scale(1.05);
+    height: 210px;
+    overflow: hidden;
   }
   .wrapper .content .home .home-featured_post .featured-post--side .side-post--item .side-post__image .img__side-post {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  .wrapper .content .home .home-featured_post .featured-post--side .side-post--item .side-post__image .img__side-post:hover {
+    transform: scale(1.05);
   }
   .wrapper .content .home .home-featured_post .featured-post--side .side-post--item .side-post__content .side-post--title__link {
     margin: 10px 0 20px;
@@ -1831,7 +1833,7 @@ img {
   background-size: cover;
   background-position: center;
 }
-.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item::after {
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item::before {
   position: absolute;
   right: 0;
   content: "";
@@ -1858,6 +1860,44 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 10px;
+}
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% {
+    width: 45vmin;
+    opacity: 0;
+  }
+}
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item:hover .firework,
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item:hover .firework::before,
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item:hover .firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 50% 0%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 0% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 50% 99%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 10% 60%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 90% 23%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s infinite;
+}
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item:hover .firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+.wrapper .content .home .home-main_post .main-post--bottom .home-birthday .birthday-list .birthday-item:hover .firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
 }
 .wrapper .content .home .home-main_post .main-post--bottom .home-introduction {
   width: 250px;
@@ -2028,22 +2068,27 @@ img {
   margin-bottom: 15px;
   overflow: hidden;
 }
-.wrapper .content .home .home-category .category-wrapper .category-list .category-post--main__image:hover .category-post--image__container {
-  transform: scale(1.05);
-}
 .wrapper .content .home .home-category .category-wrapper .category-list .category-post--main__image .category-post--image__container {
   width: 100%;
+  height: 200px;
   display: block;
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
   transition: all 0.4s ease;
+  overflow: hidden;
 }
 .wrapper .content .home .home-category .category-wrapper .category-list .category-post--main__image .category-post--image__container .img__category-post {
   width: 100%;
   height: 100%;
   aspect-ratio: 55/31;
   object-fit: cover;
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 1280px) {
+  .wrapper .content .home .home-category .category-wrapper .category-list .category-post--main__image .category-post--image__container .img__category-post:hover {
+    transform: scale(1.05);
+  }
 }
 .wrapper .content .home .home-category .category-wrapper .category-list .category-post--main__title a {
   min-height: 67.2px;
@@ -2660,9 +2705,6 @@ img {
   .wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side {
     width: 25%;
     height: 100%;
-    position: sticky;
-    top: 150px;
-    right: 0;
   }
 }
 .wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--hotpost .hot-post--title {
@@ -2776,6 +2818,44 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 10px;
+}
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% {
+    width: 45vmin;
+    opacity: 0;
+  }
+}
+.wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--birthday .birthday-list .birthday-item:hover .firework,
+.wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--birthday .birthday-list .birthday-item:hover .firework::before,
+.wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--birthday .birthday-list .birthday-item:hover .firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 50% 0%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 0% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 50% 99%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 10% 60%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 90% 23%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s infinite;
+}
+.wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--birthday .birthday-list .birthday-item:hover .firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+.wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--birthday .birthday-list .birthday-item:hover .firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
 }
 .wrapper .content .post-detail--wrapper .post-detail .post-detail--main .post-content .post-content--side .post-content--introduction {
   width: 250px;
@@ -3300,15 +3380,13 @@ img {
 }
 .wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__image {
   width: 100%;
+  height: 56.25vw;
   transition: all 0.5s ease;
 }
 @media screen and (min-width: 1280px) {
   .wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__image {
-    height: 100%;
-  }
-  .wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__image:hover {
-    transform: scale(1.05);
-    transition: all 0.5s ease;
+    height: 400px;
+    overflow: hidden;
   }
 }
 .wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__image .img__main-post {
@@ -3317,6 +3395,11 @@ img {
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 3px;
+  transition: all 0.5s ease;
+}
+.wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__image .img__main-post:hover {
+  transform: scale(1.05);
+  transition: all 0.5s ease;
 }
 @media screen and (min-width: 1280px) {
   .wrapper .content .category .category-hot--news .hot-news--content .hot-news--main .main-post__content .main-post--title {
@@ -3410,18 +3493,18 @@ img {
   }
   .wrapper .content .category .category-hot--news .hot-news--content .hot-news--side .side-post--item .side-post__image {
     width: 100%;
-    height: 100%;
-    min-height: 182.5px;
-    transition: all 0.5s ease;
-  }
-  .wrapper .content .category .category-hot--news .hot-news--content .hot-news--side .side-post--item .side-post__image:hover {
-    transform: scale(1.05);
+    height: 210px;
+    overflow: hidden;
   }
   .wrapper .content .category .category-hot--news .hot-news--content .hot-news--side .side-post--item .side-post__image .img__side-post {
     width: 100%;
     height: 100%;
     aspect-ratio: 16/9;
     object-fit: cover;
+    transition: all 0.5s ease;
+  }
+  .wrapper .content .category .category-hot--news .hot-news--content .hot-news--side .side-post--item .side-post__image .img__side-post:hover {
+    transform: scale(1.05);
   }
   .wrapper .content .category .category-hot--news .hot-news--content .hot-news--side .side-post--item .side-post__content .side-post--title__link {
     margin: 10px 0 20px;
@@ -3880,6 +3963,44 @@ img {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 10px;
+}
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% {
+    width: 45vmin;
+    opacity: 0;
+  }
+}
+.wrapper .content .category .category-main .category-main--side .category-side--birthday .birthday-list .birthday-item:hover .firework,
+.wrapper .content .category .category-main .category-main--side .category-side--birthday .birthday-list .birthday-item:hover .firework::before,
+.wrapper .content .category .category-main .category-main--side .category-side--birthday .birthday-list .birthday-item:hover .firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 50% 0%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 0% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 50% 99%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 10% 60%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, rgba(0, 0, 0, 0) 0) 90% 23%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, rgba(0, 0, 0, 0) 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, rgba(0, 0, 0, 0) 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s infinite;
+}
+.wrapper .content .category .category-main .category-main--side .category-side--birthday .birthday-list .birthday-item:hover .firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+.wrapper .content .category .category-main .category-main--side .category-side--birthday .birthday-list .birthday-item:hover .firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
 }
 .wrapper .content .category .category-main .category-main--side .category-side--introduction {
   width: 250px;

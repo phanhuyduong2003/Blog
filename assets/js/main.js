@@ -589,6 +589,14 @@ var RUN = {
             $('.main-footer--modal').iziModal('close');
         });
     },
+    handleClearInput: () => {
+        $('.header-top__search').on('submit', function () {
+            $('.header-top__search-field').val('');
+        });
+        $('.menu-nav__search').on('submit', function () {
+            $('.search-field').val('');
+        });
+    },
 
     init: () => {
         RUN.handleSelectLanguageMobile();
@@ -605,6 +613,7 @@ var RUN = {
         RUN.handleInputComment();
         RUN.handleClickPagination();
         RUN.handleModal();
+        RUN.handleClearInput();
     },
 };
 $(document).ready(() => {
