@@ -1468,6 +1468,8 @@
                     }
                     .home-birthday {
                         margin-top: 30px;
+                        position: relative;
+                        overflow: hidden;
                         .birthday-header {
                             margin-bottom: 20px;
                             @include set_font(18px, 600, initial);
@@ -1483,11 +1485,8 @@
                                 border-radius: 4px;
                                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
                                 transition: all 0.4s ease;
-                                background-image: url('../image/image_background-birthday.jpg');
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                background-position: center;
-                                &::before {
+                                background: linear-gradient(90deg, #edd5b7, #fcf7f1) no-repeat;
+                                &::after {
                                     position: absolute;
                                     right: 0;
                                     content: '';
@@ -1511,49 +1510,75 @@
                                         margin-bottom: 10px;
                                     }
                                 }
-                                &:hover {
-                                    @keyframes firework {
-                                        0% {
-                                            transform: translate(-50%, 60vh);
-                                            width: 0.5vmin;
-                                            opacity: 1;
-                                        }
-                                        50% {
-                                            width: 0.5vmin;
-                                            opacity: 1;
-                                        }
-                                        100% {
-                                            width: 45vmin;
-                                            opacity: 0;
-                                        }
-                                    }
-                                    .firework,
-                                    .firework::before,
-                                    .firework::after {
-                                        --top: 60vh;
-                                        content: '';
-                                        position: absolute;
-                                        z-index: 10;
-                                        top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%, -50%);
-                                        width: 0.5vmin;
-                                        aspect-ratio: 1;
-                                        background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
-                                        background-size: 0.5vmin 0.5vmin;
-                                        background-repeat: no-repeat;
-                                        animation: firework 2s infinite;
-                                    }
-                                    .firework::before {
-                                        transform: translate(-50%, -50%) rotate(25deg) !important;
-                                    }
-                                    .firework::after {
-                                        transform: translate(-50%, -50%) rotate(-37deg) !important;
-                                    }
-                                }
+                            }
+                        }
+
+                        //Hiệu ứng pháo hoa
+                        $particles: 50;
+                        $width: 500;
+                        $height: 500;
+                        $box-shadow: ();
+                        $box-shadow2: ();
+                        @for $i from 0 through $particles {
+                            $box-shadow: $box-shadow, random($width)- calc($width / 2) + px random($height) - calc($height / 1.2) + px hsl(random(360), 100%, 50%);
+                            $box-shadow2: $box-shadow2, 0 0 #fff;
+                        }
+                        .firework > .before,
+                        .firework > .after {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(-50%);
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            box-shadow: $box-shadow2;
+                            @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+                        }
+
+                        .firework > .after {
+                            @include animation-delay((1.25s, 1.25s, 1.25s));
+                            @include animation-duration((1.25s, 1.25s, 6.25s));
+                        }
+
+                        @include keyframes(bang) {
+                            to {
+                                box-shadow: $box-shadow;
+                            }
+                        }
+
+                        @include keyframes(gravity) {
+                            to {
+                                @include transform(translateY(200px));
+                                opacity: 0;
+                            }
+                        }
+
+                        @include keyframes(position) {
+                            0%,
+                            19.9% {
+                                margin-top: 10%;
+                                margin-left: 40%;
+                            }
+                            20%,
+                            39.9% {
+                                margin-top: 40%;
+                                margin-left: 30%;
+                            }
+                            40%,
+                            59.9% {
+                                margin-top: 20%;
+                                margin-left: 70%;
+                            }
+                            60%,
+                            79.9% {
+                                margin-top: 30%;
+                                margin-left: 20%;
+                            }
+                            80%,
+                            99.9% {
+                                margin-top: 30%;
+                                margin-left: 80%;
                             }
                         }
                     }
@@ -2262,9 +2287,6 @@
                             @include mq_min_1280 {
                                 width: 25%;
                                 height: 100%;
-                                // position: sticky;
-                                // top: 150px;
-                                // right: 0;
                             }
                             .post-content--hotpost {
                                 .hot-post--title {
@@ -2331,6 +2353,8 @@
                             }
                             .post-content--birthday {
                                 margin-top: 30px;
+                                position: relative;
+                                overflow: hidden;
                                 .birthday-header {
                                     margin-bottom: 20px;
                                     @include set_font(18px, 600, initial);
@@ -2346,10 +2370,7 @@
                                         border-radius: 4px;
                                         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
                                         transition: all 0.4s ease;
-                                        background-image: url('../image/image_background-birthday.jpg');
-                                        background-repeat: no-repeat;
-                                        background-size: cover;
-                                        background-position: center;
+                                        background: linear-gradient(90deg, #edd5b7, #fcf7f1) no-repeat;
                                         &::after {
                                             position: absolute;
                                             right: 0;
@@ -2374,49 +2395,74 @@
                                                 margin-bottom: 10px;
                                             }
                                         }
-                                        &:hover {
-                                            @keyframes firework {
-                                                0% {
-                                                    transform: translate(-50%, 60vh);
-                                                    width: 0.5vmin;
-                                                    opacity: 1;
-                                                }
-                                                50% {
-                                                    width: 0.5vmin;
-                                                    opacity: 1;
-                                                }
-                                                100% {
-                                                    width: 45vmin;
-                                                    opacity: 0;
-                                                }
-                                            }
-                                            .firework,
-                                            .firework::before,
-                                            .firework::after {
-                                                --top: 60vh;
-                                                content: '';
-                                                position: absolute;
-                                                z-index: 10;
-                                                top: 50%;
-                                                left: 50%;
-                                                transform: translate(-50%, -50%);
-                                                width: 0.5vmin;
-                                                aspect-ratio: 1;
-                                                background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
-                                                    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%,
-                                                    radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%,
-                                                    radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
-                                                background-size: 0.5vmin 0.5vmin;
-                                                background-repeat: no-repeat;
-                                                animation: firework 2s infinite;
-                                            }
-                                            .firework::before {
-                                                transform: translate(-50%, -50%) rotate(25deg) !important;
-                                            }
-                                            .firework::after {
-                                                transform: translate(-50%, -50%) rotate(-37deg) !important;
-                                            }
-                                        }
+                                    }
+                                }
+                                //Hiệu ứng pháo hoa
+                                $particles: 50;
+                                $width: 500;
+                                $height: 500;
+                                $box-shadow: ();
+                                $box-shadow2: ();
+                                @for $i from 0 through $particles {
+                                    $box-shadow: $box-shadow, random($width) - calc($width / 2) + px random($height) - calc($height / 1.2) + px hsl(random(360), 100%, 50%);
+                                    $box-shadow2: $box-shadow2, 0 0 #fff;
+                                }
+                                .firework > .before,
+                                .firework > .after {
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 0;
+                                    transform: translate(-50%);
+                                    width: 5px;
+                                    height: 5px;
+                                    border-radius: 50%;
+                                    box-shadow: $box-shadow2;
+                                    @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+                                }
+
+                                .firework > .after {
+                                    @include animation-delay((1.25s, 1.25s, 1.25s));
+                                    @include animation-duration((1.25s, 1.25s, 6.25s));
+                                }
+
+                                @include keyframes(bang) {
+                                    to {
+                                        box-shadow: $box-shadow;
+                                    }
+                                }
+
+                                @include keyframes(gravity) {
+                                    to {
+                                        @include transform(translateY(200px));
+                                        opacity: 0;
+                                    }
+                                }
+
+                                @include keyframes(position) {
+                                    0%,
+                                    19.9% {
+                                        margin-top: 10%;
+                                        margin-left: 40%;
+                                    }
+                                    20%,
+                                    39.9% {
+                                        margin-top: 40%;
+                                        margin-left: 30%;
+                                    }
+                                    40%,
+                                    59.9% {
+                                        margin-top: 20%;
+                                        margin-left: 70%;
+                                    }
+                                    60%,
+                                    79.9% {
+                                        margin-top: 30%;
+                                        margin-left: 20%;
+                                    }
+                                    80%,
+                                    99.9% {
+                                        margin-top: 30%;
+                                        margin-left: 80%;
                                     }
                                 }
                             }
@@ -3326,6 +3372,8 @@
                     // }
                     .category-side--birthday {
                         margin-top: 30px;
+                        position: relative;
+                        overflow: hidden;
                         .birthday-header {
                             margin-bottom: 20px;
                             @include set_font(18px, 600, initial);
@@ -3341,10 +3389,7 @@
                                 border-radius: 4px;
                                 box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
                                 transition: all 0.4s ease;
-                                background-image: url('../image/image_background-birthday.jpg');
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                                background-position: center;
+                                background: linear-gradient(90deg, #edd5b7, #fcf7f1) no-repeat;
                                 &::after {
                                     position: absolute;
                                     right: 0;
@@ -3369,49 +3414,74 @@
                                         margin-bottom: 10px;
                                     }
                                 }
-                                &:hover {
-                                    @keyframes firework {
-                                        0% {
-                                            transform: translate(-50%, 60vh);
-                                            width: 0.5vmin;
-                                            opacity: 1;
-                                        }
-                                        50% {
-                                            width: 0.5vmin;
-                                            opacity: 1;
-                                        }
-                                        100% {
-                                            width: 45vmin;
-                                            opacity: 0;
-                                        }
-                                    }
-                                    .firework,
-                                    .firework::before,
-                                    .firework::after {
-                                        --top: 60vh;
-                                        content: '';
-                                        position: absolute;
-                                        z-index: 10;
-                                        top: 50%;
-                                        left: 50%;
-                                        transform: translate(-50%, -50%);
-                                        width: 0.5vmin;
-                                        aspect-ratio: 1;
-                                        background: radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 50% 00%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 00% 50%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 50% 99%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 99% 50%, radial-gradient(circle, #2573ce 0.3vmin, #0000 0) 80% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 95% 90%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 10% 60%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 31% 80%, radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 80% 10%, radial-gradient(circle, rgb(255, 0, 0) 0.2vmin, #0000 0) 90% 23%,
-                                            radial-gradient(circle, rgb(255, 0, 0) 0.3vmin, #0000 0) 45% 20%, radial-gradient(circle, rgb(255, 0, 0) 0.5vmin, #0000 0) 13% 24%;
-                                        background-size: 0.5vmin 0.5vmin;
-                                        background-repeat: no-repeat;
-                                        animation: firework 2s infinite;
-                                    }
-                                    .firework::before {
-                                        transform: translate(-50%, -50%) rotate(25deg) !important;
-                                    }
-                                    .firework::after {
-                                        transform: translate(-50%, -50%) rotate(-37deg) !important;
-                                    }
-                                }
+                            }
+                        }
+                        //Hiệu ứng pháo hoa
+                        $particles: 50;
+                        $width: 500;
+                        $height: 500;
+                        $box-shadow: ();
+                        $box-shadow2: ();
+                        @for $i from 0 through $particles {
+                            $box-shadow: $box-shadow, random($width)- calc($width / 2) + px random($height) - calc($height / 1.2) + px hsl(random(360), 100%, 50%);
+                            $box-shadow2: $box-shadow2, 0 0 #fff;
+                        }
+                        .firework > .before,
+                        .firework > .after {
+                            position: absolute;
+                            top: 50%;
+                            left: 0;
+                            transform: translate(-50%);
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 50%;
+                            box-shadow: $box-shadow2;
+                            @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+                        }
+
+                        .firework > .after {
+                            @include animation-delay((1.25s, 1.25s, 1.25s));
+                            @include animation-duration((1.25s, 1.25s, 6.25s));
+                        }
+
+                        @include keyframes(bang) {
+                            to {
+                                box-shadow: $box-shadow;
+                            }
+                        }
+
+                        @include keyframes(gravity) {
+                            to {
+                                @include transform(translateY(200px));
+                                opacity: 0;
+                            }
+                        }
+
+                        @include keyframes(position) {
+                            0%,
+                            19.9% {
+                                margin-top: 10%;
+                                margin-left: 40%;
+                            }
+                            20%,
+                            39.9% {
+                                margin-top: 40%;
+                                margin-left: 30%;
+                            }
+                            40%,
+                            59.9% {
+                                margin-top: 20%;
+                                margin-left: 70%;
+                            }
+                            60%,
+                            79.9% {
+                                margin-top: 30%;
+                                margin-left: 20%;
+                            }
+                            80%,
+                            99.9% {
+                                margin-top: 30%;
+                                margin-left: 80%;
                             }
                         }
                     }
