@@ -93,6 +93,10 @@
                                     transition: all 0.4s ease;
                                     color: #84909f;
                                     background-color: #fff;
+                                    &:hover,
+                                    &:focus {
+                                        -webkit-box-shadow: 0 0 100px #ffffff inset;
+                                    }
                                 }
                             }
                             .header-top__search-button {
