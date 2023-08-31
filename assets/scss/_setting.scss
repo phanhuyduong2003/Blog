@@ -4,6 +4,9 @@
     box-sizing: border-box;
 }
 $color-main: linear-gradient(90deg, rgba(127, 127, 213, 1) 0%, rgba(134, 168, 231, 1) 54%, rgba(145, 234, 228, 1) 100%);
+html {
+    margin-top: 0 !important;
+}
 body {
     font-family: 'Open Sans', sans-serif !important;
     overflow: hidden auto;
