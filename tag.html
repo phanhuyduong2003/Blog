@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="vn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MoncowUX Blog</title>
+        <link rel="shortcut icon" href="https://moncow.com/wp-content/uploads/2022/11/cropped-logo-mc2-32x32.png" type="image/x-icon" />
+        <link rel="stylesheet" href="./assets/icon/css/all.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/js/jQueryUI/jquery-ui.css" />
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+        <link rel="stylesheet" href="./assets/js/izimodal/css/iziModal.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="header">
+                <div class="header-top container">
+                    <div class="header-top__container">
+                        <div class="header-top__left">
+                            <div class="header-top__logo">
+                                <a href="#" class="header-top--image">
+                                    <img src="./assets/image/image_logo.png" alt="" class="img-header" />
+                                </a>
+                            </div>
+                            <div class="header-top__tag">
+                                <span class="header-top__tag-item"><a href="#">#Learning Culture</a></span>
+                                <span class="header-top__tag-item"><a href="#">#Làm Nghề</a></span>
+                                <span class="header-top__tag-item"><a href="#">#gia đình IT</a></span>
+                                <span class="header-top__tag-item"><a href="#">#đáng tiền</a></span>
+                                <span class="header-top__tag-item"><a href="#">#Local talk</a></span>
+                                <span class="header-top__tag-item hot-tag"><a href="#">#SVN Goal 2023</a></span>
+                            </div>
+                        </div>
+                        <div class="header-top__right">
+                            <form class="header-top__search">
+                                <div class="header-top__search-form">
+                                    <input type="text" class="header-top__search-field" placeholder="Nhập từ khoá" />
+                                </div>
+                                <button class="header-top__search-button" type="submit">
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                            <div class="header-top__language">
+                                <div class="select-language__container">
+                                    <img src="./assets/image/icon/icon_vn.svg" alt="" class="flag-chose" />
+                                    <span class="language-chose">VI</span>
+                                    <button class="button-dropdown">
+                                        <i class="fa-thin fa-chevron-down header-top__icon-dropdown"></i>
+                                    </button>
+                                </div>
+                                <ul class="select-language__none open-select">
+                                    <li class="header-top__language-item language-item__selected">
+                                        <img src="./assets/image/icon/icon_vn.svg" alt="" class="flag-image" />
+                                        <span class="text">VI</span>
+                                    </li>
+                                    <li class="header-top__language-item">
+                                        <img src="./assets/image/icon/icon_en.svg" alt="" class="flag-image" />
+                                        <span class="text">EN</span>
+                                    </li>
+                                    <li class="header-top__language-item">
+                                        <img src="./assets/image/icon/icon_jp.svg" alt="" class="flag-image" />
+                                        <span class="text">JP</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="header-top__unlogin">
+                                <div class="header-top__login-input">
+                                    <a href="#" class="header-top__login-button">G-SUITE LOGIN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-main container">
+                    <div class="header-main__wrapper">
+                        <div class="menu-container">
+                            <ul class="menu-bar">
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Tin nóng</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Dự án - Sản phẩm</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Góc nhìn</a>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Gương mặt Sun*</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Corner of Sun*</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Văn hoá Sun*</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Văn hoá học tập</span>
+                                            <span class="submenu-link">Văn hoá - Sự kiện</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Kinh nghiệm hay</a>
+                                </li>
+                                <li class="menu-item has-submenu">
+                                    <a href="#" class="menu-link">Chuyện tâm tình</a>
+                                    <i class="fa-thin fa-angle-down icon-submenu"></i>
+                                    <div class="submenu">
+                                        <div class="submenu-item">
+                                            <span class="submenu-link">Sun* Confession</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Multimedia</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="#" class="menu-link">Tác giả</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__line"></div>
+            </div>
+            <div class="mobile-header">
+                <div class="mobile-header__main-header">
+                    <div class="main-header__logo">
+                        <a href="#" class="logo-home">
+                            <img src="./assets/image/image_logo.png" alt="" class="logo" />
+                        </a>
+                    </div>
+                    <div class="main-header__menu">
+                        <div class="menu__select-language">
+                            <div class="select-language__container">
+                                <span class="language">VI</span>
+                                <span class="fa-thin fa-chevron-down icon-dropdown"></span>
+                            </div>
+                            <div class="select-dropdown__none open-dropdown">
+                                <div class="list-language">
+                                    <ul class="list-language__dropdown">
+                                        <li class="list-language__dropdown-item selected">
+                                            <span>VI</span>
+                                        </li>
+                                        <li class="list-language__dropdown-item">
+                                            <span>EN</span>
+                                        </li>
+                                        <li class="list-language__dropdown-item">
+                                            <span>JP</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu__sidebar-button">
+                            <span class="fa-solid fa-bars"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile-header__menu-nav">
+                    <div class="menu-nav__container">
+                        <div class="menu-nav__header">
+                            <div class="menu-nav__unlogin">
+                                <a href="#" class="menu-nav__login-button">G-SUITE LOGIN</a>
+                            </div>
+                            <div class="menu-nav__close-button">
+                                <i class="fa-solid fa-xmark icon-close"></i>
+                            </div>
+                        </div>
+
+                        <form class="menu-nav__search">
+                            <div class="search-form">
+                                <div class="input-container">
+                                    <input type="text" class="search-field" placeholder="Nhập từ khoá" />
+                                </div>
+                            </div>
+                            <button class="search-button" type="submit">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                        <ul class="menu-nav__link-list">
+                            <li class="menu-nav__ tag">
+                                <a href="#" class="menu-nav__link">Tin nóng</a>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <a href="#" class="menu-nav__link">Dự án - Sản phẩm</a>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <a href="#" class="menu-nav__link">Góc nhìn</a>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Gương mặt Sun*</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <span class="menu-nav__ tag-children">
+                                    <a href="#" class="menu-nav__link">Corner of Sun*</a>
+                                </span>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Văn hoá Sun*</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <div class="accordion-content">
+                                    <span class="menu-nav__ tag-children">
+                                        <a href="#" class="menu-nav__link">Văn hoá học tập</a>
+                                    </span>
+                                    <span class="menu-nav__ tag-children">
+                                        <a href="#" class="menu-nav__link">Văn hoá - Sự kiện</a>
+                                    </span>
+                                </div>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <a href="#" class="menu-nav__link">Kinh nghiệm hay</a>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <div class="accordion-container">
+                                    <a href="#" class="menu-nav__link">Chuyện tâm tình</a>
+                                    <i class="fa-solid fa-caret-right accordion-button"></i>
+                                </div>
+                                <span class="menu-nav__ tag-children"> <a href="#" class="menu-nav__link">Sun* Confession</a></span>
+                            </li>
+                            <li class="menu-nav__ tag">
+                                <a href="#" class="menu-nav__link">Multimedia</a>
+                            </li>
+                        </ul>
+                        <div class="menu-nav__tag-list">
+                            <span class="menu-nav__tag-item"><a href="#">#Learning Culture</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#Làm Nghề</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#gia đình IT</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#đáng tiền</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#Local talk</a></span>
+                            <span class="menu-nav__tag-item"><a href="#">#SVN Goal 2023</a></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-nav__background"></div>
+            </div>
+            <div class="content container">
+                <div class="tag">
+                    <div class="tag-header">
+                        <span class="tag-title">TAG: LEARNING CULTURE</span>
+                        <span class="tag-line"></span>
+                    </div>
+                    <div class="tag-main">
+                        <div class="tag-main--listpost">
+                            <div class="tag-main--content">
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tag-main--item">
+                                    <a href="#" class="tag-main--image"><img src="https://news.sun-asterisk.com/images/440x248/017964f3-da59-4196-bc74-cf071212483f.png" alt="" class="img--tag-main" /></a>
+                                    <div class="tag-main--content">
+                                        <div class="tag-main--tag experience">
+                                            <a href="#">KINH NGHIỆM HAY</a>
+                                        </div>
+                                        <div class="tag-main--title">
+                                            <a href="#"> Chinh phục chứng chỉ CKAD với loạt kinh nghiệm 'không thể chi tiết hơn' từ Sunner Hữu Kim (R&D) </a>
+                                        </div>
+                                        <div class="tag-main--preview">“Một phút nói hết” với hàng loạt bí quyết chinh phục chứng chỉ CKAD nổi danh cùng Sunner Hữu Kim - Full Stack Software đến từ R&D Unit. Chần chừ gì nữa, đọc ngay thôi!</div>
+                                        <div class="tag-main--info">
+                                            <span class="tag-main--author"><a href="#"> Đăng bởi Kim </a></span>
+                                            <div class="tag-main--line"></div>
+                                            <span class="tag-main--view">475 Lượt xem</span>
+                                            <div class="tag-main--line"></div>
+                                            <span>2023-06-23</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="tag-main--navigation">
+                                <li class="tag-navigation--prev"><i class="fa-solid fa-chevron-left"></i></li>
+                                <li class="tag-navigation--page">1</li>
+                                <li class="tag-navigation--page tag-navigation--active">2</li>
+                                <li class="tag-navigation--page">3</li>
+                                <li class="tag-navigation--dots">...</li>
+                                <li class="tag-navigation--page">6</li>
+                                <li class="tag-navigation--next"><i class="fa-solid fa-chevron-right"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer-container container">
+                    <div class="main-footer">
+                        <div class="main-footer--container">
+                            <div class="main-footer--title">LIÊN HỆ</div>
+                            <div class="main-footer--content">
+                                <p>Sun* Inc.</p>
+                                <p>Tòa soạn nội bộ Sun* Inc.</p>
+                                <p>Địa chỉ: Tầng 13, Tòa nhà Keangnam Land Mark 72, Đường Phạm Hùng, Quận Nam Từ Liêm, TP. Hà Nội.</p>
+                            </div>
+                        </div>
+                        <div class="main-footer--container">
+                            <div class="main-footer--title">CHỊU TRÁCH NHIỆM NỘI DUNG</div>
+                            <div class="main-footer--content">
+                                <p>Biên tập và chỉnh sửa bởi Ban Truyền thông nội bộ.</p>
+                                <p>Đường dây nóng: 024.38.378.453 (nhánh 6)</p>
+                            </div>
+                        </div>
+                        <div class="main-footer--container">
+                            <div class="main-footer--title">GÓP Ý</div>
+                            <div class="main-footer--content">
+                                <p>Sun* hoan nghênh độc giả gửi góp ý cho chúng tôi.</p>
+                                <div class="main-footer--form">
+                                    <span>Gửi phản hồi</span>
+                                    <i class="fa-solid fa-paper-plane icon-send"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-footer--modal">
+                            <div class="modal-header">
+                                <span class="modal-title">Góp ý</span>
+                                <div class="modal-close"><i class="fa-sharp fa-light fa-circle-xmark"></i></div>
+                            </div>
+                            <div class="modal-form">
+                                <div class="modal-form--item">
+                                    <span class="modal-form--label">Họ tên</span>
+                                    <div class="modal-form--input">
+                                        <input type="text" class="modal-form--field" />
+                                    </div>
+                                </div>
+                                <div class="modal-form--item">
+                                    <span class="modal-form--label modal-form--required">Email</span>
+                                    <div class="modal-form--input">
+                                        <input type="text" class="modal-form--field" />
+                                    </div>
+                                </div>
+                                <div class="modal-form--item">
+                                    <span class="modal-form--label modal-form--required">Nội dung phản hồi</span>
+                                    <div class="modal-form--input">
+                                        <textarea type="text" class="modal-form--field modal-form--textarea" spellcheck="false" placeholder="Nội dung phải chứa ít nhất 10 kí tự"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-form--submit">
+                                    <button class="modal-form--submitbtn">Gửi phản hồi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-footer">
+                        <div class="banner-footer--logo">
+                            <a href="#" class="footer-logo"><img src="./assets/image/image_logo.png" alt="" /></a>
+                        </div>
+                        <div class="banner-footer--social">
+                            <a href="#" target="_blank" class="footer-social--container link-social">
+                                <i class="fa-sharp fa-solid fa-earth-asia"></i>
+                            </a>
+                            <a href="#" target="_blank" class="footer-social--container link-social">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                            <a href="#" target="_blank" class="footer-social--container link-social">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bottom-footer">MoncowUX Blog - Trang blog thuộc MoncowUX</div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/jquery-3.7.0.min.js"></script>
+        <script src="./assets/js/jQueryUI/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="./assets/js/izimodal/js/iziModal.min.js" type="text/javascript"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>
