@@ -660,8 +660,10 @@
                                     border-radius: 3px;
                                     transition: all 0.5s ease;
                                     &:hover {
-                                        transform: scale(1.05);
-                                        transition: all 0.5s ease;
+                                        @include mq_min_1280 {
+                                            transform: scale(1.05);
+                                            transition: all 0.5s ease;
+                                        }
                                     }
                                 }
                             }
@@ -2390,6 +2392,7 @@
                                             margin-right: 20px;
                                             border: 1px solid #2573ce;
                                             border-radius: 50%;
+                                            overflow: hidden;
                                         }
                                         .birthday-item--info {
                                             .birthday-item--name {
