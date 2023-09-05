@@ -3295,6 +3295,9 @@
                             &:hover {
                                 color: #2573ce;
                             }
+                            .page-number {
+                                padding: 10px;
+                            }
                         }
                         .category-navigation--dots {
                             margin-right: 5px;
@@ -3843,6 +3846,9 @@
                             &:hover {
                                 color: #2573ce;
                             }
+                            .page-number {
+                                padding: 10px;
+                            }
                         }
                         .category-navigation--dots {
                             margin-right: 5px;
@@ -4150,6 +4156,9 @@
                             &:hover {
                                 color: #2573ce;
                             }
+                            .page-number {
+                                padding: 10px;
+                            }
                         }
                         .tag-navigation--dots {
                             margin-right: 5px;
@@ -4211,7 +4220,6 @@
                             background-color: #383838;
                             cursor: pointer;
                             .icon-send {
-                                width: 40px;
                                 margin-left: 10px;
                                 line-height: 40px;
                             }
