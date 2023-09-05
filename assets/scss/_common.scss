@@ -3292,11 +3292,18 @@
                             font-size: 18px;
                             cursor: pointer;
                             user-select: none;
+                            transition: all 0.3s ease;
                             &:hover {
-                                color: #2573ce;
+                                background-color: #2573ce;
+                                color: #fff;
+                                font-weight: 600;
                             }
                             a {
                                 padding: 10px;
+                                color: #2573ce;
+                                &:hover {
+                                    color: #fff;
+                                }
                             }
                         }
                         .category-navigation--dots {
@@ -3309,6 +3316,9 @@
                             background-color: #2573ce;
                             font-weight: 600;
                             &:hover {
+                                color: #fff;
+                            }
+                            a {
                                 color: #fff;
                             }
                         }
@@ -3843,11 +3853,18 @@
                             font-size: 18px;
                             cursor: pointer;
                             user-select: none;
+                            transition: all 0.3s ease;
                             &:hover {
-                                color: #2573ce;
+                                background-color: #2573ce;
+                                color: #fff;
+                                font-weight: 600;
                             }
                             a {
                                 padding: 10px;
+                                color: #2573ce;
+                                &:hover {
+                                    color: #fff;
+                                }
                             }
                         }
                         .category-navigation--dots {
@@ -3860,6 +3877,9 @@
                             background-color: #2573ce;
                             font-weight: 600;
                             &:hover {
+                                color: #fff;
+                            }
+                            a {
                                 color: #fff;
                             }
                         }
@@ -4153,11 +4173,18 @@
                             font-size: 18px;
                             cursor: pointer;
                             user-select: none;
+                            transition: all 0.3s ease;
                             &:hover {
-                                color: #2573ce;
+                                background-color: #2573ce;
+                                color: #fff;
+                                font-weight: 600;
                             }
                             a {
                                 padding: 10px;
+                                color: #2573ce;
+                                &:hover {
+                                    color: #fff;
+                                }
                             }
                         }
                         .tag-navigation--dots {
@@ -4170,6 +4197,9 @@
                             background-color: #2573ce;
                             font-weight: 600;
                             &:hover {
+                                color: #fff;
+                            }
+                            a {
                                 color: #fff;
                             }
                         }
