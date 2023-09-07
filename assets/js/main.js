@@ -575,7 +575,7 @@ var RUN = {
             $(this).toggleClass('category-navigation--active');
         });
     },
-    handleModal: () => {
+    handleFormFooterModal: () => {
         $('.main-footer--modal').iziModal({
             closeButton: true,
             bodyOverflow: true,
@@ -597,6 +597,20 @@ var RUN = {
             $('.search-field').val('');
         });
     },
+    handleRecruitmentModal: () => {
+        $('.recruitment-detail').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+            focusInput: false,
+        });
+        $('.recruitment-slider--container').on('click', function (event) {
+            event.preventDefault();
+            $('.recruitment-detail[data-modal="' + $(this).data('click') + '"]').iziModal('open');
+        });
+        $('.recruitment-detail--closebutton').on('click', function () {
+            $('.recruitment-detail[data-modal="' + $(this).data('button') + '"]').iziModal('close');
+        });
+    },
 
     init: () => {
         RUN.handleSelectLanguageMobile();
@@ -612,8 +626,9 @@ var RUN = {
         RUN.handleMediaPanel();
         RUN.handleInputComment();
         RUN.handleClickPagination();
-        RUN.handleModal();
+        RUN.handleFormFooterModal();
         RUN.handleClearInput();
+        RUN.handleRecruitmentModal();
     },
 };
 $(document).ready(() => {

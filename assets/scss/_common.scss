@@ -1862,6 +1862,7 @@
                                             width: 95% !important;
                                         }
                                         margin: 0 10px;
+                                        cursor: pointer;
                                         &__top-header {
                                             height: 60px;
                                             padding: 10px 15px;
@@ -4409,6 +4410,162 @@
                         background-color: #2573ce;
                         color: #fff;
                         cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+.recruitment-detail {
+    width: 90%;
+    max-width: 350px !important;
+    @include mq_min_992 {
+        width: 780px;
+        max-width: initial !important;
+    }
+    .iziModal-wrap {
+        .iziModal-content {
+            padding: 30px 10px 0 !important;
+            position: relative;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            user-select: none;
+            @include mq_min_992 {
+                display: flex;
+                padding: 50px !important;
+            }
+            .recruitment-detail--closebutton {
+                position: absolute;
+                top: 15px;
+                right: 10px;
+                padding: 0;
+                border: none;
+                outline: none;
+                background: none;
+                cursor: pointer;
+                @include mq_min_992 {
+                    top: 12.5px;
+                    right: 50px;
+                }
+                .icon-close--recruitment {
+                    font-size: 20px;
+                    @include mq_min_992 {
+                        font-size: 25px;
+                    }
+                }
+            }
+            .recruitment-detail--left {
+                @include mq_min_992 {
+                    width: 40%;
+                }
+                .recruitment-image--title {
+                    width: 112px;
+                    height: 70px;
+                    margin-bottom: 20px;
+                    background-image: url('https://news.sun-asterisk.com/_nuxt/img/525034a.png');
+                    background-position: center;
+                    background-size: cover;
+                    @include mq_min_992 {
+                        margin-bottom: 30px;
+                    }
+                }
+                .recruitment-image--job {
+                    width: 55%;
+                    margin: 0 auto;
+                    pointer-events: none;
+                    @include mq_min_992 {
+                        width: 100%;
+                    }
+                }
+            }
+            .recruitment-detail--right {
+                @include mq_min_992 {
+                    width: 60%;
+                    margin-left: 30px;
+                }
+                .recruitment-detail--describe {
+                    margin-top: 40px;
+                    @include mq_min_992 {
+                        margin-top: 0;
+                    }
+                    .recruitment-detail--name {
+                        @include set_font(20px, 700, initial);
+                        text-align: center;
+                        @include mq_min_992 {
+                            text-align: left;
+                        }
+                    }
+                    .recruitment-detail--position {
+                        text-align: center;
+                        @include mq_min_992 {
+                            text-align: left;
+                        }
+                        span {
+                            display: inline-block;
+                            margin: 15px 0;
+                            padding: 5px 10px;
+                            border-radius: 4px;
+                            @include set_font(12px, 600, initial);
+                            background-color: #7bb8ff69;
+                            color: #2573ce;
+                        }
+                    }
+                    .recruitment-detail--salary {
+                        margin-bottom: 7px;
+                        @include set_font(18px, 700, 1.5);
+                        @include truncate_text(1);
+                    }
+                    .recruitment-detail--info {
+                        display: flex;
+                        .recruitment-detail--address {
+                            margin: 0 28px 7px 0;
+                            @include set_font(14px, initial, 1.5);
+                            .icon-address {
+                                margin-right: 12px;
+                            }
+                        }
+                        .recruitment-detail--link {
+                            margin: 0 0 7px auto;
+                            @include set_font(14px, initial, 1.5);
+                            .icon-detail {
+                                margin-right: 5px;
+                            }
+                            a {
+                                color: #2573ce;
+                            }
+                        }
+                    }
+                    .recruitment-detail--experience {
+                        margin-bottom: 10px;
+                        .icon-experience {
+                            margin-right: 12px;
+                        }
+                        span {
+                            @include set_font(14px, initial, 1.5);
+                        }
+                    }
+                }
+                .recruitment-detail--requirement {
+                    height: 200px;
+                    margin-bottom: 7px;
+                    overflow: auto;
+                    @include set_font(14px, initial, 1.5);
+                    word-break: break-word;
+                    &::-webkit-scrollbar {
+                        width: 3px;
+                    }
+                    &::-webkit-scrollbar-thumb {
+                        width: 3px;
+                    }
+                    pre {
+                        text-align: left;
+                        word-break: break-word;
+                        white-space: pre-wrap;
+                        white-space: -moz-pre-wrap;
+                        white-space: -pre-wrap;
+                        white-space: -o-pre-wrap;
+                        word-wrap: break-word;
                     }
                 }
             }
