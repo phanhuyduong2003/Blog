@@ -12,7 +12,7 @@
             background-color: #fff;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
             .header-top {
-                height: 64px;
+                height: 45px;
                 transition: height 0.3s ease-out;
                 @include mq_min_1280 {
                     padding: 0 25px 0 17px;
@@ -1120,7 +1120,7 @@
                                         }
                                         .foryou-item--author {
                                             a {
-                                                max-width: 200px;
+                                                max-width: 130px;
                                                 @include truncate_text(1);
                                             }
                                         }
@@ -1611,7 +1611,8 @@
                             line-height: 57px;
                             font-size: 24px;
                             font-weight: 800;
-                            background-color: rgba(254, 235, 232, 0.7);
+                            background-color: #2573ce6e;
+                            color: #fff;
                         }
                         .introduction-slider {
                             .introduction-slider--wrapper {
@@ -1626,8 +1627,7 @@
                             .introduction-slider--pagination {
                                 margin-top: 5px;
                                 .slick-dots {
-                                    display: flex;
-                                    padding-left: 17px;
+                                    @include flex(center, initial);
                                     .slick-active {
                                         margin-right: 8.5px;
                                         button {
@@ -2109,6 +2109,7 @@
             .post-detail {
                 .post-detail--main {
                     .post-content {
+                        margin-bottom: 30px;
                         @include mq_min_1280 {
                             display: flex;
                         }
@@ -2500,7 +2501,8 @@
                                     line-height: 57px;
                                     font-size: 24px;
                                     font-weight: 800;
-                                    background-color: rgba(254, 235, 232, 0.7);
+                                    background-color: #2573ce6e;
+                                    color: #fff;
                                 }
                                 .introduction-slider {
                                     .introduction-slider--wrapper {
@@ -2515,8 +2517,7 @@
                                     .introduction-slider--pagination {
                                         margin-top: 5px;
                                         .slick-dots {
-                                            display: flex;
-                                            padding-left: 17px;
+                                            @include flex(center, initial);
                                             .slick-active {
                                                 margin-right: 8.5px;
                                                 button {
@@ -3538,7 +3539,8 @@
                             line-height: 57px;
                             font-size: 24px;
                             font-weight: 800;
-                            background-color: rgba(254, 235, 232, 0.7);
+                            background-color: #2573ce6e;
+                            color: #fff;
                         }
                         .introduction-slider {
                             .introduction-slider--wrapper {
@@ -3553,8 +3555,7 @@
                             .introduction-slider--pagination {
                                 margin-top: 5px;
                                 .slick-dots {
-                                    display: flex;
-                                    padding-left: 17px;
+                                    @include flex(center, initial);
                                     .slick-active {
                                         margin-right: 8.5px;
                                         button {
@@ -3716,9 +3717,9 @@
                                 }
                                 .search-main--category {
                                     margin-top: 13px;
-                                    font-size: 12px;
                                     letter-spacing: 2px;
-                                    line-height: 27px;
+                                    @include set_font(12px, initial, 27px);
+                                    text-transform: uppercase;
                                     @include mq_min_768 {
                                         margin-top: 5px;
                                     }
