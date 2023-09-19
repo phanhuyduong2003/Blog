@@ -12,7 +12,7 @@
             background-color: #fff;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.24);
             .header-top {
-                height: 45px;
+                height: 64px;
                 transition: height 0.3s ease-out;
                 @include mq_min_1280 {
                     padding: 0 25px 0 17px;
@@ -1120,7 +1120,7 @@
                                         }
                                         .foryou-item--author {
                                             a {
-                                                max-width: 130px;
+                                                max-width: 200px;
                                                 @include truncate_text(1);
                                             }
                                         }
@@ -1611,8 +1611,7 @@
                             line-height: 57px;
                             font-size: 24px;
                             font-weight: 800;
-                            background-color: #2573ce6e;
-                            color: #fff;
+                            background-color: rgba(254, 235, 232, 0.7);
                         }
                         .introduction-slider {
                             .introduction-slider--wrapper {
@@ -1621,15 +1620,14 @@
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
-                                        border-bottom-left-radius: 4px;
-                                        border-bottom-right-radius: 4px;
                                     }
                                 }
                             }
                             .introduction-slider--pagination {
                                 margin-top: 5px;
                                 .slick-dots {
-                                    @include flex(center, initial);
+                                    display: flex;
+                                    padding-left: 17px;
                                     .slick-active {
                                         margin-right: 8.5px;
                                         button {
@@ -2111,7 +2109,6 @@
             .post-detail {
                 .post-detail--main {
                     .post-content {
-                        margin-bottom: 30px;
                         @include mq_min_1280 {
                             display: flex;
                         }
@@ -2503,8 +2500,7 @@
                                     line-height: 57px;
                                     font-size: 24px;
                                     font-weight: 800;
-                                    background-color: #2573ce6e;
-                                    color: #fff;
+                                    background-color: rgba(254, 235, 232, 0.7);
                                 }
                                 .introduction-slider {
                                     .introduction-slider--wrapper {
@@ -2513,15 +2509,14 @@
                                                 width: 100%;
                                                 height: 100%;
                                                 object-fit: cover;
-                                                border-bottom-left-radius: 4px;
-                                                border-bottom-right-radius: 4px;
                                             }
                                         }
                                     }
                                     .introduction-slider--pagination {
                                         margin-top: 5px;
                                         .slick-dots {
-                                            @include flex(center, initial);
+                                            display: flex;
+                                            padding-left: 17px;
                                             .slick-active {
                                                 margin-right: 8.5px;
                                                 button {
@@ -3543,8 +3538,7 @@
                             line-height: 57px;
                             font-size: 24px;
                             font-weight: 800;
-                            background-color: #2573ce6e;
-                            color: #fff;
+                            background-color: rgba(254, 235, 232, 0.7);
                         }
                         .introduction-slider {
                             .introduction-slider--wrapper {
@@ -3553,15 +3547,14 @@
                                         width: 100%;
                                         height: 100%;
                                         object-fit: cover;
-                                        border-bottom-left-radius: 4px;
-                                        border-bottom-right-radius: 4px;
                                     }
                                 }
                             }
                             .introduction-slider--pagination {
                                 margin-top: 5px;
                                 .slick-dots {
-                                    @include flex(center, initial);
+                                    display: flex;
+                                    padding-left: 17px;
                                     .slick-active {
                                         margin-right: 8.5px;
                                         button {
@@ -3723,9 +3716,9 @@
                                 }
                                 .search-main--category {
                                     margin-top: 13px;
+                                    font-size: 12px;
                                     letter-spacing: 2px;
-                                    @include set_font(12px, initial, 27px);
-                                    text-transform: uppercase;
+                                    line-height: 27px;
                                     @include mq_min_768 {
                                         margin-top: 5px;
                                     }
@@ -4262,6 +4255,11 @@
                             color: #fff;
                             background-color: #383838;
                             cursor: pointer;
+                            .wpb-pcf-btn {
+                                padding: 0;
+                                font-family: inherit;
+                                cursor: pointer;
+                            }
                             .icon-send {
                                 margin-left: 10px;
                                 line-height: 40px;
@@ -4351,74 +4349,96 @@
                     cursor: pointer;
                 }
             }
-            .modal-form {
-                padding: 30px 20px;
-                &--item {
-                    margin-bottom: 18px;
-                    .modal-form--label {
-                        @include set_font(14px, initial, 1.5);
-                    }
-                    .modal-form--input {
-                        width: 100%;
-                        .modal-form--field {
-                            width: 100%;
-                            height: 35px;
-                            box-sizing: border-box;
-                            padding: 0 15px;
-                            border: 1px solid #ececec;
-                            border-radius: 4px;
-                            outline: none;
-                            transition: all 0.4s ease;
-                            color: #84909f;
-                            background-color: #fff;
-                            &:hover {
-                                border: 1px solid #c0c4cc;
-                                border-radius: 4px;
-                            }
-                            &:focus {
-                                border: 1px solid #253e6b;
-                                border-radius: 4px;
-                            }
-                            &::placeholder {
+            .wpcf7 {
+                .wpcf7-form {
+                    .modal-form {
+                        padding: 30px 20px;
+                        &--item {
+                            margin-bottom: 18px;
+                            .modal-form--label {
                                 @include set_font(14px, initial, 1.5);
-                                color: #c0c4cc;
+                            }
+                            .modal-form--input {
+                                width: 100%;
+                                .modal-form--field {
+                                    width: 100%;
+                                    height: 35px;
+                                    box-sizing: border-box;
+                                    padding: 0 15px;
+                                    border: 1px solid #ececec;
+                                    border-radius: 4px;
+                                    outline: none;
+                                    transition: all 0.4s ease;
+                                    color: #84909f;
+                                    background-color: #fff;
+                                    &:hover {
+                                        border: 1px solid #c0c4cc;
+                                        border-radius: 4px;
+                                    }
+                                    &:focus {
+                                        border: 1px solid #253e6b;
+                                        border-radius: 4px;
+                                    }
+                                    &::placeholder {
+                                        @include set_font(14px, initial, 1.5);
+                                        color: #c0c4cc;
+                                    }
+                                }
+                                .modal-form--textarea {
+                                    width: 100%;
+                                    height: 95px;
+                                    box-sizing: border-box;
+                                    padding: 5px 15px;
+                                    border: 1px solid #ececec;
+                                    border-radius: 4px;
+                                    resize: none;
+                                    outline: none;
+                                    transition: all 0.4s ease;
+                                    color: #84909f;
+                                    background-color: #fff;
+                                    font-size: 14px;
+                                    font-family: 'Open Sans', sans-serif;
+                                }
+                                .modal-form--block {
+                                    cursor: not-allowed;
+                                    user-select: none;
+                                    -moz-user-select: none;
+                                    -webkit-user-select: none;
+                                    -ms-user-select: none;
+                                    pointer-events: none;
+                                }
+                                .wpcf7-not-valid-tip {
+                                    margin-top: 10px;
+                                }
+                            }
+                            .modal-form--required {
+                                &::before {
+                                    content: '*';
+                                    margin-right: 5px;
+                                    line-height: 1.5;
+                                    color: #f56c6c;
+                                }
                             }
                         }
-                        .modal-form--textarea {
-                            width: 100%;
-                            height: 95px;
-                            box-sizing: border-box;
-                            padding: 5px 15px;
-                            border: 1px solid #ececec;
-                            border-radius: 4px;
-                            resize: none;
-                            outline: none;
-                            transition: all 0.4s ease;
-                            color: #84909f;
-                            background-color: #fff;
-                            font-family: 'Open Sans', sans-serif;
+                        .modal-form--submit {
+                            text-align: center;
+                            .modal-form--submitbtn {
+                                padding: 12px 50px;
+                                border-radius: 20px;
+                                border: none;
+                                outline: none;
+                                font-size: 14px;
+                                background-color: #2573ce;
+                                color: #fff;
+                                cursor: pointer;
+                            }
+                            .wpcf7-spinner {
+                                display: none !important;
+                            }
                         }
                     }
-                    .modal-form--required {
-                        &::before {
-                            content: '*';
-                            margin-right: 5px;
-                            line-height: 1.5;
-                            color: #f56c6c;
-                        }
-                    }
-                }
-                .modal-form--submit {
-                    text-align: center;
-                    .modal-form--submitbtn {
-                        padding: 12px 50px;
-                        border-radius: 20px;
-                        border: none;
-                        outline: none;
-                        font-size: 14px;
-                        background-color: #2573ce;
-                        color: #fff;
-                        cursor: pointer;
+                    .wpcf7-response-output {
+                        display: none;
                     }
                 }
             }

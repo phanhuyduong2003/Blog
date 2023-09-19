@@ -1,5 +1,5 @@
 var RUN = {
-    //Thay đổi ngôn ngữ trên điện thoại
+    //Change language on mobile
     handleSelectLanguageMobile: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -17,7 +17,7 @@ var RUN = {
         });
     },
 
-    //Thay đổi ngôn ngữ
+    //Change language
     handleSelectLanguage: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -34,7 +34,7 @@ var RUN = {
         });
     },
 
-    //Đóng mở sidebar
+    //Open/close sidebar on mobile
     handleSideBarMobile: () => {
         $('.menu__sidebar-button').on('click', function () {
             $('.mobile-header__menu-nav').addClass('menu-nav__active');
@@ -49,7 +49,7 @@ var RUN = {
         });
     },
 
-    //Đóng mở submenu
+    //Open/close submenu on mobile
     handleOpenSubmenu: () => {
         $('.menu-nav__category').accordion({
             header: '.accordion-container',
@@ -65,7 +65,7 @@ var RUN = {
         });
     },
 
-    //Ẩn menu khi cuộn
+    //Hide menu on scroll
     handleMenuOnScroll: () => {
         var prevScrollpos = 0;
         window.onscroll = function () {
@@ -79,7 +79,7 @@ var RUN = {
         };
     },
 
-    //Cài đặt slide cho bài viết mới
+    //Setting slider for new post category
     handleSlideNewPost: () => {
         $('.new-post--slider_content').slick({
             infinite: true,
@@ -87,7 +87,6 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-            // speed: 800,
             prevArrow: $('.new-post--slider_navigation__prev'),
             nextArrow: $('.new-post--slider_navigation__next'),
             responsive: [
@@ -109,7 +108,7 @@ var RUN = {
         });
     },
 
-    //Cài đặt slide cho ảnh giới thiệu
+    //Setting slider for introduction image
     handleSlideIntroduction: () => {
         $('.introduction-slider--wrapper').slick({
             infinite: true,
@@ -117,22 +116,20 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
-            // speed: 1000,
             dots: true,
             appendDots: $('.introduction-slider--pagination'),
             arrows: false,
         });
     },
 
-    //Cài đặt slide cho tuyển dụng
+    //Setting slider for recruiment
     handleSlideRecruitment: () => {
         $('.recruitment-slider--content').slick({
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 2,
-            // autoplay: true,
+            autoplay: true,
             autoplaySpeed: 3000,
-            // speed: 1000,
             prevArrow: $('.recruitment-slider--button__prev'),
             nextArrow: $('.recruitment-slider--button__next'),
             responsive: [
@@ -160,8 +157,23 @@ var RUN = {
             ],
         });
     },
+    //Setting modal to open job detail for recruitment
+    handleRecruitmentModal: () => {
+        $('.recruitment-detail').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+            focusInput: false,
+        });
+        $('.recruitment-slider--container').on('click', function (event) {
+            event.preventDefault();
+            $('.recruitment-detail[data-modal="' + $(this).data('click') + '"]').iziModal('open');
+        });
+        $('.recruitment-detail--closebutton').on('click', function () {
+            $('.recruitment-detail[data-modal="' + $(this).data('button') + '"]').iziModal('close');
+        });
+    },
 
-    //Cài đặt slide cho tác giả
+    //Setting slider for list author
     handleSlideAuthor: () => {
         $('.author-slider--content').slick({
             infinite: true,
@@ -195,7 +207,7 @@ var RUN = {
         });
     },
 
-    //Cài đặt slide cho bài viết liên quan
+    //Setting slider for post related
     handleSlidePostRelated: () => {
         $('.post-slider--content').slick({
             infinite: true,
@@ -215,7 +227,7 @@ var RUN = {
         });
     },
 
-    //Xử lý lựa chọn xem ảnh/video
+    //Setting media panel
     handleMediaPanel: () => {
         let all_media = [
             {
@@ -417,7 +429,7 @@ var RUN = {
             },
         ];
 
-        //Lấy ra thể loại mặc định
+        //Get type media default
         const handleGetTypeDefault = () => {
             let type_default = $('.media-panel--content__item');
 
@@ -425,14 +437,14 @@ var RUN = {
             $(type_default[0]).addClass('default');
         };
 
-        //Lấy ra danh sách thể loại
+        //Get list type media
         const handleGetListType = () => {
             type_navbar.map((item) => {
                 $('.media-panel--header__navbar').append(`<div class="navbar-item" data-type=${item.type}>${item.name}</div>`);
             });
         };
 
-        //Xử lý chuyển động chờ ảnh/video từ dữ liệu
+        //Handle waiting animation
         const handleOverLoading = () => {
             $('.media-panel--post__image').addClass('loading-iframe');
             $('.media-panel--post__iframe').addClass('loading-iframe');
@@ -442,7 +454,7 @@ var RUN = {
             }, 2000);
         };
 
-        //Lấy bài viết mặc định
+        //Get post default
         const handleGetPostDefault = () => {
             let lastPostID = all_media[0].id;
             const postDefault = () => {
@@ -455,19 +467,19 @@ var RUN = {
             postDefault();
         };
 
-        //Lấy thể loại được chọn mặc định
+        //Get type in navbar default
         const handleGetNavbarDefault = () => {
             let navbarItem = $('.navbar-item');
             $(navbarItem[0]).addClass('navbar-item__selected');
         };
 
-        //Lấy bài viết được chọn mặc định
+        //Get post selected default
         const handleGetPostSelected = () => {
             let postItem = $('.media-panel--post__item');
             $(postItem[0]).addClass('post-item__selected');
         };
 
-        //Xử lý chọn bài viết trong danh sách bài viết
+        //Handle on click post
         const handleClickPost = () => {
             let id_navbar = type_navbar[0].type;
             let handleTypePost = all_media.filter((item) => (Number(id_navbar) === 99 ? item : item.type === Number(id_navbar)));
@@ -499,7 +511,7 @@ var RUN = {
             });
         };
 
-        //Xử lý chọn thể loại
+        //Handle change type on click navbar
         const handleClickNavbar = () => {
             $('.navbar-item').on('click', function () {
                 $('.media-panel--post__main').replaceWith(`<div class="media-panel--post__main"></div>`);
@@ -533,7 +545,7 @@ var RUN = {
             });
         };
 
-        //Xử lý khi chọn bài viết
+        //Handle on select post
         const handleClickItem = () => {
             $('.media-panel--post__item').on('click', function () {
                 let id_post = $(this).attr('data-post');
@@ -563,23 +575,55 @@ var RUN = {
         handleClickPost();
         handleClickNavbar();
     },
+    //Handle height textarea in comment box
     handleInputComment: () => {
         $('.input-field').on('input', function () {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
         });
     },
+    //Handle click page on pagination
     handleClickPagination: () => {
         $('.category-navigation--page').on('click', function () {
             $('.category-navigation--active').removeClass('category-navigation--active');
             $(this).toggleClass('category-navigation--active');
         });
     },
-    handleFormFooterModal: () => {
+    //Handle clear search box on submit
+    handleClearInput: () => {
+        $('.header-top__search').on('submit', function () {
+            $('.header-top__search-field').val('');
+        });
+        $('.menu-nav__search').on('submit', function () {
+            $('.search-field').val('');
+        });
+    },
+    //Handle footer modal
+    handleFooterModal: () => {
+        function cf7Reinit() {
+            $('.wpcf7-form').each(function () {
+                var item = $(this);
+                wpcf7.init(item[0]);
+                if (wpcf7.cached) {
+                    wpcf7.refill(item[0]);
+                }
+            });
+        }
+        function cf7Reset() {
+            $('.wpcf7-form').each(function () {
+                var item = $(this);
+                wpcf7.reset(item[0]);
+                if (wpcf7.cached) {
+                    wpcf7.refill(item[0]);
+                }
+            });
+        }
         $('.main-footer--modal').iziModal({
             closeButton: true,
             bodyOverflow: true,
             focusInput: false,
+            onOpening: cf7Reinit,
+            onClosed: cf7Reset,
         });
         $('.main-footer--form').on('click', function (event) {
             event.preventDefault();
@@ -589,26 +633,33 @@ var RUN = {
             $('.main-footer--modal').iziModal('close');
         });
     },
-    handleClearInput: () => {
-        $('.header-top__search').on('submit', function () {
-            $('.header-top__search-field').val('');
+    //Handle when submit form in footer
+    handleSubmitForm: () => {
+        iziToast.settings({
+            position: 'topRight',
+            messageColor: '#fff',
         });
-        $('.menu-nav__search').on('submit', function () {
-            $('.search-field').val('');
-        });
-    },
-    handleRecruitmentModal: () => {
-        $('.recruitment-detail').iziModal({
-            closeButton: true,
-            bodyOverflow: true,
-            focusInput: false,
-        });
-        $('.recruitment-slider--container').on('click', function (event) {
-            event.preventDefault();
-            $('.recruitment-detail[data-modal="' + $(this).data('click') + '"]').iziModal('open');
-        });
-        $('.recruitment-detail--closebutton').on('click', function () {
-            $('.recruitment-detail[data-modal="' + $(this).data('button') + '"]').iziModal('close');
+        $('.modal-form--submitbtn').on('click', () => {
+            setTimeout(() => {
+                if ($('.wpcf7-form').hasClass('submitting')) {
+                    console.log('sent');
+                    iziToast.success({
+                        backgroundColor: '#00cc56',
+                        title: 'Thành công',
+                        message: 'Cảm ơn bạn đã gửi phản hồi!',
+                        onClosed: () => {
+                            window.location.reload();
+                        },
+                    });
+                } else if ($('.wpcf7-form').hasClass('invalid')) {
+                    console.log('error');
+                    iziToast.error({
+                        backgroundColor: '#f64954',
+                        title: 'Lỗi',
+                        message: 'Nội dung góp ý của bạn chưa được gửi',
+                    });
+                }
+            }, 1000);
         });
     },
 
@@ -621,14 +672,13 @@ var RUN = {
         RUN.handleSlideNewPost();
         RUN.handleSlideIntroduction();
         RUN.handleSlideRecruitment();
+        RUN.handleRecruitmentModal();
         RUN.handleSlideAuthor();
         RUN.handleSlidePostRelated();
-        RUN.handleMediaPanel();
         RUN.handleInputComment();
         RUN.handleClickPagination();
-        RUN.handleFormFooterModal();
-        RUN.handleClearInput();
-        RUN.handleRecruitmentModal();
+        RUN.handleFooterModal();
+        RUN.handleSubmitForm();
     },
 };
 $(document).ready(() => {
