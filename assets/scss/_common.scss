@@ -95,6 +95,7 @@
                                     background-color: #fff;
                                     &:hover,
                                     &:focus {
+                                        box-shadow: 0 0 100px #fff inset;
                                         -webkit-box-shadow: 0 0 100px #ffffff inset;
                                     }
                                 }
@@ -4338,7 +4339,7 @@
 }
 .main-footer--modal {
     width: 90%;
-    margin: 80px auto 50px;
+    // margin: 80px auto 50px;
     .iziModal-wrap {
         .iziModal-content {
             .modal-header {
@@ -4432,6 +4433,20 @@
                                 color: #fff;
                                 cursor: pointer;
                             }
+                            .modal-form--blockbtn {
+                                padding: 12px 50px;
+                                border-radius: 20px;
+                                border: none;
+                                outline: none;
+                                font-size: 14px;
+                                background-color: #828991;
+                                color: #fff;
+                                cursor: pointer;
+                                &:hover {
+                                    background-color: #828991;
+                                    cursor: not-allowed;
+                                }
+                            }
                             .wpcf7-spinner {
                                 display: none !important;
                             }
@@ -4439,6 +4454,141 @@
                     }
                     .wpcf7-response-output {
                         display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.form-footer--success {
+    width: 70%;
+    @include mq_min_768 {
+        width: 55%;
+    }
+    @include mq_min_992 {
+        width: 50%;
+    }
+    @include mq_min_1280 {
+        width: 40%;
+    }
+    .iziModal-wrap {
+        .iziModal-content {
+            padding: 20px !important;
+            text-align: center;
+            .form-notify--image {
+                text-align: center;
+                .icon-success {
+                    font-size: 80px;
+                    color: #25d55b;
+                }
+            }
+            .form-notify--title {
+                margin-top: 20px;
+                text-align: center;
+                @include set_font(28px, 600, 1.5);
+                @include mq_min_768 {
+                    font-size: 40px;
+                }
+            }
+            .form-notify--message {
+                margin: 20px 0;
+                @include set_font(15px, initial, 1.5);
+                @include mq_min_576 {
+                    font-size: 18px;
+                }
+            }
+            .form-notify--close {
+                padding: 10px;
+                border-radius: 4px;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                color: #fff;
+            }
+            .success-button {
+                background-color: #25d55b;
+            }
+        }
+    }
+}
+.form-footer--error {
+    width: 70%;
+    @include mq_min_768 {
+        width: 55%;
+    }
+    @include mq_min_992 {
+        width: 50%;
+    }
+    @include mq_min_1280 {
+        width: 40%;
+    }
+    .iziModal-wrap {
+        .iziModal-content {
+            padding: 20px !important;
+            text-align: center;
+            .form-notify--image {
+                text-align: center;
+                .icon-error {
+                    font-size: 80px;
+                    color: #ff0000;
+                }
+            }
+            .form-notify--title {
+                margin-top: 20px;
+                text-align: center;
+                @include set_font(28px, 600, 1.5);
+                @include mq_min_768 {
+                    font-size: 40px;
+                }
+            }
+            .form-notify--message {
+                margin: 20px 0;
+                @include set_font(15px, initial, 1.5);
+                @include mq_min_576 {
+                    font-size: 18px;
+                }
+            }
+            .form-notify--close {
+                padding: 10px;
+                border-radius: 4px;
+                border: 0;
+                outline: 0;
+                cursor: pointer;
+                color: #fff;
+            }
+            .error-button {
+                background-color: #ff0000;
+            }
+        }
+    }
+}
+.form-footer--load {
+    background: none;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #383838;
+    border-radius: 50% !important;
+    width: 50px;
+    height: 50px !important;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.iziToast-wrapper {
+    .iziToast-capsule {
+        .iziToast {
+            .iziToast-body {
+                .iziToast-texts {
+                    font-family: 'Open Sans', sans-serif;
+                    .iziToast-title {
+                        font-size: 16px;
+                        font-weight: 600;
                     }
                 }
             }
@@ -4621,4 +4771,7 @@
             }
         }
     }
+}
+.grecaptcha-badge {
+    visibility: hidden;
 }

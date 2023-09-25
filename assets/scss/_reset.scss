@@ -46,7 +46,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
+    content: "";
     content: none;
 }
 table {
@@ -65,8 +65,8 @@ b, u, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 // table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
         margin: revert;
@@ -104,19 +104,12 @@ time, mark, audio, video {
     blockquote:after,
     q:before,
     q:after {
-        content: '';
+        content: "";
         content: revert;
     }
     table {
         border-collapse: revert;
         border-spacing: revert;
-    }
-    figure {
-        width: 100% !important;
-        display: block;
-        margin: 0;
-        padding: 0;
-        border: 0;
     }
     img {
         border-radius: 4px;

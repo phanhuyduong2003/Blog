@@ -1,5 +1,5 @@
 var RUN = {
-    //Change language on mobile
+    //Thay đổi ngôn ngữ trên điện thoại
     handleSelectLanguageMobile: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -17,7 +17,7 @@ var RUN = {
         });
     },
 
-    //Change language
+    //Thay đổi ngôn ngữ
     handleSelectLanguage: () => {
         $('.menu__select-language').on('click', function () {
             $(this).find('.open-dropdown').toggleClass('select-dropdown__none select-dropdown');
@@ -34,7 +34,7 @@ var RUN = {
         });
     },
 
-    //Open/close sidebar on mobile
+    //Đóng mở sidebar
     handleSideBarMobile: () => {
         $('.menu__sidebar-button').on('click', function () {
             $('.mobile-header__menu-nav').addClass('menu-nav__active');
@@ -49,7 +49,7 @@ var RUN = {
         });
     },
 
-    //Open/close submenu on mobile
+    //Đóng mở submenu
     handleOpenSubmenu: () => {
         $('.menu-nav__category').accordion({
             header: '.accordion-container',
@@ -65,7 +65,7 @@ var RUN = {
         });
     },
 
-    //Hide menu on scroll
+    //Ẩn menu khi cuộn
     handleMenuOnScroll: () => {
         var prevScrollpos = 0;
         window.onscroll = function () {
@@ -79,7 +79,7 @@ var RUN = {
         };
     },
 
-    //Setting slider for new post category
+    //Cài đặt slide cho bài viết mới
     handleSlideNewPost: () => {
         $('.new-post--slider_content').slick({
             infinite: true,
@@ -87,6 +87,7 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+            // speed: 800,
             prevArrow: $('.new-post--slider_navigation__prev'),
             nextArrow: $('.new-post--slider_navigation__next'),
             responsive: [
@@ -108,7 +109,7 @@ var RUN = {
         });
     },
 
-    //Setting slider for introduction image
+    //Cài đặt slide cho ảnh giới thiệu
     handleSlideIntroduction: () => {
         $('.introduction-slider--wrapper').slick({
             infinite: true,
@@ -116,20 +117,22 @@ var RUN = {
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 3000,
+            // speed: 1000,
             dots: true,
             appendDots: $('.introduction-slider--pagination'),
             arrows: false,
         });
     },
 
-    //Setting slider for recruiment
+    //Cài đặt slide cho tuyển dụng
     handleSlideRecruitment: () => {
         $('.recruitment-slider--content').slick({
             infinite: true,
             slidesToShow: 4,
             slidesToScroll: 2,
-            autoplay: true,
+            // autoplay: true,
             autoplaySpeed: 3000,
+            // speed: 1000,
             prevArrow: $('.recruitment-slider--button__prev'),
             nextArrow: $('.recruitment-slider--button__next'),
             responsive: [
@@ -157,7 +160,6 @@ var RUN = {
             ],
         });
     },
-    //Setting modal to open job detail for recruitment
     handleRecruitmentModal: () => {
         $('.recruitment-detail').iziModal({
             closeButton: true,
@@ -173,7 +175,7 @@ var RUN = {
         });
     },
 
-    //Setting slider for list author
+    //Cài đặt slide cho tác giả
     handleSlideAuthor: () => {
         $('.author-slider--content').slick({
             infinite: true,
@@ -207,7 +209,7 @@ var RUN = {
         });
     },
 
-    //Setting slider for post related
+    //Cài đặt slide cho bài viết liên quan
     handleSlidePostRelated: () => {
         $('.post-slider--content').slick({
             infinite: true,
@@ -227,7 +229,7 @@ var RUN = {
         });
     },
 
-    //Setting media panel
+    //Xử lý lựa chọn xem ảnh/video
     handleMediaPanel: () => {
         let all_media = [
             {
@@ -429,7 +431,7 @@ var RUN = {
             },
         ];
 
-        //Get type media default
+        //Lấy ra thể loại mặc định
         const handleGetTypeDefault = () => {
             let type_default = $('.media-panel--content__item');
 
@@ -437,14 +439,14 @@ var RUN = {
             $(type_default[0]).addClass('default');
         };
 
-        //Get list type media
+        //Lấy ra danh sách thể loại
         const handleGetListType = () => {
             type_navbar.map((item) => {
                 $('.media-panel--header__navbar').append(`<div class="navbar-item" data-type=${item.type}>${item.name}</div>`);
             });
         };
 
-        //Handle waiting animation
+        //Xử lý chuyển động chờ ảnh/video từ dữ liệu
         const handleOverLoading = () => {
             $('.media-panel--post__image').addClass('loading-iframe');
             $('.media-panel--post__iframe').addClass('loading-iframe');
@@ -454,7 +456,7 @@ var RUN = {
             }, 2000);
         };
 
-        //Get post default
+        //Lấy bài viết mặc định
         const handleGetPostDefault = () => {
             let lastPostID = all_media[0].id;
             const postDefault = () => {
@@ -467,19 +469,19 @@ var RUN = {
             postDefault();
         };
 
-        //Get type in navbar default
+        //Lấy thể loại được chọn mặc định
         const handleGetNavbarDefault = () => {
             let navbarItem = $('.navbar-item');
             $(navbarItem[0]).addClass('navbar-item__selected');
         };
 
-        //Get post selected default
+        //Lấy bài viết được chọn mặc định
         const handleGetPostSelected = () => {
             let postItem = $('.media-panel--post__item');
             $(postItem[0]).addClass('post-item__selected');
         };
 
-        //Handle on click post
+        //Xử lý chọn bài viết trong danh sách bài viết
         const handleClickPost = () => {
             let id_navbar = type_navbar[0].type;
             let handleTypePost = all_media.filter((item) => (Number(id_navbar) === 99 ? item : item.type === Number(id_navbar)));
@@ -511,7 +513,7 @@ var RUN = {
             });
         };
 
-        //Handle change type on click navbar
+        //Xử lý chọn thể loại
         const handleClickNavbar = () => {
             $('.navbar-item').on('click', function () {
                 $('.media-panel--post__main').replaceWith(`<div class="media-panel--post__main"></div>`);
@@ -545,7 +547,7 @@ var RUN = {
             });
         };
 
-        //Handle on select post
+        //Xử lý khi chọn bài viết
         const handleClickItem = () => {
             $('.media-panel--post__item').on('click', function () {
                 let id_post = $(this).attr('data-post');
@@ -575,21 +577,18 @@ var RUN = {
         handleClickPost();
         handleClickNavbar();
     },
-    //Handle height textarea in comment box
     handleInputComment: () => {
         $('.input-field').on('input', function () {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
         });
     },
-    //Handle click page on pagination
     handleClickPagination: () => {
         $('.category-navigation--page').on('click', function () {
             $('.category-navigation--active').removeClass('category-navigation--active');
             $(this).toggleClass('category-navigation--active');
         });
     },
-    //Handle clear search box on submit
     handleClearInput: () => {
         $('.header-top__search').on('submit', function () {
             $('.header-top__search-field').val('');
@@ -598,7 +597,6 @@ var RUN = {
             $('.search-field').val('');
         });
     },
-    //Handle footer modal
     handleFooterModal: () => {
         function cf7Reinit() {
             $('.wpcf7-form').each(function () {
@@ -623,7 +621,7 @@ var RUN = {
             bodyOverflow: true,
             focusInput: false,
             onOpening: cf7Reinit,
-            onClosed: cf7Reset,
+            onClosing: cf7Reset,
         });
         $('.main-footer--form').on('click', function (event) {
             event.preventDefault();
@@ -633,34 +631,149 @@ var RUN = {
             $('.main-footer--modal').iziModal('close');
         });
     },
-    //Handle when submit form in footer
     handleSubmitForm: () => {
-        iziToast.settings({
-            position: 'topRight',
-            messageColor: '#fff',
+        $('.form-footer--success').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+            focusInput: false,
+            timeout: 3000,
+            timeoutProgressbar: true,
+            onClosed: () => {
+                $('.wpcf7-form').trigger('reset');
+                $('.modal-form--button').removeClass('modal-form--submitbtn').addClass('modal-form--blockbtn');
+            },
         });
-        $('.modal-form--submitbtn').on('click', () => {
-            setTimeout(() => {
-                if ($('.wpcf7-form').hasClass('submitting')) {
-                    console.log('sent');
-                    iziToast.success({
-                        backgroundColor: '#00cc56',
-                        title: 'Thành công',
-                        message: 'Cảm ơn bạn đã gửi phản hồi!',
-                        onClosed: () => {
-                            window.location.reload();
-                        },
-                    });
-                } else if ($('.wpcf7-form').hasClass('invalid')) {
-                    console.log('error');
-                    iziToast.error({
-                        backgroundColor: '#f64954',
-                        title: 'Lỗi',
-                        message: 'Nội dung góp ý của bạn chưa được gửi',
-                    });
+        $('.form-footer--error').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+            focusInput: false,
+            timeout: 3000,
+            timeoutProgressbar: true,
+        });
+        $('.form-footer--load').iziModal({
+            closeButton: true,
+            bodyOverflow: true,
+            focusInput: false,
+            timeoutProgressbar: true,
+        });
+        $('.modal-form--button').on('click', function () {
+            $('.main-footer--modal').iziModal('close');
+            $('.form-footer--load').iziModal('open');
+        });
+        $('.wpcf7').on('wpcf7mailsent', async function (event) {
+            let dataForm = await event.detail.inputs;
+            console.log(dataForm);
+            if (dataForm) {
+                $('.form-footer--load').iziModal('close');
+                $('.form-footer--success').iziModal('open');
+                $('.form-notify--message').text($('.wpcf7-response-output').text());
+                $('.success-button').on('click', function () {
+                    $('.form-footer--success').iziModal('close');
+                });
+                let hasName = false;
+                let hasEmail = false;
+                let hasFeedback = false;
+                let isFeedbackEmpty = true;
+                $('.modal-form--button').prop('disabled', true);
+                $('.modal-form--name').on('input', function () {
+                    hasName = $.trim($(this).val()) !== '';
+                    validateInput();
+                });
+
+                $('.modal-form--email').on('input', function () {
+                    const emailPattern = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+                    hasEmail = $(this).val() && emailPattern.test($(this).val());
+                    validateInput();
+                });
+
+                $('.modal-form--feedback').on({
+                    input: function () {
+                        hasFeedback = $(this).val() && $.trim($(this).val()).length >= 10;
+                        if ($(this).val()) {
+                            isFeedbackEmpty = false;
+                        }
+                        validateInput();
+                    },
+                    keypress: function (event) {
+                        if (event.which === 8 || event.which === 46) {
+                            hasFeedback = $(this).val() && $.trim($(this).val()).length > 10;
+                            if (!$(this).val()) {
+                                isFeedbackEmpty = true;
+                            }
+                        }
+                        validateInput();
+                    },
+                });
+
+                function validateInput() {
+                    if (hasName && hasEmail && hasFeedback) {
+                        $('.modal-form--button').prop('disabled', false);
+                        $('.modal-form--button').removeClass('modal-form--blockbtn').addClass('modal-form--submitbtn');
+                    } else if (isFeedbackEmpty) {
+                        $('.modal-form--button').prop('disabled', true);
+                    } else {
+                        $('.modal-form--button').prop('disabled', true);
+                        $('.modal-form--button').removeClass('modal-form--submitbtn').addClass('modal-form--blockbtn');
+                    }
                 }
-            }, 1000);
+            }
         });
+        $('.wpcf7').on('wpcf7invalid', function () {
+            $('.form-footer--load').iziModal('close');
+            $('.form-footer--error').iziModal('open');
+            $('.form-notify--message').text($('.wpcf7-response-output').text());
+            $('.error-button').on('click', function () {
+                $('.form-footer--error').iziModal('close');
+            });
+        });
+    },
+    handleValidateInput: () => {
+        let hasName = false;
+        let hasEmail = false;
+        let hasFeedback = false;
+        let isFeedbackEmpty = true;
+        $('.modal-form--button').prop('disabled', true);
+        $('.modal-form--name').on('input', function () {
+            hasName = $.trim($(this).val()) !== '';
+            validateInput();
+        });
+
+        $('.modal-form--email').on('input', function () {
+            const emailPattern = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+            hasEmail = $(this).val() && emailPattern.test($(this).val());
+            validateInput();
+        });
+
+        $('.modal-form--feedback').on({
+            input: function () {
+                hasFeedback = $(this).val() && $.trim($(this).val()).length >= 10;
+                if ($(this).val()) {
+                    isFeedbackEmpty = false;
+                }
+                validateInput();
+            },
+            keypress: function (event) {
+                if (event.which === 8 || event.which === 46) {
+                    hasFeedback = $(this).val() && $.trim($(this).val()).length > 10;
+                    if (!$(this).val()) {
+                        isFeedbackEmpty = true;
+                    }
+                }
+                validateInput();
+            },
+        });
+
+        function validateInput() {
+            if (hasName && hasEmail && hasFeedback) {
+                $('.modal-form--button').prop('disabled', false);
+                $('.modal-form--button').removeClass('modal-form--blockbtn').addClass('modal-form--submitbtn');
+            } else if (isFeedbackEmpty) {
+                $('.modal-form--button').prop('disabled', true);
+            } else {
+                $('.modal-form--button').prop('disabled', true);
+                $('.modal-form--button').removeClass('modal-form--submitbtn').addClass('modal-form--blockbtn');
+            }
+        }
     },
 
     init: () => {
@@ -679,6 +792,7 @@ var RUN = {
         RUN.handleClickPagination();
         RUN.handleFooterModal();
         RUN.handleSubmitForm();
+        RUN.handleValidateInput();
     },
 };
 $(document).ready(() => {

@@ -3,12 +3,17 @@
 *::after {
     box-sizing: border-box;
 }
-$color-main: linear-gradient(90deg, rgba(127, 127, 213, 1) 0%, rgba(134, 168, 231, 1) 54%, rgba(145, 234, 228, 1) 100%);
+$color-main: linear-gradient(
+    90deg,
+    rgba(127, 127, 213, 1) 0%,
+    rgba(134, 168, 231, 1) 54%,
+    rgba(145, 234, 228, 1) 100%
+);
 html {
     margin-top: 0 !important;
 }
 body {
-    font-family: 'Open Sans', sans-serif !important;
+    font-family: "Open Sans", sans-serif !important;
     overflow: hidden auto;
     &::-webkit-scrollbar {
         width: 5px;
@@ -22,8 +27,8 @@ body {
     }
 }
 @font-face {
-    font-family: 'Catamaran', sans-serif;
-    src: url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap');
+    font-family: "Catamaran", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap");
 }
 a {
     display: inline-block;
@@ -31,7 +36,7 @@ a {
     color: inherit;
 }
 input {
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
 }
 img {
@@ -80,4 +85,13 @@ img {
 }
 .story {
     color: #2bbbe0;
+}
+.setting-figure {
+    figure {
+        width: 100% !important;
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
 }
