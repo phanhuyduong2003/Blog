@@ -2995,13 +2995,29 @@
                                 .main-post--preview {
                                     max-height: 63px;
                                     min-height: 63px;
-                                    // padding: 0 20px;
                                     font-size: 14px;
                                     line-height: 1.5;
                                     color: #6d758c;
+                                    transition: all 0.3s ease;
                                     @include truncate_text(3);
                                     @include mq_min_1280 {
                                         padding: 0;
+                                    }
+                                }
+                                .main-post--preview.active {
+                                    display: unset;
+                                }
+                                .main-post--seemore {
+                                    display: block;
+                                    padding: 8px 0;
+                                    font-size: 14px;
+                                    transition: all 0.3s ease;
+                                    cursor: pointer;
+                                    background: none;
+                                    border: 0;
+                                    outline: 0;
+                                    &:hover {
+                                        color: #2573ce;
                                     }
                                 }
                                 .main-post--info {

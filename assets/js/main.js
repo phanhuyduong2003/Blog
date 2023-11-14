@@ -775,6 +775,36 @@ var RUN = {
             }
         }
     },
+    handleHiddenButtonSlider: () => {
+        // $('.recruitment-slider--container').attr('aria-hidden', true);
+        $('.recruitment-slider--button__prev').on('click', function () {
+            if ($('.recruitment-slider--container').attr('data-slick-index') == 0 && $('.recruitment-slider--container').attr('aria-hidden') == true) {
+                // $('.recruitment-slider--button__prev').css('background-color', '#f20');
+                console.log(111);
+                $('.recruitment-slider--button__prev').css('pointer-events', 'auto');
+            } else {
+                // $('.recruitment-slider--button__prev').css('background-color', '#fff');
+                $('.recruitment-slider--button__prev').css('pointer-events', 'none');
+                console.log(222);
+            }
+        });
+        $('.recruitment-slider--button__next').on('click', function () {
+            if ($('.recruitment-slider--container').attr('data-slick-index') == 11 && $('.recruitment-slider--container').attr('aria-hidden') == true) {
+                // $('.recruitment-slider--button__prev').css('background-color', '#f20');
+                $('.recruitment-slider--button__next').css('pointer-events', 'auto');
+                console.log(333);
+            } else {
+                $('.recruitment-slider--button__next').css('pointer-events', 'none');
+                console.log(444);
+            }
+        });
+    },
+    handleCollapsePreview: () => {
+        $('.main-post--seemore').on('click', function () {
+            $(this).text($(this).text() == 'Xem thêm' ? 'Ẩn bớt' : 'Xem thêm');
+            $('.main-post--preview').toggleClass('active');
+        });
+    },
 
     init: () => {
         RUN.handleSelectLanguageMobile();
@@ -793,6 +823,8 @@ var RUN = {
         RUN.handleFooterModal();
         RUN.handleSubmitForm();
         RUN.handleValidateInput();
+        RUN.handleHiddenButtonSlider();
+        RUN.handleCollapsePreview();
     },
 };
 $(document).ready(() => {
